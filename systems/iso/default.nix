@@ -24,8 +24,6 @@
     config.allowUnfree = true;
   };
 
-	console.keyMap = "fr-bepo";
-
   nix = {
     settings.experimental-features = ["nix-command" "flakes"];
     extraOptions = "experimental-features = nix-command flakes";
@@ -34,10 +32,6 @@
   services = {
     qemuGuest.enable = true;
     openssh.settings.PermitRootLogin = lib.mkForce "yes";
-		xserver.xkb = {
-			layout = "fr";
-			variant = "bepo";
-		};
   };
 
   boot = {
