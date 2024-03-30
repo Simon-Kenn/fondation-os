@@ -4,11 +4,20 @@
 	inputs,
   ...
 }: {
-	imports = [ inputs.home-manager.nixosModules.home-manager ];
+	imports = [ 
+		../../modules/nixos
+		inputs.home-manager.nixosModules.home-manager 
+	];
 
   networking = {
     hostName = "iso";
   };
+
+	config = {
+		system = {
+			locale.enable = true;
+		};
+	};
 
   nixpkgs = {
     hostPlatform = lib.mkDefault "x86_64-linux";
