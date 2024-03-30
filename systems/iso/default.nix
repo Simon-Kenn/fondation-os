@@ -13,7 +13,7 @@
     hostName = "iso";
   };
 
-	config = {
+	modules = {
 		system = {
 			locale.enable = true;
 		};

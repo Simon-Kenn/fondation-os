@@ -6,7 +6,7 @@
 	...
 }: 
 with lib; let
-	cfg =  config.cli.editors.nvim;
+	cfg =  config.modules.cli.editors.nvim;
 in {
 	imports = [
 		inputs.nixvim.homeManagerModules.nixvim
@@ -20,7 +20,7 @@ in {
 		./neorg.nix
 	];
 
-	options.cli.editors.nvim =  {
+	options.modules.cli.editors.nvim =  {
 		enable = mkEnableOption "Enable nvim editor";
 	};
 

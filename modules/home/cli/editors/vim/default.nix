@@ -1,8 +1,8 @@
 { lib, config, ...}:
 with lib; let  
-	cfg = config.cli.editors.vim;
+	cfg = config.modules.cli.editors.vim;
 in {
-	options.cli.editors.vim = {
+	options.modules.cli.editors.vim = {
 		enable = mkEnableOption "Enable vim";
 	};
 
