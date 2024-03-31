@@ -3,7 +3,6 @@
 		../../modules/home
 	];
 
-
 	home = {
 		username = lib.mkDefault "nixos";
 		homeDirectory = lib.mkDefault "/home/${config.home.username}";
@@ -12,7 +11,7 @@
 
 	modules = {
 		cli = {
-			nvim.enable = true;
+			editors.vim.enable = true;
 		};
 	};
 }
