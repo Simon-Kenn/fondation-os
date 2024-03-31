@@ -9,9 +9,9 @@
 		stateVersion = lib.mkDefault "24.05";
 	};
 
-	modules = {
-		cli = {
-			editors.vim.enable = true;
-		};
-	};
+	#modules = {
+	#	cli = {
+	#		editors.vim.enable = true;
+	#	};
+	#};
 }
