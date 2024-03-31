@@ -6,7 +6,7 @@
 	...
 }: 
 with lib; let
-	cfg =  config.modules.cli.editors.nvim;
+	cfg = config.modules.cli.editors.nvim;
 in {
 	imports = [
 		inputs.nixvim.homeManagerModules.nixvim
@@ -26,11 +26,18 @@ in {
 
 	config = mkIf cfg.enable {
 
-		home.sessionVariables.EDITOR = "nvim";
+		programs.neovim = {
+			viAlias = true;
+			vimAlias = true;
+			defaultEditor = true;
+		};
 
 		programs.nixvim = {
 			enable = true;
 			package = pkgs.neovim-nightly;
+			defaultEditor = true;
+			viAlias = true;
+			vimAlias = true;
 		};
 	};
 }
