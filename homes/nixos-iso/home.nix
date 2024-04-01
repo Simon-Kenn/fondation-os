@@ -1,5 +1,7 @@
 { lib, config, ...}: {
+
 	imports = [
+		../../modules/home
 	];
 
 	home = {
@@ -8,4 +10,5 @@
 		stateVersion = lib.mkDefault "24.05";
 	};
 
+	modules.home.editors.vim.enable = true;
 }
