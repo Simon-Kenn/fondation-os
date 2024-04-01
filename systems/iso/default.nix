@@ -16,6 +16,7 @@
 	modules = {
 		system = {
 			locale.enable = true;
+			nixpkgs.enable = true;
 		};
 	};
 
