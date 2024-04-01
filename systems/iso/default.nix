@@ -6,14 +6,14 @@
 }: {
 	imports = [ 
 		../../modules/nixos
-		./home.nix
+		inputs.home-manager.nixosModules.home-manager 
 	];
 
   networking = {
     hostName = "iso";
   };
 
-	modules = {
+	os = {
 		system = {
 			locale.enable = true;
 			nixpkgs.enable = true;
@@ -22,7 +22,7 @@
 
   nixpkgs = {
     hostPlatform = lib.mkDefault "x86_64-linux";
-    config.allowUnfree = true;
+    #config.allowUnfree = true;
   };
 
   nix = {

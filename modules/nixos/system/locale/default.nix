@@ -5,9 +5,9 @@
 	...
 }: 
 with lib; let 
-	cfg = config.modules.system.locale;
+	cfg = config.os.system.locale;
 in {
-	options.modules.system.locale = {
+	options.os.system.locale = {
 		enable = mkEnableOption "Wheter or not to manage locale settings.";
 	};
 
@@ -17,11 +17,11 @@ in {
 		};
 		time.timeZone = "Europe/Paris";
 
-		#services.xserver.xkb = {
-		#	layout = "fr";
-		#	variant = "bepo";
-		#};
+		services.xserver.xkb = {
+			layout = "fr";
+			variant = "bepo";
+		};
 
-		#console.keyMap = "fr-bepo";
+		console.keyMap = "fr-bepo";
 	};
 }

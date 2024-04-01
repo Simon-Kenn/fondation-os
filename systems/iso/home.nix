@@ -1,6 +1,6 @@
 { lib, config, inputs, ...}: {
 	imports = [
-		../../modules/home
+	#	../../modules/home
 	];
 
 	home = {
