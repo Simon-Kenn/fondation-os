@@ -6,7 +6,7 @@
 }: {
 	imports = [ 
 		../../modules/nixos
-		inputs.home-manager.nixosModules.home-manager 
+		../../homes/nixos-iso
 	];
 
   networking = {
@@ -19,11 +19,6 @@
 			nixpkgs.enable = true;
 		};
 	};
-
-  nixpkgs = {
-    hostPlatform = lib.mkDefault "x86_64-linux";
-    #config.allowUnfree = true;
-  };
 
   nix = {
     settings.experimental-features = ["nix-command" "flakes"];
@@ -50,7 +45,4 @@
       hybrid-sleep.enable = false;
     };
   };
-
-	home-manager.users.nixos = import ./home.nix;
-  users.extraUsers.root.password = "nixos";
 }
