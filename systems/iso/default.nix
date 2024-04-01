@@ -6,7 +6,7 @@
 }: {
 	imports = [ 
 		../../modules/nixos
-		inputs.home-manager.nixosModules.home-manager 
+		./home.nix
 	];
 
   networking = {
