@@ -10,5 +10,10 @@
 		stateVersion = lib.mkDefault "24.05";
 	};
 
-	modules.home.editors.vim.enable = true;
+	programs.home-manager.enable = true;
+	programs.git.enable = true;
+
+	#modules.home = {
+	#	editors.nvim.enable = true;
+	#};
 }

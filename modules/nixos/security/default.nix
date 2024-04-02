@@ -1,6 +1,5 @@
 {
 	imports = [
-		#./nvim	
-		./vim
+		./sops
 	];
 }

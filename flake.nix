@@ -46,22 +46,18 @@
 		};
   };
 
-  outputs = {
-		self,
-    nixpkgs,
-		home-manager,
-    ...
-  } @inputs: 
+  outputs = { self, nixpkgs, home-manager, ...}@inputs: 
 	let
 		inherit (self) outputs;
-	
 		lib = nixpkgs.lib // home-manager.lib;
-	in {
+	in 
+	{
 		inherit lib;
 
 		overlays = import ./overlays { inherit inputs; };
 
 		nixosConfigurations = {
+
 			iso = lib.nixosSystem {
 				modules = [
 					"${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-gnome.nix"

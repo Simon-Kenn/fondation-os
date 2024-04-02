@@ -2,6 +2,7 @@
 with lib; let  
 	cfg = config.modules.home.editors.vim;
 in {
+
 	options.modules.home.editors.vim = {
 		enable = mkEnableOption "Enable vim";
 	};

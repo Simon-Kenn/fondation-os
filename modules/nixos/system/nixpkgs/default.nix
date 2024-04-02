@@ -3,7 +3,7 @@ with lib; let
 	cfg = config.os.system.nixpkgs;
 in {
 
-	options.os.system.nixpkgs = {
+	options.os.system.nixpkgs = { 
 		enable = mkEnableOption "Wether or not to manage nixkpgs";
 	};
 
