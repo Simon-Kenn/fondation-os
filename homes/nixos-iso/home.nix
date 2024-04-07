@@ -13,7 +13,8 @@
 	programs.home-manager.enable = true;
 	programs.git.enable = true;
 
-	#modules.home = {
-	#	editors.nvim.enable = true;
-	#};
+	modules.home = {
+		editors.vim.enable = true;
+		system.nixpkgs.enable = true;
+	};
 }

@@ -1,4 +1,4 @@
-{ inputs, pkgs, ...}: {
+{ inputs, outputs, pkgs, ...}: {
 	imports = [
 		inputs.home-manager.nixosModules.home-manager 
 	];
@@ -9,4 +9,5 @@
 	};
 
 	home-manager.users.nixos = import ./home.nix;
+	home-manager.extraSpecialArgs = { inherit inputs outputs; };
 }

@@ -17,17 +17,17 @@
 		nvim-cmp = {
 			enable = true;
 
-			snippet.expand = "luasnip";
-    	sources = [
-				{name = "nvim_lsp";}
-				{name = "nvim-lua";}
-				{name = "luasnip";}
-    	  {name = "path";}
-				{name = "neorg";}
-    	  {name = "buffer"; keywordLength = 5;}
-				{name = "cmdline";}
-				{name = "cmp-cmdline-history";}
-    	];
+			#snippet.expand = "luasnip";
+    	#sources = [
+			#	{name = "nvim_lsp";}
+			#	{name = "nvim-lua";}
+			#	{name = "luasnip";}
+    	#  {name = "path";}
+			#	{name = "neorg";}
+    	#  {name = "buffer"; keywordLength = 5;}
+			#	{name = "cmdline";}
+			#	{name = "cmp-cmdline-history";}
+    	#];
     	mapping = {
 				"<C-d>" = "cmp.mapping.scroll_docs(-4)";
 				"<C-f>" = "cmp.mapping.scroll_docs(4)";
