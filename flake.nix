@@ -66,6 +66,18 @@
 				];
 				specialArgs = { inherit inputs outputs; };
 			};
+
+		};
+
+		homeConfigurations = {
+
+			"nixos@iso" = lib.homeManagerConfiguration {
+				modules = [ ./homes/nixos-iso/home.nix ];
+				pkgs = nixpkgs.legacyPackages.x86_64-linux;
+				extraSpecialArgs = { inherit inputs outputs; };
+			};
+
 		};
   };
+	
 }
