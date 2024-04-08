@@ -7,10 +7,10 @@
 }: 
 with lib; 
 let
-	cfg = config.modules.home.editors.nvim;
+	cfg = config.hm.editors.nvim;
 in 
 {
-			options.modules.home.editors.nvim =  {
+			options.hm.editors.nvim =  {
 				enable = mkEnableOption "Enable nvim editor";
 			};
 

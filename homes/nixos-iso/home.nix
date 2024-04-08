@@ -15,6 +15,6 @@
 
 	modules.home = {
 		editors.vim.enable = true;
-		system.nixpkgs.enable = true;
+		system.nix.enable = true;
 	};
 }

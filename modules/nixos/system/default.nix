@@ -1,6 +1,9 @@
 {
 	imports = [
+		./impermanence
+		./boot
 		./locale
-		./nixpkgs
+		./nix
+		./base-packages
 	];
 }
