@@ -1,10 +1,10 @@
 { lib, config, ...}:
 with lib; let 
-	cfg = config.os.services.openssh;
+	cfg = config.os.network.openssh;
 	hasOptinPersistence = config.environment.persistence ? "/persist";
 in {
 
-	options.os.services.openssh = {
+	options.os.network.openssh = {
 		enable = mkEnableOption "Enable systemd boot";
 	};
 

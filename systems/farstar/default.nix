@@ -20,6 +20,7 @@
 
 		network = {
 			network-manager.enable = true;
+			openssh.enable = true;
 		};
 
 		shell.fish.enable = true;
