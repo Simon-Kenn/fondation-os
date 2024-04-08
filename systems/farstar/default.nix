@@ -5,9 +5,10 @@
 	imports = [
 		./hardware.nix
 		./disk.nix
+		../../modules/nixos
 	];
 
-	modules = {
+	os = {
 		system = {
 			ephemeral-btrfs.enable = true;
 			impermanence.enable = true;
