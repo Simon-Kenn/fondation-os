@@ -67,6 +67,11 @@
 				specialArgs = { inherit inputs outputs; };
 			};
 
+			farstar = lib.nixosSystem {
+				system = "x86_64-linux";
+				modules = [ ./systems/farstar ];
+				specialArgs = { inherit inputs outputs; };
+			};
 		};
 
 		homeConfigurations = {
