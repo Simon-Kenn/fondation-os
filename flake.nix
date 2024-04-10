@@ -82,6 +82,11 @@
 				extraSpecialArgs = { inherit inputs outputs; };
 			};
 
+			"leto@farstar" = lib.homeManagerConfiguration {
+				modules = [ ./homes/leto-farstar/home.nix ];
+				pkgs = nixpkgs.legacyPackages.x86_64-linux;
+				extraSpecialArgs = { inherit inputs outputs; };
+			};
 		};
   };
 	
