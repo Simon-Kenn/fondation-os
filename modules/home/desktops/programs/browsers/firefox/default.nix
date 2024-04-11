@@ -11,7 +11,7 @@ in {
 		enable = mkEnableOption "enable firefox browser";
 	};
 
-	config = mkf cfg.enable {
+	config = mkIf cfg.enable {
 
 		home.sessionVariables.BROWSER = "firefox";
 
