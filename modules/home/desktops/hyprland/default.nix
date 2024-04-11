@@ -1,5 +1,5 @@
 {
-	config, lib, ...
+	config, lib, pkgs, ...
 }: 
 with lib; let 
 cfg = config.hm.desktops.hyprland;
