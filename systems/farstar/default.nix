@@ -27,6 +27,11 @@
 		shell.fish.enable = true;
 	};
 
+	xdg.portal = {
+		enable = true;
+		wlr.enable = true;
+	};
+
 	hardware = {
 		opengl = {
 			enable = true;
