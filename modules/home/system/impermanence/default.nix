@@ -13,6 +13,7 @@ in {
 			"/persist/home/leto" = {
 				directories = [
 					"Codes"
+					".config"
 					".ssh"
 					".vim"
 				];
