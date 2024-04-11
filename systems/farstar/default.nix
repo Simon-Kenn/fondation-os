@@ -1,4 +1,4 @@
-{
+{ pkgs, ...}: {
 	networking.hostName = "farstar";
 	system.stateVersion = "24.05";
 
@@ -25,5 +25,16 @@
 		};
 
 		shell.fish.enable = true;
+	};
+
+	hardware = {
+		opengl = {
+			enable = true;
+			extraPackages = with pkgs; [
+				rocmPackages.clr
+				rocmPackages.clr.icd
+			];
+			driSupport = true;
+		};
 	};
 }
