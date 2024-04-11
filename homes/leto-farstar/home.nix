@@ -11,17 +11,24 @@
 	};
 
 	hm = {
+
 		system = {
 			nix.enable = true;
 			impermanence.enable = true;
 		};
+
 		cli = {
 			programs = {
 				gpg.enable = true;
 			};
 		};
+
 		editors = {
 			vim.enable = true;
+		};
+
+		desktops = {
+			hyprland.enable = true;
 		};
 	};
 

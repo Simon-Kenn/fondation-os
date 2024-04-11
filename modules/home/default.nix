@@ -3,5 +3,6 @@
 		./system
 		./cli
 		./editors
+		./desktops
 	];
 }
