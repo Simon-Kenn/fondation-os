@@ -2,7 +2,7 @@
 	config, lib, ...
 }: 
 with lib; let 
-	cfg = hm.desktops.hyprland;
+	cfg = config.hm.desktops.hyprland;
 in {
 
 	imports = [

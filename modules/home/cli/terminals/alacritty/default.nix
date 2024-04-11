@@ -2,7 +2,7 @@
 	config, lib, ...
 }:
 with lib; let 
-	cfg = hm.cli.terminals.alacritty;
+	cfg = config.hm.cli.terminals.alacritty;
 in {
 	
 	options.hm.cli.terminals.alacritty = {
