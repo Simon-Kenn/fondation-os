@@ -18,6 +18,7 @@
 		};
 
 		cli = {
+			terminals.alacritty.enable = true;
 			programs = {
 				gpg.enable = true;
 			};
