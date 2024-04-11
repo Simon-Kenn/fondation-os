@@ -1,6 +1,8 @@
 { pkgs, inputs, outputs, config, ...}:
 {
-	imports = [ inputs.home-manager.nixosModules.home-manager ];
+	imports = [ 
+		inputs.home-manager.nixosModules.home-manager 
+	];
 
 	users.users.leto = {
 		isNormalUser = true;
