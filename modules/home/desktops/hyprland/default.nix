@@ -7,10 +7,11 @@ in {
 
 	imports = [
 		../ui
-			./config.nix
-			./workspaces.nix
-			./keymaps-global.nix
-			./keymaps-app.nix
+		../programs
+		./config.nix
+		./workspaces.nix
+		./keymaps-global.nix
+		./keymaps-app.nix
 	];
 
 	options.hm.desktops.hyprland = {
