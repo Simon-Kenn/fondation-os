@@ -16,7 +16,7 @@
 	os = {
 		system = {
 			locale.enable = true;
-			nixpkgs.enable = true;
+			nix.enable = true;
 		};
 	};
 

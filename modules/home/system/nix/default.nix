@@ -1,9 +1,9 @@
 { lib, config, outputs, ...}: 
 with lib; let 
-	cfg = config.hm.system.nixpkgs;
+	cfg = config.hm.system.nix;
 in {
 
-	options.hm.system.nixpkgs = {
+	options.hm.system.nix = {
 		enable = mkEnableOption "Wether or not to manage nixkpgs";
 	};
 
