@@ -1,7 +1,7 @@
 { lib, ...}:
 {
 	imports = [
-		../../home-manager/default.nix
+		../../modules/home
 	];
 
 	home = {
