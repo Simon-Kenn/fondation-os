@@ -6,6 +6,7 @@
 		./hardware.nix
 		./disk.nix
 		../../modules/nixos
+		../../homes/leto-farstar
 	];
 
 	os = {
@@ -20,7 +21,7 @@
 
 		network = {
 			network-manager.enable = true;
-			openssh.enable = true;
+			#openssh.enable = true;
 		};
 
 		shell.fish.enable = true;
