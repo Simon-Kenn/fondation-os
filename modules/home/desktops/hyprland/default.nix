@@ -6,6 +6,7 @@ with lib; let
 in {
 
 	imports = [
+		./ui
 		./config.nix
 		./workspaces.nix
 		./keymaps-global.nix
@@ -20,5 +21,10 @@ in {
 
 		wayland.windowManager.hyprland.enable = true;
 
+		desktops = {
+			ui = {
+				colors.enable = true;
+			};
+		};
 	};
 }

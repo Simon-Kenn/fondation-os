@@ -2,6 +2,7 @@
 	config, lib, ...
 }:
 with lib; let 
+	inherit (config.colorscheme) colors;
 	cfg = config.hm.cli.terminals.alacritty;
 in {
 	
