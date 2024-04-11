@@ -1,5 +1,5 @@
 {config, ...}: let
-  inherit (config.colorscheme) colors;
+  #inherit (config.colorscheme) colors;
 in {
   wayland.windowManager.hyprland.settings = {
     input = {
@@ -16,8 +16,8 @@ in {
       gaps_out = 5;
 
       border_size = 2;
-      "col.active_border" = "0xFF${colors.base0D}";
-      "col.inactive_border" = "0xFF${colors.base02}";
+      #"col.active_border" = "0xFF${colors.base0D}";
+      #"col.inactive_border" = "0xFF${colors.base02}";
 
       resize_on_border = true;
       hover_icon_on_border = true;
