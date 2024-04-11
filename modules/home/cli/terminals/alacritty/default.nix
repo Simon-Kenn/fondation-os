@@ -54,7 +54,7 @@ in {
 
 				font = {
 					normal = {
-						family = config.fontProfiles.monospace.family;
+						family = config.desktops.ui.fontProfiles.monospace.family;
 						style = "Regular";
 					};
 					#bold = {
