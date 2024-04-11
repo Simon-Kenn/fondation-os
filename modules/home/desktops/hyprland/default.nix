@@ -6,7 +6,7 @@ with lib; let
 in {
 
 	imports = [
-		./ui
+		../ui
 		./config.nix
 		./workspaces.nix
 		./keymaps-global.nix
