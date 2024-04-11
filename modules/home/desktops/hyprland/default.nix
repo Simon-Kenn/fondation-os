@@ -24,6 +24,7 @@ in {
 		desktops = {
 			ui = {
 				colors.enable = true;
+				fontProfiles.enable = true;
 			};
 		};
 	};
