@@ -5,7 +5,7 @@
 	...
 }:
 with lib; let 
-	cfg = config.hm.desktops.programs.browsers.firefox;
+	cfg = config.desktops.programs.browsers.firefox;
 in {
 	options.desktops.programs.browsers.firefox = {
 		enable = mkEnableOption "enable firefox browser";
