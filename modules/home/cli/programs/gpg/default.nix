@@ -13,7 +13,7 @@ in{
 
 		services.gpg-agent = {
 			enable = true;
-			pinentryFlavor = "curses";
+			pinentryFlavor = pkgs.pinentry-gnome3;
 		};
 
 		programs = {
