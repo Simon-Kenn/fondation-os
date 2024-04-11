@@ -40,7 +40,7 @@ in {
 			};
 
 			programs = {
-				browsers.firefox = enable;
+				browsers.firefox.enable = true;
 			};
 		};
 	};
