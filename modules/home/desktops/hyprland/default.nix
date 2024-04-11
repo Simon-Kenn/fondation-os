@@ -22,6 +22,7 @@ in {
 		wayland.windowManager.hyprland.enable = true;
 
 		desktops = {
+
 			ui = {
 				colors.enable = true;
 				fontProfiles = { 
@@ -35,6 +36,10 @@ in {
 						package = pkgs.fira;
 					};
 				};
+			};
+
+			programs = {
+				browsers.firefox = enable;
 			};
 		};
 	};
