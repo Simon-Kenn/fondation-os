@@ -8,6 +8,7 @@ in {
 	imports = [
 		../ui
 		../programs
+		../wayland
 		./config.nix
 		./workspaces.nix
 		./keymaps-global.nix
@@ -41,6 +42,10 @@ in {
 
 			programs = {
 				browsers.firefox.enable = true;
+			};
+
+			wayland = {
+				wofi.enable = true;
 			};
 		};
 	};
