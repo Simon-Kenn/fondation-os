@@ -9,7 +9,7 @@ with lib; let
 in {
   options.desktops.wayland.wofi = {
     enable = mkEnableOption "Enable rofi app manager";
-    package = mkPackageOpt pkgs.rofi-wayland "Package to use for rofi";
+    #package = mkPackageOpt pkgs.rofi-wayland "Package to use for rofi";
   };
 
   config = mkIf cfg.enable {
