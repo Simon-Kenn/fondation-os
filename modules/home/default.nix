@@ -4,6 +4,5 @@
 		./cli
 		./editors
 		./desktops
-		./browsers
 	];
 }
