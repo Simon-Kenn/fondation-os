@@ -19,11 +19,14 @@
 
 		cli = {
 			terminals.alacritty.enable = true;
+
 			programs = {
 				gpg.enable = true;
 				ripgrep.enable = true;
 				eza.enable = true;
+				bat.enable = true;
 			};
+
 		};
 
 		editors = {

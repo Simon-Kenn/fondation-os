@@ -3,5 +3,6 @@
 		./gpg
 		./ripgrep
 		./eza
+		./bat
 	];
 }
