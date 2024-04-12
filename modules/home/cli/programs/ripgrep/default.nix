@@ -2,7 +2,7 @@
 with lib; let 
 	cfg = config.hm.cli.programs.ripgrep;
 in {
-	options.hm.cli.programs.rigprep = {
+	options.hm.cli.programs.ripgrep = {
 		enable = mkEnableOption "Enable ripgrep";
 	};
 
