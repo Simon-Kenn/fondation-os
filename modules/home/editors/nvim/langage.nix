@@ -13,6 +13,7 @@
 				jsonls.enable = true;
 				rust-analyzer = {
 					enable = true;
+					installRustc = true;
 					installCargo = true;
 				};
 				texlab.enable = true;
