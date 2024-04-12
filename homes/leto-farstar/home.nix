@@ -26,6 +26,7 @@
 				eza.enable = true;
 				bat.enable = true;
 				direnv.enable = true;
+				fzf.enable = true;
 			};
 
 		};

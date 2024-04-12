@@ -5,5 +5,6 @@
 		./eza
 		./bat
 		./direnv
+		./fzf
 	];
 }
