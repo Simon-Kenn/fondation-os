@@ -25,6 +25,7 @@
 				ripgrep.enable = true;
 				eza.enable = true;
 				bat.enable = true;
+				direnv.enable = true;
 			};
 
 		};

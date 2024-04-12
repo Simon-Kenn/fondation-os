@@ -4,5 +4,6 @@
 		./ripgrep
 		./eza
 		./bat
+		./direnv
 	];
 }
