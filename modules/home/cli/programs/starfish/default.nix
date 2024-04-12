@@ -1,13 +1,13 @@
 { config, lib, ...}:
 with lib; let 
-	cfg = config.hm.cli.programs.starfish;
+	cfg = config.hm.cli.programs.starship;
 in {
-	options.hm.cli.programs.starfish = {
-		enable = mkEnableOption "Enable starfish";
+	options.hm.cli.programs.starship = {
+		enable = mkEnableOption "Enable starship";
 	};
 
 	config = mkIf cfg.enable {
-		programs.starfish = {
+		programs.starship = {
 			enable = true;
 			enableFishIntegration = true;
 		};
