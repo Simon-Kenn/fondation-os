@@ -2,7 +2,7 @@
 	config, lib, ...
 }:
 with lib; let 
-	inherit (config.colorscheme) colors;
+	inherit (config.colorScheme) palette;
 	cfg = config.hm.cli.terminals.alacritty;
 in {
 	
@@ -20,31 +20,10 @@ in {
 			settings = {
 
 				window = {
-					#dimensions = {
-					#	columns = 0;
-					#	lines = 0;
-					#};
-
-					#position = {
-					#	x = 0;
-					#	y = 0;
-					#};
-
 					padding = {
 						x = 2;
 						y = 2;
 					};
-
-					#decoration = "none";
-					#opacity =  0.90;
-					#startup_mode = "Windowed";
-					#title = "Alacritty";
-					#dynamic_title = true;
-					#class = {
-					#	instance = "Alacritty";
-					#	general = "Alacritty";
-					#};
-					#decoration_theme_variant = "none";
 				};
 
 				scrolling = {
@@ -57,105 +36,84 @@ in {
 						family = config.desktops.ui.fontProfiles.monospace.family;
 						style = "Regular";
 					};
-					#bold = {
-					#	family = "";
-					#	style = "Bold";
-					#};
-					#italic = {
-					#	family = "";
-					#	style = "Italic";
-					#};
-					#bold_italic = {
-					#	family = "";
-					#	style = "Bold Italic";
-					#};
 					size = 11.0;
-					#offset = {
-					#	x = 0;
-					#	y = 0;
-					#};
-					#glyph_offset = {
-					#	x = 0;
-					#	y = 0;
-					#};
-
 				};
 
 				colors = {
 					primary = {
-						background = "#${colors.base00}";
-						foreground = "#${colors.base05}";
-						dim_foreground = "#${colors.base05}";
-						bright_foreground = "#${colors.base05}";
+						background = "#${palette.base00}";
+						foreground = "#${palette.base05}";
+						dim_foreground = "#${palette.base05}";
+						bright_foreground = "#${palette.base05}";
 					};
 
 					cursor = {
-						text = "#${colors.base00}";
-						cursor = "#${colors.base06}";
+						text = "#${palette.base00}";
+						cursor = "#${palette.base06}";
 					};
 
 					vi_mode_cursor = {
-						text = "#${colors.base00}";
-						cursor = "#${colors.base07}";
+						text = "#${palette.base00}";
+						cursor = "#${palette.base07}";
 					};
 
 					search = {
 						matches = {
-							foreground = "#${colors.base00}";
-							background = "#${colors.base01}"; # TODO: Change
+							foreground = "#${palette.base00}";
+							background = "#${palette.base01}"; # TODO: Change
 						};
 						focused_match = {
-							foreground = "#${colors.base00}";
-							background = "#${colors.base0B}";
+							foreground = "#${palette.base00}";
+							background = "#${palette.base0B}";
 						};
 					};
 
 					hints = {
 						start = {
-							foreground = "#${colors.base00}";
-							background = "#${colors.base0A}";
+							foreground = "#${palette.base00}";
+							background = "#${palette.base0A}";
 						};
 						end = {
-							foreground = "#${colors.base00}";
-							background = "#${colors.base06}";
+							foreground = "#${palette.base00}";
+							background = "#${palette.base06}";
 						};
 					};
 
 					footer_bar= {
-						foreground = "#${colors.base00}";
-						background = "#${colors.base01}";
+						foreground = "#${palette.base00}";
+						background = "#${palette.base01}";
 					};
 					normal = {
-						black = "#${colors.base03}";
-						red = "#${colors.base08}";
-						green = "#${colors.base0B}";
-						yellow = "#${colors.base0A}";
-						blue = "#${colors.base0D}";
-						magenta = "#${colors.base06}";
-						cyan = "#${colors.base0C}";
-						white = "#${colors.base05}";
+						black = "#${palette.base03}";
+						red = "#${palette.base08}";
+						green = "#${palette.base0B}";
+						yellow = "#${palette.base0A}";
+						blue = "#${palette.base0D}";
+						magenta = "#${palette.base06}";
+						cyan = "#${palette.base0C}";
+						white = "#${palette.base05}";
 					};
 
 					bright = {
-						black = "#${colors.base04}";
-						red = "#${colors.base08}";
-						green = "#${colors.base0B}";
-						yellow = "#${colors.base0A}";
-						blue = "#${colors.base0D}";
-						magenta = "#${colors.base06}";
-						cyan = "#${colors.base0C}";
-						white = "#${colors.base05}";
+						black = "#${palette.base04}";
+						red = "#${palette.base08}";
+						green = "#${palette.base0B}";
+						yellow = "#${palette.base0A}";
+						blue = "#${palette.base0D}";
+						magenta = "#${palette.base06}";
+						cyan = "#${palette.base0C}";
+						white = "#${palette.base05}";
 					};
 
 					dim = {
-						black = "#${colors.base03}";
-						red = "#${colors.base08}";
-						green = "#${colors.base0B}";
-						yellow = "#${colors.base0A}";
-						blue = "#${colors.base0D}";
-						magenta = "#${colors.base06}";
-						cyan = "#${colors.base0C}";
-						white = "#${colors.base05}";
+						black = "#${palette.base03}";
+						red = "#${palette.base08}";
+						green = "#${palette.base0B}";
+						yellow = "#${palette.base0A}";
+						blue = "#${palette.base0D}";
+						magenta = "#${palette.base06}";
+						cyan = "#${palette.base0C}";
+						white = "#${palette.base05}";
 					};
 				};
 

@@ -27,10 +27,10 @@ in {
     };
 
     style = /* css */ ''
-      @define-color txt #${config.colorscheme.colors.base05};
-      @define-color bg #${config.colorscheme.colors.base00};
-      @define-color bg1 #${config.colorscheme.colors.base03};
-      @define-color accent #${config.colorscheme.colors.base0D};
+      @define-color txt #${config.colorscheme.palette.base05};
+      @define-color bg #${config.colorscheme.palette.base00};
+      @define-color bg1 #${config.colorscheme.palette.base03};
+      @define-color accent #${config.colorscheme.palette.base0D};
 
       @keyframes slideIn {
          0% {
