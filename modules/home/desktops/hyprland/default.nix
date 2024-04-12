@@ -46,6 +46,7 @@ in {
 
 			wayland = {
 				wofi.enable = true;
+				waybar.enable = true;
 			};
 		};
 	};

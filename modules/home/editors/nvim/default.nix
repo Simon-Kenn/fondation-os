@@ -32,7 +32,6 @@ in
 						viAlias = true;
 						vimAlias = true;
 						defaultEditor = true;
-						enable = true;
 					};
 			
 					programs.nixvim = {

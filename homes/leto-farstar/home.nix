@@ -21,11 +21,12 @@
 			terminals.alacritty.enable = true;
 			programs = {
 				gpg.enable = true;
+				ripgrep.enable = true;
 			};
 		};
 
 		editors = {
-			vim.enable = true;
+			nvim.enable = true;
 		};
 
 		desktops = {
