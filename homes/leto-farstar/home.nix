@@ -22,6 +22,7 @@
 			programs = {
 				gpg.enable = true;
 				ripgrep.enable = true;
+				eza.enable = true;
 			};
 		};
 
