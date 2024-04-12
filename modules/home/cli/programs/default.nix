@@ -6,5 +6,7 @@
 		./bat
 		./direnv
 		./fzf
+		./git
+		./starfish
 	];
 }

@@ -27,6 +27,7 @@
 				bat.enable = true;
 				direnv.enable = true;
 				fzf.enable = true;
+				starship.enable = true;
 			};
 
 		};
@@ -41,7 +42,6 @@
 	};
 
 	programs.home-manager.enable = true;
-	programs.git.enable = true;
 
 	systemd.user.startServices = "sd-switch";
 }
