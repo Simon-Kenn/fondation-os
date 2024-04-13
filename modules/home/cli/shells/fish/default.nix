@@ -38,8 +38,28 @@ in {
         set -g fish_pager_color_prefix f4b8e4
         set -g fish_pager_color_completion ${palette.base05}
         set -g fish_pager_color_description 737994
-
 			'';
+
+			shellAbbrs = {
+				vim = "nvim";
+				n = "nvim";
+				cd = "z";
+				cdi = "zi";
+				grep = "rg";
+				cat = "bat";
+				ls = "eza";
+				sl = "eza";
+				l = "eza --group --header --group-directories-first --long --git --all --binary --all --icons";
+				tree = "eza  --tree";
+
+				nd = "nix develop";
+				nfu = "nix flake update";
+				hms = "home-manager switch --flake ~/Codes/fondation#leto@farstar";
+				hmr = "home-manager generations | fzf --tac --no-sort | awk '{print $7} | xargs -I{} bash{}/activate";
+				nrs = "sudo nixos-rebuild switch --flake ~/Codes/fondation#farstar";
+			};
 		};
+
+
 	};
 }

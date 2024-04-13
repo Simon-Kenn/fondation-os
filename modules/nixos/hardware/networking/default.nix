@@ -12,7 +12,7 @@ in {
 
   config = mkIf cfg.enable {
     networking.firewall = {
-      enable = true;
+      #enable = true;
     };
 
     networking.networkmanager.enable = true;
