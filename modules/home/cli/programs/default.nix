@@ -8,5 +8,6 @@
 		./fzf
 		./git
 		./starfish
+		./zoxide
 	];
 }
