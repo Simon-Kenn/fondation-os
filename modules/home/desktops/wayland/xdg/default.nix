@@ -5,9 +5,9 @@
 	...
 }:
 with lib; let
-	cfg = config.desktops.wayland.xdg;
+	cfg = config.hm.desktops.wayland.xdg;
 in {
-	options.desktops.wayland.xdg = {
+	options.hm.desktops.wayland.xdg = {
 		enable = mkEnableOption "Enable xdg";
 	};
 

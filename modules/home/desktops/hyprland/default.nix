@@ -6,9 +6,6 @@ cfg = config.hm.desktops.hyprland;
 in {
 
 	imports = [
-		../ui
-		../programs
-		../wayland
 		./config.nix
 		./workspaces.nix
 		./keymaps-global.nix
@@ -20,35 +17,6 @@ in {
 	};
 
 	config = mkIf cfg.enable {
-
 		wayland.windowManager.hyprland.enable = true;
-
-		desktops = {
-
-			ui = {
-				colors.enable = true;
-				fontProfiles = { 
-					enable = true;
-					monospace = {
-						family = "FiraCode Nerd Font";
-						package = pkgs.nerdfonts.override {fonts = ["FiraCode"];};
-					};
-					regular = {
-						family = "Fira Sans";
-						package = pkgs.fira;
-					};
-				};
-			};
-
-			programs = {
-				browsers.firefox.enable = true;
-			};
-
-			wayland = {
-				wofi.enable = true;
-				waybar.enable = true;
-				xdg.enable = true;
-			};
-		};
 	};
 }

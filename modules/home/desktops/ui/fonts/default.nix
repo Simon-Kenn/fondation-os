@@ -15,10 +15,10 @@ let
       example = "pkgs.fira-code";
     };
   };
-  cfg = config.desktops.ui.fontProfiles;
+  cfg = config.hm.desktops.ui.fontProfiles;
 in
 {
-  options.desktops.ui.fontProfiles = {
+  options.hm.desktops.ui.fontProfiles = {
     enable = lib.mkEnableOption "Whether to enable font profiles";
     monospace = mkFontOption "monospace";
     regular = mkFontOption "regular";

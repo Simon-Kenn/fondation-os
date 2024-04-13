@@ -33,7 +33,7 @@ in {
 
 				font = {
 					normal = {
-						family = config.desktops.ui.fontProfiles.monospace.family;
+						family = config.hm.desktops.ui.fontProfiles.monospace.family;
 						style = "Regular";
 					};
 					size = 11.0;

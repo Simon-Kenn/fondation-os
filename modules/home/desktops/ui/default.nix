@@ -1,6 +1,7 @@
 {
 	imports = [
-		./colors.nix	
-		./fonts.nix
+		./colors
+		./fonts
+		./gtk
 	];
 }

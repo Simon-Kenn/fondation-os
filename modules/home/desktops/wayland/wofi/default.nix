@@ -4,9 +4,9 @@
   ...
 }:
 with lib; let
-  cfg = config.desktops.wayland.wofi;
+  cfg = config.hm.desktops.wayland.wofi;
 in {
-  options.desktops.wayland.wofi = {
+  options.hm.desktops.wayland.wofi = {
     enable = mkEnableOption "Enable rofi app manager";
     #package = mkPackageOpt pkgs.rofi-wayland "Package to use for rofi";
   };

@@ -5,14 +5,14 @@
 	...
 }: 
 with lib; let 
-	cfg = config.desktops.ui.colors;
+	cfg = config.hm.desktops.ui.colors;
 in {
 	
 	imports = [
 		inputs.nix-colors.homeManagerModule
 	];
 
-	options.desktops.ui.colors = {
+	options.hm.desktops.ui.colors = {
 		enable = mkEnableOption "Enable nix colors";
 	};
 

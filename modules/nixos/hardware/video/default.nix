@@ -22,6 +22,8 @@ in {
 				driSupport32Bit = true;
 			};
 		};
+
+		programs.dconf.enable = true;
   };
 }
 
