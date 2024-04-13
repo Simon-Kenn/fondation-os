@@ -19,6 +19,10 @@
 			base-packages.enable = true;
 		};
 
+		hardware = {
+			audio.enable = true;
+		};
+
 		network = {
 			network-manager.enable = true;
 			#openssh.enable = true;

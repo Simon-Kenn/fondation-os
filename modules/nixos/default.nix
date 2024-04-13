@@ -4,5 +4,6 @@
 		./security
 		./network
 		./shell
+		./hardware
 	];
 }
