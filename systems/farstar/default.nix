@@ -21,24 +21,15 @@
 
 		hardware = {
 			audio.enable = true;
+			bluetooth.enable = true;
+			networking.enable = true;
+			video.enable = true;
 		};
 
 		network = {
-			network-manager.enable = true;
 			#openssh.enable = true;
 		};
 
 		shell.fish.enable = true;
-	};
-
-	hardware = {
-		opengl = {
-			enable = true;
-			extraPackages = with pkgs; [
-				rocmPackages.clr
-				rocmPackages.clr.icd
-			];
-			driSupport = true;
-		};
 	};
 }

@@ -25,7 +25,7 @@ in {
 		programs.noisetorch.enable = true;
 
 		environment.systemPackages = with pkgs; [
-			headset-charg-indicator
+			headset-charge-indicator
 			pulsemixer
 		];
 
