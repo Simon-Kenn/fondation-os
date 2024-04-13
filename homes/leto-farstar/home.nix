@@ -18,6 +18,7 @@
 		};
 
 		cli = {
+
 			terminals.alacritty.enable = true;
 			shells.fish.enable = true;
 
@@ -30,6 +31,8 @@
 				fzf.enable = true;
 				starship.enable = true;
 				zoxide.enable = true;
+				yazi.enable = true;
+				zellij.enable = true;
 			};
 
 		};

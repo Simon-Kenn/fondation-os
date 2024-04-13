@@ -8,6 +8,8 @@
 		./fzf
 		./git
 		./starfish
+		./yazi
 		./zoxide
+		./zellij
 	];
 }
