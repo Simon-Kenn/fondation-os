@@ -3,5 +3,6 @@
 		./audio
 		./bluetooth
 		./networking
+		./video
 	];
 }
