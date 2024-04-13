@@ -47,6 +47,7 @@ in {
 			wayland = {
 				wofi.enable = true;
 				waybar.enable = true;
+				xdg.enable = true;
 			};
 		};
 	};

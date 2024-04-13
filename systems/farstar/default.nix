@@ -27,14 +27,6 @@
 		shell.fish.enable = true;
 	};
 
-	xdg.portal = {
-		enable = true;
-		wlr.enable = true;
-		extraPortals = [
-			pkgs.xdg-desktop-portal-gtk
-		];
-	};
-
 	hardware = {
 		opengl = {
 			enable = true;
