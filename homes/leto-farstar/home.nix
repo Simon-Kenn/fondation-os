@@ -19,6 +19,7 @@
 
 		cli = {
 			terminals.alacritty.enable = true;
+			shells.fish.enable = true;
 
 			programs = {
 				gpg.enable = true;

@@ -1,6 +1,7 @@
 {
 	config,
 	lib,
+	pkgs,
 	...
 }:
 with lib; let
@@ -12,9 +13,17 @@ in {
 
 	config = mkIf cfg.enable {
 		xdg = {
-			autostart.enable = true;
+			enable = true;
+			#autostart.enable = true;
 			portal = {
 				enable = true;
+				config = {
+					common = {
+						default = [
+							"gtk"
+						];
+					};
+				};
 				extraPortals = with pkgs; [
 					xdg-desktop-portal-hyprland
 				];
