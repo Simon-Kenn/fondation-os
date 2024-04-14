@@ -1,4 +1,4 @@
-{config, ...}: let
+{config, pkgs, ...}: let
   inherit (config.colorScheme) palette;
 in {
   wayland.windowManager.hyprland.settings = {
@@ -11,7 +11,12 @@ in {
       sensitivity = 0;
     };
 
+		exec-once = [
+			"${pkgs.waybar}/bin/waybar"
+			"${pkgs.swaynotificationcenter}/bin/swaync"
+    ];
     general = {
+			
       gaps_in = 5;
       gaps_out = 5;
 

@@ -19,6 +19,12 @@
   	 	number = true;
   	 	relativenumber = true;
 
+			splitbellow = true;
+			splitright = true;
+
+			wrap = true;
+			clipboard = "unamedplus";
+
   	 	foldmethod = "expr";
 			foldexpr = "nvim_treesitter#foldexpr()";
   	 	foldenable = false;
@@ -27,6 +33,7 @@
   	 	tabstop = 2;
   	 	shiftwidth = 2;
   	 	softtabstop = 2;
+			expandtab = true;
   	 	smarttab = true;
   	 	autoindent = true;
   	 	smartindent = true;
@@ -40,7 +47,7 @@
 			hlsearch = false;
 			incsearch = true;
 
-			scrolloff = 8;
+			scrolloff = 999;
 			colorcolumn = "120";
   	};
 	};

@@ -3,5 +3,6 @@
 		./colors
 		./fonts
 		./gtk
+		./qt
 	];
 }

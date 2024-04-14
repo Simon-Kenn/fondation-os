@@ -48,11 +48,14 @@
 				wofi.enable = true;
 				waybar.enable = true;
 				xdg.enable = true;
+				hyprpaper.enable = true;
+				swaync.enable = true;
 			};
 
 			ui = {
 				gtk.enable = true;
 				colors.enable = true;
+				qt.enable = true;
 				fontProfiles = { 
 
 					enable = true;
