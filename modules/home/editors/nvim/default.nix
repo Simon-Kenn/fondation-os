@@ -24,6 +24,7 @@ in
 		./neorg.nix
 		./completion.nix
 		./langage.nix
+    ./treesitter.nix
 	];
 	
 	config = mkIf cfg.enable {

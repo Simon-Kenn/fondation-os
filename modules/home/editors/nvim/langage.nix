@@ -36,18 +36,5 @@
 		lsp-format.enable = true;
 		lspkind.enable = true;
 		nvim-lightbulb.enable = true;
-
-		treesitter = {
-			enable = true;
-			nixGrammars = true;
-    	ensureInstalled = "all";
-			nixvimInjections = true;
-			indent = true;
-			folding = true;
-		};
-
-		rainbow-delimiters.enable = true;
-		ts-autotag.enable = true;
-		ts-context-commentstring.enable = true;
 	};
 }

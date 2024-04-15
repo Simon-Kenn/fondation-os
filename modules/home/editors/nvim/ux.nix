@@ -1,7 +1,12 @@
 {
 	programs.nixvim.plugins = {
 
-		telescope.enable = true;
+		telescope = {
+      enable = true;
+      extensions.fzf-native.enable = true;
+      extensions.undo.enable = true;
+    };
+
 		which-key.enable = true;
 		undotree.enable = true;
 		comment.enable = true;

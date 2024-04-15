@@ -3,15 +3,15 @@
 		colorschemes.catppuccin = {
 			enable = true;
     	flavour = "mocha";
-			#integrations = {
-			#	cmp = true;
-			#	treesitter = true;
-			#	telescope.enable = true;
-			#	which_key = true;
-			#	notify = true;
-			#	neotree = true;
-			#	native_lsp.enabled = true;
-			#};
+			integrations = {
+				cmp = true;
+				treesitter = true;
+				telescope.enabled = true;
+			  which_key = true;
+				notify = true;
+				neotree = true;
+				native_lsp.enabled = true;
+			};
 		};
 
 		plugins = {
