@@ -13,8 +13,10 @@
 	hm = {
 
 		system = {
+
 			nix.enable = true;
 			impermanence.enable = true;
+
 		};
 
 		cli = {
@@ -23,6 +25,7 @@
 			shells.fish.enable = true;
 
 			programs = {
+
 				gpg.enable = true;
 				ripgrep.enable = true;
 				eza.enable = true;
@@ -33,6 +36,7 @@
 				zoxide.enable = true;
 				yazi.enable = true;
 				zellij.enable = true;
+
 			};
 
 		};
