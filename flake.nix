@@ -60,11 +60,27 @@
 	let
 		inherit (self) outputs;
 		lib = nixpkgs.lib // home-manager.lib;
+    systems = [
+      "x86_64linux"
+      "aarch64-linux"
+    ];
+    forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
+    pkgsFor = lib.genAttrs systems (
+      system:
+        import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        }
+    );
 	in 
 	{
 		inherit lib;
 
 		overlays = import ./overlays { inherit inputs; };
+
+    pakages = forEachSystem (pkgs: import ./shell.nix {inherit pkgs; });
+    devShells = forEachSystem (pkgs: import ./shell.nix { inherit pkgs; });
+    formatter = forEachSystem (pkgs: pkgs.alejandra);
 
 		nixosConfigurations = {
 
@@ -94,7 +110,7 @@
 
 			"leto@farstar" = lib.homeManagerConfiguration {
 				modules = [ ./homes/leto-farstar/home.nix ];
-				pkgs = nixpkgs.legacyPackages.x86_64-linux;
+				pkgs = pkgsFor.x86_64-linux;
 				extraSpecialArgs = { inherit inputs outputs; };
 			};
 		};
