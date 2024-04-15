@@ -22,7 +22,7 @@ in
 		./ui.nix
 		./ux.nix
 		./neorg.nix
-		#./completion.nix
+		./completion.nix
 		./langage.nix
 	];
 	
