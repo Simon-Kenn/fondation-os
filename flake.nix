@@ -60,8 +60,8 @@
 	let
 		inherit (self) outputs;
 		lib = nixpkgs.lib // home-manager.lib;
-    systems = [
-      "x86_64linux"
+        systems = [
+      "x86_64-linux"
       "aarch64-linux"
     ];
     forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
