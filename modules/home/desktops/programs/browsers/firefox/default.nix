@@ -74,7 +74,7 @@ in {
   	  "x-scheme-handler/https" = [ "firefox.desktop" ];
   	};
 
-		home.persistence."/persist".directories = [
+		home.persistence."/persist/home/leto".directories = [
 			".mozzila"	
 		];
 	};

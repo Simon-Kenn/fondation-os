@@ -19,11 +19,11 @@
   	 	number = true;
   	 	relativenumber = true;
 
-			splitbellow = true;
+			splitbelow = true;
 			splitright = true;
 
 			wrap = true;
-			clipboard = "unamedplus";
+			clipboard = "unnamedplus";
 
   	 	foldmethod = "expr";
 			foldexpr = "nvim_treesitter#foldexpr()";
