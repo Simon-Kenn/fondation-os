@@ -40,7 +40,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-
 		firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -50,6 +49,11 @@
 			url = "github:Mic92/sops-nix";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+    neorg-templates = {
+      url = "github:pysan3/neorg-templates";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ...}@inputs: 

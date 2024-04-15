@@ -607,6 +607,22 @@
         "type": "github"
       }
     },
+    "neorg-templates": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1707616388,
+        "narHash": "sha256-nZOAxXSHTUDBpUBS/Esq5HHwEaTB01dI7x5CQFB3pcw=",
+        "owner": "pysan3",
+        "repo": "neorg-templates",
+        "rev": "2808ec9796e0ba89377e1eeb73bd25af3d10ef7f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pysan3",
+        "repo": "neorg-templates",
+        "type": "github"
+      }
+    },
     "neovim-flake": {
       "inputs": {
         "flake-utils": "flake-utils_5",
@@ -924,6 +940,7 @@
         "hyprwm-contrib": "hyprwm-contrib",
         "impermanence": "impermanence",
         "neorg-overlay": "neorg-overlay",
+        "neorg-templates": "neorg-templates",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nix-colors": "nix-colors",
         "nixpkgs": "nixpkgs_6",

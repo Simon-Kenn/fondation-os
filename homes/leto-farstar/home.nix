@@ -49,6 +49,7 @@
 			hyprland.enable = true;
 
 			wayland = {
+        kanshi.enable = true;
 				wofi.enable = true;
 				waybar.enable = true;
 				xdg.enable = true;

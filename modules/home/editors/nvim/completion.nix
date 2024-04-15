@@ -49,17 +49,17 @@
     	      end
     	    '';
     	  };
-				"<S-Tab>" = {
-    	    action = ''
-    	      function(fallback)
-							if cmp.visible() then
-      				  cmp.select_prev_item()
-      				else
-      				  fallback()
-      				end
-    	      end
-    	    '';
-    	  };
+				#"<S-Tab>" = {
+    	  #  action = /*lua */ ''
+    	  #    function(fallback)
+				#			if cmp.visible() then
+      	#			  cmp.select_prev_item()
+      	#			else
+      	#			  fallback()
+      	#			end
+    	  #    end
+    	  #  '';
+    	  #};
     	};
 		};
 	};

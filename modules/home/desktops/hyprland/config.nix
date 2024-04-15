@@ -14,6 +14,7 @@ in {
 		exec-once = [
 			"${pkgs.waybar}/bin/waybar"
 			"${pkgs.swaynotificationcenter}/bin/swaync"
+      "${pkgs.kanshi}/bin/kanshi"
     ];
     general = {
 			

@@ -26,5 +26,15 @@ in {
       adwsteamgtk
       steam
     ];
+
+    home.persistence."/persist/home/leto" = {
+      allowOther = true;
+      directories = [
+      {
+        directory = ".local/share/Steam";
+        method = "symlink";
+      }
+      ];
+    };
   };
 }

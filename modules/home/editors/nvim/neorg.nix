@@ -1,49 +1,44 @@
- {pkgs, ...}:{ 
-	programs.nixvim.plugins = {
-		neorg = {
-      enable = true;
-			lazyLoading = false;
+{
+  pkgs,
+  inputs,
+  ...
+}: let
+  neorg-templates = pkgs.vimUtils.buildVimPlugin {
+    version = "latest";
+    pname = "neorg-templates";
+    src = inputs.neorg-templates;
+  };
+in {
+  programs.nixvim = {
+    extraPlugins = [
+      neorg-templates
+    ];
 
-      modules = {
-        "core.defaults" = {__empty = null;};
-				"core.esupports.metagen" = {
-					config = {
-						type = "auto";
-					};
-				};
-				"core.dirman" = {
-          config = {
+    plugins = {
+      neorg = {
+        enable = true;
+        lazyLoading = true;
+        modules = {
+          "core.defaults".__empty = null;
+          "core.concealer".__empty = null;
+          "core.summary".__empty = null;
+          "core.completion".config.engine = "nvim-cmp";
+          "core.dirman".config = {
             workspaces = {
-							notes = "~/Notes";
-							home = "~";
-							org = "~/Org";
+              notes = "~/Notes";
             };
-					index = "index.norg";
             default_workspace = "notes";
           };
+          "core.integrations.telescope".__empty = null;
+          "external.templates".templates_dir = "~/Notes/templates";
         };
+      };
 
-				"core.journal" = {
-					config = {
-						journal_folder = "Journal";
-						strategy = "nested";
-						workspace = "notes";
-					};
-				};
-        "core.ui.calendar" = {__empty = null;};
-
-				"core.completion" = {
-          config = {
-            engine = "nvim-cmp";
-						name = "[Norg]";
-          };
-        };
-
-        "core.concealer" = {__empty = null;};
-        "core.summary" = {__empty = null;};
-
-        "core.integrations.telescope" = {__empty = null;};
-				"core.integrations.nvim-cmp" = {__empty = null;};
+      treesitter = {
+        grammarPackages = with pkgs.tree-sitter-grammars; [
+          tree-sitter-norg
+          tree-sitter-norg-meta
+        ];
       };
     };
   };
