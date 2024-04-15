@@ -88,7 +88,7 @@
 				modules = [
 					"${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-gnome.nix"
 					"${nixpkgs}/nixos/modules/installer/cd-dvd/channel.nix"
-					./systems/iso	
+					./hosts/iso	
 				];
 				specialArgs = { inherit inputs outputs; };
 			};
