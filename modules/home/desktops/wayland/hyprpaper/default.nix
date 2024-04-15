@@ -19,7 +19,7 @@ in {
     services.hyprpaper = {
       enable = true;
       preloads = [
-				"./nix-black-4K.png"
+				"~/fondation/modules/home/desktops/wayland/hyprpaper/nix-black-4K.png"
       ];
       wallpapers = [", ./nix-black-4K.png" ];
     };
