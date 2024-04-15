@@ -1,0 +1,6 @@
+{
+  imports = [
+    ./global
+    ./desktops/hyprland
+  ];
+}

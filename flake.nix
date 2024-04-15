@@ -75,6 +75,8 @@
 	in 
 	{
 		inherit lib;
+    nixosModules = import ./modules/nixos;
+    homeManagerModules = import ./modules/home-manager;
 
 		overlays = import ./overlays { inherit inputs; };
 
@@ -109,7 +111,7 @@
 			};
 
 			"leto@farstar" = lib.homeManagerConfiguration {
-				modules = [ ./homes/leto-farstar/home.nix ];
+				modules = [ ./home/leto.nix ];
 				pkgs = pkgsFor.x86_64-linux;
 				extraSpecialArgs = { inherit inputs outputs; };
 			};

@@ -11,7 +11,7 @@
         extraPkgs = p:
           with p; [
           mangohud
-            gamemode
+          gamemode
           ];
       };
       dedicatedServer.openFirewall = true;
@@ -25,6 +25,6 @@
 
   environment.systemPackages = with pkgs; [
     winetricks
-      wineWowPackages.waylandFull
+    wineWowPackages.waylandFull
   ];
 }

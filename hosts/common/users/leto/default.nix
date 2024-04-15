@@ -14,7 +14,7 @@
 	};
 
 	home-manager = {
-		users.leto = import ../../../../homes/leto-farstar/home.nix;
+    users.leto = import ../../../../home/leto.nix;
 		extraSpecialArgs = { inherit inputs outputs; };
 	};
 }
