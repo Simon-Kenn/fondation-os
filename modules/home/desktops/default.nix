@@ -4,6 +4,7 @@
 		./wayland
 		./programs
 		./ui
+    ./gaming
 	];
 
   home.packages = with pkgs; [

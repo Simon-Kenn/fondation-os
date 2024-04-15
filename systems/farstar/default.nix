@@ -30,6 +30,11 @@
 			#openssh.enable = true;
 		};
 
+    gaming = {
+   #   gamemode.enable = true;
+      steam.enable = true;
+    };
+
 		shell.fish.enable = true;
 	};
 }

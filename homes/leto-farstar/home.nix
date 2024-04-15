@@ -76,7 +76,10 @@
 
 			programs = {
 				browsers.firefox.enable = true;
+        discord.enable = true;
 			};
+
+      gaming.enable = true;
 		};
 	};
 

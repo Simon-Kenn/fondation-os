@@ -5,5 +5,6 @@
 		./network
 		./shell
 		./hardware
+    ./gaming
 	];
 }
