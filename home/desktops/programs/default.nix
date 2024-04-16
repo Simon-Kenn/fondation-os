@@ -1,4 +1,4 @@
-{
+{ pkgs, ...}:{
   imports = [
     ./discord.nix
     ./firefox.nix
@@ -6,4 +6,8 @@
     ./playerctl.nix
     #./sublime-music.nix
   ];
+
+	home.packages = with pkgs; [
+		pkgs.element-desktop
+	];
 }
