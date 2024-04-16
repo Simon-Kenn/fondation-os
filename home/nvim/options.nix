@@ -1,5 +1,5 @@
 {
-	programs.nixvim.options = {
+	programs.nixvim.opts = {
 		enc = "utf-8";
 		fileencoding = "utf-8";
 		conceallevel = 3;

@@ -8,7 +8,12 @@
 		./plugins
   ];
 
-  home.sessionVariables.EDITOR = "nvim";
+  home = {
+		sessionVariables.EDITOR = "nvim";
+		persistence."/persist/home/leto".directories = [
+			".local/share/nvim"
+		];
+	};
 
   programs.nixvim = {
     enable = true;

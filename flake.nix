@@ -78,7 +78,7 @@
     nixosModules = import ./modules/nixos;
     homeManagerModules = import ./modules/home-manager;
 
-		overlays = import ./overlays { inherit inputs; };
+		overlays = import ./overlays { inherit inputs outputs; };
 
     pakages = forEachSystem (pkgs: import ./shell.nix {inherit pkgs; });
     devShells = forEachSystem (pkgs: import ./shell.nix { inherit pkgs; });

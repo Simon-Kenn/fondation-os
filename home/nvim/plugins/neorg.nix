@@ -1,7 +1,6 @@
 { pkgs, ...}: {
 	programs.nixvim.plugins.neorg = {
 		enable = true;
-		package = pkgs.vimPlugins.neorg;
 
 		lazyLoading = true;
 		modules = {
