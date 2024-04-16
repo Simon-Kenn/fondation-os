@@ -1,16 +1,23 @@
 {
-	programs.nixvim.opts = {
-		number = true;	
-		relativenumeber = true;
+	programs.nixvim.options = {
+		enc = "utf-8";
+		fileencoding = "utf-8";
+		conceallevel = 3;
 
-		splitbellow = true;
+		number = true;	
+		relativenumber = true;
+
+		splitbelow = true;
 		splitright = true;
 
 		wrap = false;
 
-		expandtab = true;
-		tabstop = 4;
-		shiftwidth = 4;
+		smarttab = true;
+		autoindent = true;
+		smartindent = true;
+		tabstop = 2;
+		shiftwidth = 2;
+		softtabstop = 2;
 
 		clipboard = "unnamedplus";
 
@@ -23,6 +30,5 @@
 
 		termguicolors = true;
 
-		termguicolors = true;
 	};
 }

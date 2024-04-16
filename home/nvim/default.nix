@@ -1,16 +1,20 @@
-{ inputs, ...}: {
+{ inputs, pkgs, ...}: {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim 
     ./vbepo.nix
-    ./options.nix
+    ./leadermap.nix
     ./colorscheme.nix
+    ./options.nix
+		./plugins
   ];
+
+  home.sessionVariables.EDITOR = "nvim";
 
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-    colorscheme = cat
+    package = pkgs.neovim-nightly;
   };
 }
