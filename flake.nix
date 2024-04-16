@@ -60,7 +60,7 @@
 	let
 		inherit (self) outputs;
 		lib = nixpkgs.lib // home-manager.lib;
-        systems = [
+    systems = [
       "x86_64-linux"
       "aarch64-linux"
     ];
@@ -106,7 +106,7 @@
 
 			"nixos@iso" = lib.homeManagerConfiguration {
 				modules = [ ./homes/nixos-iso/home.nix ];
-				pkgs = nixpkgs.legacyPackages.x86_64-linux;
+				pkgs = pkgsFor.x86_64-linux;
 				extraSpecialArgs = { inherit inputs outputs; };
 			};
 

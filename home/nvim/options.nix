@@ -29,6 +29,5 @@
 		ignorecase = true;
 
 		termguicolors = true;
-
 	};
 }
