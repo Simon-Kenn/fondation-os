@@ -4,5 +4,8 @@
 		#./neorg.nix
 		./telescope.nix
 		./auto-session.nix
+		./hardtime.nix
+		./focus.nix
+		./editor.nix
 	];
 }

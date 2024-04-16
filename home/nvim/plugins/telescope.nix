@@ -5,6 +5,9 @@
 
 			extensions = { 
 				fzf-native.enable = true;
+				frecency.enable = true;
+				file-browser.enable = true;
+				undo.enable = true;
 				media-files = { 
 					enable = true;
 				};
@@ -43,5 +46,32 @@
 				};
 			};
 		};
+
+		keymaps = [
+			{
+				mode = "n";
+				action = ":Telescope undo<cr>";
+				key = "<leader>fu";
+				options.desc = "Undo history";
+			}
+			{
+				mode = "n";
+				action = ":Telescope frecency<cr>";
+				key = "<leader>fF";
+				options.desc = "File frecencey";
+			}
+			{
+				mode = "n";
+				action = ":Telescope media_file<cr>";
+				key = "<leader>fm";
+				options.desc = "Seach media";
+			}			
+			{
+				mode = "n";
+				action = ":Telescope file_browser<cr>";
+				key = "<leader>fa";
+				options.desc = "File browser";
+			}
+		];
 	};
 }
