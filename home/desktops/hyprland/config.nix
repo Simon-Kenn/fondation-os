@@ -1,4 +1,8 @@
-{config, pkgs, ...}: let
+{
+  config,
+  pkgs,
+  ...
+}: let
   inherit (config.colorScheme) palette;
 in {
   wayland.windowManager.hyprland.settings = {
@@ -11,13 +15,14 @@ in {
       sensitivity = 0;
     };
 
-		exec-once = [
-			"${pkgs.waybar}/bin/waybar"
-			"${pkgs.swaynotificationcenter}/bin/swaync"
+    exec = ["${pkgs.swaybg}/bin/swaybg -i ${config.wallpaper} --mode fill"];
+
+    exec-once = [
+      "${pkgs.waybar}/bin/waybar"
+      "${pkgs.mako}/bin/mako"
       "${pkgs.kanshi}/bin/kanshi"
     ];
     general = {
-			
       gaps_in = 5;
       gaps_out = 5;
 

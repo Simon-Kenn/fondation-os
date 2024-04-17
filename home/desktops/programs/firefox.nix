@@ -1,17 +1,21 @@
-{ inputs, pkgs, ...}:{
-	home.sessionVariables.BROWSER = "firefox";
+{
+  inputs,
+  pkgs,
+  ...
+}: {
+  home.sessionVariables.BROWSER = "firefox";
 
-	programs.firefox = {
+  programs.firefox = {
     enable = true;
-		profiles.simon = {
-			bookmarks = { };
-			extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
-				ublock-origin
+    profiles.simon = {
+      bookmarks = {};
+      extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
+        ublock-origin
         bitwarden
       ];
-			settings = {
-				"browser.startup.homepage" = "https://start.duckduckgo.com";
-				"browser.contentblockings.category" = true;
+      settings = {
+        "browser.startup.homepage" = "https://start.duckduckgo.com";
+        "browser.contentblockings.category" = true;
         "app.shield.optoutstudies.enabled" = false;
         "app.update.auto" = false;
         "browser.bookmarks.restore_default_bookmarks" = false;
@@ -48,18 +52,18 @@
         "identity.fxaccounts.enabled" = false;
         "privacy.trackingprotection.enabled" = true;
         "privacy.trackingprotection.socialtracking.enabled" = true;
-			};
-		};
+      };
+    };
   };
 
   xdg.mimeApps.defaultApplications = {
-    "text/html" = [ "firefox.desktop" ];
-    "text/xml" = [ "firefox.desktop" ];
-    "x-scheme-handler/http" = [ "firefox.desktop" ];
-    "x-scheme-handler/https" = [ "firefox.desktop" ];
+    "text/html" = ["firefox.desktop"];
+    "text/xml" = ["firefox.desktop"];
+    "x-scheme-handler/http" = ["firefox.desktop"];
+    "x-scheme-handler/https" = ["firefox.desktop"];
   };
 
-	home.persistence."/persist/home/leto".directories = [
-		".mozzila"	
-	];
+  home.persistence."/persist/home/leto".directories = [
+    ".mozila"
+  ];
 }
