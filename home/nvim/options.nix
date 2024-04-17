@@ -1,33 +1,39 @@
 {
-	programs.nixvim.opts = {
-		enc = "utf-8";
-		fileencoding = "utf-8";
-		conceallevel = 3;
+	programs.nixvim = {
 
-		number = true;	
-		relativenumber = true;
+		clipboard = {
+			providers.wl-copy.enable = true;
+			register = "unnamedplus";
+		};
 
-		splitbelow = true;
-		splitright = true;
+		opts = {
+			enc = "utf-8";
+			fileencoding = "utf-8";
+			conceallevel = 3;
 
-		wrap = false;
+			number = true;	
+			relativenumber = true;
 
-		smarttab = true;
-		autoindent = true;
-		smartindent = true;
-		tabstop = 2;
-		shiftwidth = 2;
-		softtabstop = 2;
+			splitbelow = true;
+			splitright = true;
 
-		clipboard = "unnamedplus";
+			wrap = false;
 
-		scrolloff = 999;
+			smarttab = true;
+			autoindent = true;
+			smartindent = true;
+			tabstop = 2;
+			shiftwidth = 2;
+			softtabstop = 2;
 
-		virtualedit = "block";
-		inccommand = "split";
+			scrolloff = 999;
 
-		ignorecase = true;
+			virtualedit = "block";
+			inccommand = "split";
 
-		termguicolors = true;
+			ignorecase = true;
+
+			termguicolors = true;
+		};
 	};
 }

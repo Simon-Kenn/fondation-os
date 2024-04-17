@@ -3,6 +3,7 @@
 
 		treesitter = {
 			enable = true;
+			nixGrammars = true;
 			ensureInstalled = "all";
 			nixvimInjections = true;
 

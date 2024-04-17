@@ -7,5 +7,7 @@
 		./hardtime.nix
 		./focus.nix
 		./editor.nix
+		./lsp.nix
+		./lang
 	];
 }

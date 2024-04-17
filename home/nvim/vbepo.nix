@@ -1,7 +1,7 @@
 {
   programs.nixvim = {
     keymaps = [
-    # TODO: utiliser w/W
+			{ mode = "n"; key = "w"; action = ":ZenMode<CR>"; options = { desc = "ZenMode";}; }
 # Mouvement
       { mode = ["n" "v" "o"]; key = "é"; action = "w" ; options = { desc = "words forward"; }; }
       { mode = ["n" "v" "o"]; key = "É"; action = "W" ; options = { desc = "WORDS forward"; }; }
