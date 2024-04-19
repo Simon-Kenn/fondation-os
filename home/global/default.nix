@@ -4,16 +4,15 @@
   inputs,
   outputs,
   ...
-}:let 
-  inherit (inputs.nixcolors) colorSchemes;
-in {
-  imports = [
-    inputs.impermanence.nixosModules.home-manager.impermanence
-    inputs.nix-colors.homeManagerModule
-    ../cli
-    ../nvim
-  ]
-  ++ (builtins.attrValues outputs.homeManagerModules);
+}: {
+  imports =
+    [
+      inputs.impermanence.nixosModules.home-manager.impermanence
+      inputs.nix-colors.homeManagerModule
+      ../cli
+      ../nvim
+    ]
+    ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
@@ -46,12 +45,11 @@ in {
     persistence = {
       "/persist/home/leto" = {
         directories = [
+          "Bibliothèque"
           "Notes"
           "Codes"
           ".local/bin"
           ".local/share/nix"
-          ".ssh"
-          ".vim"
         ];
         allowOther = true;
       };

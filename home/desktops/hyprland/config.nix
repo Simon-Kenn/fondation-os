@@ -5,6 +5,11 @@
 }: let
   inherit (config.colorScheme) palette;
 in {
+  home.packages = with pkgs; [
+    grimblast
+    wev
+  ];
+
   wayland.windowManager.hyprland.settings = {
     input = {
       kb_layout = "fr";

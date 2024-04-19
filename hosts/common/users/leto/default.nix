@@ -1,20 +1,28 @@
-{ pkgs, inputs, outputs, ...}:
 {
-	imports = [ 
-		inputs.home-manager.nixosModules.home-manager 
-	];
+  pkgs,
+  inputs,
+  outputs,
+  ...
+}: {
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+  ];
 
-	users.users.leto = {
-		isNormalUser = true;
-		shell = pkgs.fish;
-		extraGroups = ["wheel" "network" "git"];
-		packages = [ pkgs.home-manager ];
-		initialPassword = "password";
-		#hashedPasswordFile = 
-	};
+  users.users.leto = {
+    isNormalUser = true;
+    shell = pkgs.fish;
+    extraGroups = ["wheel" "network" "git"];
+    packages = [pkgs.home-manager];
+    initialPassword = "password";
+    #hashedPasswordFile =
+  };
 
-	home-manager = {
+  home-manager = {
     users.leto = import ../../../../home/leto.nix;
-		extraSpecialArgs = { inherit inputs outputs; };
-	};
+    extraSpecialArgs = {inherit inputs outputs;};
+  };
+
+  security.pam.services = {
+    swaylock = {};
+  };
 }

@@ -16,6 +16,7 @@
     sessionVariables.EDITOR = "nvim";
     persistence."/persist/home/leto".directories = [
       ".local/share/nvim"
+      ".vim"
     ];
   };
 

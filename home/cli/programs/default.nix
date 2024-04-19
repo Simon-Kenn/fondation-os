@@ -10,5 +10,7 @@
     ./ripgrep.nix
     ./yazi.nix
     ./zoxide.nix
+    ./ssh.nix
+    ./bottom.nix
   ];
 }

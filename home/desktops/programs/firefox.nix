@@ -64,6 +64,6 @@
   };
 
   home.persistence."/persist/home/leto".directories = [
-    ".mozila"
+    ".mozilla"
   ];
 }
