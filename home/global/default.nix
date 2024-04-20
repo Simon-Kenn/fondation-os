@@ -47,6 +47,11 @@
         directories = [
           "Bibliothèque"
           "Notes"
+          "Documents"
+          "Musiques"
+          "Images"
+          "Vidéos"
+          "Téléchargements"
           "Codes"
           ".local/bin"
           ".local/share/nix"

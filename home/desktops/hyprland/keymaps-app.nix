@@ -24,16 +24,16 @@
         "SUPER,h,exec,wofi -S run"
 
         # Screenshooting
-        # TODO: Finir
-        ",print,exec,${grimblast} --notify --freeze copy output"
-        "SUPER,print,exec,${grimblast} --notify --freeze copy area"
+        ",print,exec,${grimblast} --notify --freeze copysave area"
+        "SUPER,print,exec,${grimblast} --notify --freeze save output"
         # To OCR
         "ALT,Print,exec,${grimblast} --freeze save area - | ${tesseract} - - | wl-copy && ${notify-send} -t 3000 'OCR result copied to buffer'"
 
         ## Brightness control (only works if the system has lightd)
         #",XF86MonBrightnessUp,exec,light -A 10"
-        #",XF86MonBrightnessDown,exec,light -U 10"
+        #",XF86MonBrightnessDown,exec,light -U 10
 
+        # TODO: end it
         # Volume
         #",XF86AudioRaiseVolume,exec,${pactl} set-sink-volume @DEFAULT_SINK@ +5%"
         #",XF86AudioLowerVolume,exec,${pactl} set-sink-volume @DEFAULT_SINK@ -5%"
