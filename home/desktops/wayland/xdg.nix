@@ -1,7 +1,7 @@
-{ pkgs, ...}: {
+{pkgs, ...}: {
   xdg = {
     enable = true;
-#autostart.enable = true;
+    #autostart.enable = true;
     portal = {
       enable = true;
       config = {
@@ -16,6 +16,8 @@
       ];
     };
 
-    mimeApps.enable = true;
+    mimeApps = {
+      enable = true;
+    };
   };
 }
