@@ -8,6 +8,7 @@
     ./element-desktop.nix
     ./calibre.nix
     ./libreoffice.nix
+    ./signal-dekstop.nix
     #./sublime-music.nix
   ];
 }
