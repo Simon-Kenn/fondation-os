@@ -2,15 +2,49 @@
   config,
   pkgs,
   ...
-}: let
-  inherit (config.colorScheme) palette;
-in {
+}: {
   home.packages = with pkgs; [
     grimblast
     wev
   ];
 
-  wayland.windowManager.hyprland.settings = {
+  wayland.windowManager.hyprland.settings = let
+    active = "0xaa${config.colorscheme.palette.base0C}";
+    inactive = "0xaa${config.colorscheme.palette.base02}";
+  in {
+    general = {
+      gaps_in = 5;
+      gaps_out = 5;
+      border_size = 2;
+      "col.active_border" = active;
+      "col.inactive_border" = inactive;
+      resize_on_border = true;
+      hover_icon_on_border = true;
+    };
+
+    decoration = {
+      rounding = 5;
+
+      active_opacity = 0.97;
+      inactive_opacity = 0.77;
+      fullscreen_opacity = 1.0;
+
+      blur = {
+        enabled = true;
+        size = 5;
+        passes = 3;
+        new_optimizations = true;
+        ignore_opacity = true;
+        popups = true;
+      };
+
+      drop_shadow = "yes";
+      shadow_range = 12;
+      shadow_offset = "3 3";
+      "col.shadow" = "0x44000000";
+      "col.shadow_inactive" = "0x66000000";
+    };
+
     input = {
       kb_layout = "fr";
       kb_variant = "bepo";
@@ -18,6 +52,16 @@ in {
 
       follow_mouse = 1;
       sensitivity = 0;
+
+      touchpad = {
+        natural_scroll = true;
+      };
+    };
+
+    group = {
+      "col.border_active" = active;
+      "col.border_inactive" = inactive;
+      groupbar.font_size = 11;
     };
 
     exec = ["${pkgs.swaybg}/bin/swaybg -i ${config.wallpaper} --mode fill"];
@@ -27,19 +71,6 @@ in {
       "${pkgs.mako}/bin/mako"
       "${pkgs.kanshi}/bin/kanshi"
     ];
-    general = {
-      gaps_in = 5;
-      gaps_out = 5;
-
-      border_size = 2;
-      "col.active_border" = "0xFF${palette.base0D}";
-      "col.inactive_border" = "0xFF${palette.base02}";
-
-      resize_on_border = true;
-      hover_icon_on_border = true;
-
-      layout = "dwindle";
-    };
 
     dwindle = {
       pseudotile = true;
@@ -50,27 +81,6 @@ in {
 
     master = {
       new_is_master = true;
-    };
-
-    decoration = {
-      rounding = 5;
-
-      active_opacity = 1.0;
-      inactive_opacity = 1.0;
-      fullscreen_opacity = 1.0;
-
-      blur = {
-        enabled = true;
-        size = 5;
-        passes = 3;
-        new_optimizations = "on";
-      };
-
-      drop_shadow = "yes";
-      shadow_range = 4;
-      shadow_render_power = 3;
-      "col.shadow" = "0x44000000";
-      "col.shadow_inactive" = "0x66000000";
     };
 
     animations = {

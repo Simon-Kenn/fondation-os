@@ -1,6 +1,6 @@
-{ pkgs, ...}: {
+{pkgs, ...}: {
   imports = [
-    ./waybar
+    ./waybar.nix
     ./hyprpaper.nix
     ./kanshi.nix
     ./mako.nix

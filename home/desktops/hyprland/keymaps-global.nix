@@ -1,77 +1,222 @@
-let
-  main = "SUPER";
-  secondMain = "SUPER SHIFT";
-  alt = "ALT";
-  secondAlt = "SUPER ALT";
-in {
+{lib, ...}: {
   wayland.windowManager.hyprland.settings = {
     bindm = [
-      "${main}, mouse:272,            movewindow"
-      "${main}, mouse:273,            resizewindow"
+      "SUPER,mouse:272,movewindow"
+      "SUPER,mouse:273,resizewindow"
     ];
-    bind = [
-      # window operations
-      "${secondMain},c,               killactive"
-      "${secondMain},m,               exit"
-      "${main}, v,                    togglefloating"
-      "${main}, p,                    pseudo"
-      "${main}, j,                    togglesplit"
-      "${main}, f,                    fullscreen"
+    bind = let
+      workspaces = [
+        {
+          name = "1";
+          key = "quotedbl";
+        }
+        {
+          name = "2";
+          key = "guillemotleft";
+        }
+        {
+          name = "3";
+          key = "guillemotright";
+        }
+        {
+          name = "4";
+          key = "parenleft";
+        }
+        {
+          name = "5";
+          key = "parenright";
+        }
+        {
+          name = "7";
+          key = "at";
+        }
+        {
+          name = "8";
+          key = "plus";
+        }
+        {
+          name = "9";
+          key = "minus";
+        }
+        {
+          name = "10";
+          key = "slash";
+        }
 
-      # change focus
-      "${main}, t,                    movefocus, l"
-      "${main}, n,                    movefocus, r"
-      "${main}, r,                    movefocus, u"
-      "${main}, s,                    movefocus, d"
+        {
+          name = "11";
+          key = "asterisk";
+        }
+        {
+          name = "12";
+          key = "equal";
+        }
+        {
+          name = "13";
+          key = "percent";
+        }
+        {
+          name = "F1";
+          key = "F1";
+        }
+        {
+          name = "F2";
+          key = "F2";
+        }
+        {
+          name = "F3";
+          key = "F3";
+        }
+        {
+          name = "F4";
+          key = "F4";
+        }
+        {
+          name = "F5";
+          key = "F5";
+        }
+        {
+          name = "F6";
+          key = "F6";
+        }
+        {
+          name = "F7";
+          key = "F7";
+        }
+        {
+          name = "F8";
+          key = "F8";
+        }
+        {
+          name = "F9";
+          key = "F9";
+        }
+        {
+          name = "F10";
+          key = "F10";
+        }
+        {
+          name = "F11";
+          key = "F11";
+        }
+        {
+          name = "F12";
+          key = "F12";
+        }
+      ];
+      #workspaces_key = [
+      #  "quotedbl"
+      #  "guillemotleft"
+      #  "guillemotright"
+      #  "parenleft"
+      #  "parenright"
+      #  "at"
+      #  "plus"
+      #  "minus"
+      #  "slash"
+      #  "asterisk"
+      #  "equal"
+      #  "percent"
+      #  "F1"
+      #  "F2"
+      #  "F3"
+      #  "F4"
+      #  "F5"
+      #  "F6"
+      #  "F7"
+      #  "F8"
+      #  "F9"
+      #  "F10"
+      #  "F11"
+      #  "F12"
+      #];
+      #workspaces = [
+      #  "1"
+      #  "2"
+      #  "3"
+      #  "4"
+      #  "5"
+      #  "6"
+      #  "7"
+      #  "8"
+      #  "9"
+      #  "0"
+      #  "F1"
+      #  "F2"
+      #  "F3"
+      #  "F4"
+      #  "F5"
+      #  "F6"
+      #  "F7"
+      #  "F8"
+      #  "F9"
+      #  "F10"
+      #  "F11"
+      #  "F12"
+      #];
+      directions = rec {
+        left = "l";
+        right = "r";
+        up = "u";
+        down = "d";
+        t = left;
+        n = right;
+        r = up;
+        s = down;
+      };
+    in
+      [
+        "SUPERSHIFT,c,killactive"
+        "SUPERSHIFT,x,exit"
 
-      # move window
-      "${alt}, t,                     movewindow, l"
-      "${alt}, n,                     movewindow, r"
-      "${alt}, r,                     movewindow, u"
-      "${alt}, s,                     movewindow, d"
+        "SUPER,j,togglesplit"
+        "SUPER,f,fullscreen,1"
+        "SUPERSHIFT,f,fullscreen,0"
+        "SUPERSHIFT,space,togglefloating"
 
-      # change workspace
-      "${main}, quotedbl,             workspace, 1"
-      "${main}, guillemotleft,        workspace, 2"
-      "${main}, guillemotright,       workspace, 3"
-      "${main}, parenleft,            workspace, 4"
-      "${main}, parenright,           workspace, 5"
-      "${main}, at,                   workspace, 6"
-      "${main}, plus,                 workspace, 7"
-      "${main}, minus,                workspace, 8"
-      "${main}, slash,                workspace, 9"
-      "${main}, asterisk,             workspace, 10"
+        "SUPER,é,splitratio,-0.25"
+        "SUPERSHIFT,é,splitratio,-0.3333333"
 
-      # move active windowe to workspace x
-      "${secondMain}, quotedbl,       movetoworkspace, 1"
-      "${secondMain}, guillemotleft,  movetoworkspace, 2"
-      "${secondMain}, guillemotright, movetoworkspace, 3"
-      "${secondMain}, parenleft,      movetoworkspace, 4"
-      "${secondMain}, parenright,     movetoworkspace, 5"
-      "${secondMain}, at,             movetoworkspace, 6"
-      "${secondMain}, plus,           movetoworkspace, 7"
-      "${secondMain}, minus,          movetoworkspace, 8"
-      "${secondMain}, slash,          movetoworkspace, 9"
-      "${secondMain}, asterisk,       movetoworkspace, 10"
+        "SUPER,è,splitratio,0.25"
+        "SUPERSHIFT,è,splitratio,0.3333333"
 
-      # move active windowe to workspace x in silence
-      "${secondAlt}, quotedbl,       movetoworkspacesilent, 1"
-      "${secondAlt}, guillemotleft,  movetoworkspacesilent, 2"
-      "${secondAlt}, guillemotright, movetoworkspacesilent, 3"
-      "${secondAlt}, parenleft,      movetoworkspacesilent, 4"
-      "${secondAlt}, parenright,     movetoworkspacesilent, 5"
-      "${secondAlt}, at,             movetoworkspacesilent, 6"
-      "${secondAlt}, plus,           movetoworkspacesilent, 7"
-      "${secondAlt}, minus,          movetoworkspacesilent, 8"
-      "${secondAlt}, slash,          movetoworkspacesilent, 9"
-      "${secondAlt}, asterisk,       movetoworkspacesilent, 10"
+        "SUPER,g,togglegroup"
+        "SUPER,l,lockactivegroup,toggle"
+        "SUPER,tab,changegroupactive,f"
+        "SUPERSHIFT,tab,changegroupactive,b"
 
-      # Scrolling through active workspace
-      "${main}, right,            workspace, +1"
-      "${main}, left,             workspace, -1"
+        "SUPER,apostrophe,workspace,previous"
 
-      "${main}, mouse_down,       workspace, e+1"
-      "${main}, mouse_up,         workspace, e-1"
-    ];
+        "SUPER,u,togglespecialworkspace"
+        "SUPERSHIFT,u,movetoworkspacesilent,special"
+        "SUPER,i,pseudo"
+      ]
+      ++
+      # Change workspace
+      (map (n: "SUPER,${n.key},workspace,name:${n.name}") workspaces)
+      ++
+      # Move window to workspace
+      (map (n: "SUPERSHIFT,${n.key},movetoworkspacesilent,name:${n.name}") workspaces)
+      ++
+      # Move focus
+      (lib.mapAttrsToList (key: direction: "SUPER,${key},movefocus,${direction}") directions)
+      ++
+      # Swap windows
+      (lib.mapAttrsToList (key: direction: "SUPERSHIFT,${key},swapwindow,${direction}") directions)
+      ++
+      # Move windows
+      (lib.mapAttrsToList (
+          key: direction: "SUPERCONTROL,${key},movewindoworgroup,${direction}"
+        )
+        directions)
+      ++
+      # Move monitor focus
+      (lib.mapAttrsToList (key: direction: "SUPERALT,${key},focusmonitor,${direction}") directions)
+      ++
+      # Move workspace to other monitor
+      (lib.mapAttrsToList (
+          key: direction: "SUPERALTSHIFT,${key},movecurrentworkspacetomonitor,${direction}"
+        )
+        directions);
   };
 }

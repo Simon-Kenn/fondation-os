@@ -7,7 +7,7 @@
   wayland.windowManager.hyprland.settings = {
     bind = let
       grimblast = lib.getExe pkgs.grimblast;
-      pactl = lib.getExe' pkgs.tesseract;
+      #pactl = lib.getExe' pkgs.tesseract;
       tesseract = lib.getExe pkgs.tesseract;
       notify-send = lib.getExe' pkgs.libnotify "notify-send";
 
@@ -19,9 +19,6 @@
         # Program bindings
         "SUPER,Return,exec, ${terminal}"
         "SUPER,b,exec, ${browser}"
-
-        "SUPER,space,exec,wofi -S drun"
-        "SUPER,h,exec,wofi -S run"
 
         # Screenshooting
         ",print,exec,${grimblast} --notify --freeze copysave area"
@@ -57,6 +54,17 @@
           makoctl = lib.getExe' config.services.mako.package "makoctl";
         in
           lib.optionals config.services.mako.enable ["SUPER,w,exec,${makoctl} dismiss"]
+      )
+      ++
+      # Launcher
+      (
+        let
+          wofi = lib.getExe config.programs.wofi.package;
+        in
+          lib.optionals config.programs.wofi.enable [
+            "SUPER,space,exec,${wofi} -S drun -x 10 -y 10 -W 25% -H 60%"
+            "SUPER,h,exec,${wofi} -S run"
+          ]
       );
   };
 }
