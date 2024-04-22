@@ -1,10 +1,10 @@
 {pkgs, ...}: {
   programs.nixvim.plugins.neorg = {
     enable = true;
-    package = with pkgs.vimPlugins; [
-      neorg
-      neorg-telescope
-    ];
+    #package = with pkgs.vimPlugins; [
+    #  neorg
+    #  neorg-telescope
+    #];
 
     lazyLoading = true;
     modules = {

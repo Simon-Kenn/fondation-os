@@ -26,7 +26,6 @@
   pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
   wofi = "${pkgs.wofi}/bin/wofi";
 
-  # Function to simplify making waybar outputs
   jsonOutput = name: {
     pre ? "",
     text ? "",
@@ -46,42 +45,39 @@
       '{text:$text,tooltip:$tooltip,alt:$alt,class:$class,percentage:$percentage}'
   ''}/bin/waybar-${name}";
 in {
+  systemd.user.services.waybar = {
+    Unit.StartLimitBurst = 30;
+  };
   programs.waybar = {
-    enable = true;
     systemd.enable = true;
     settings = [
       {
         mode = "dock";
         layer = "top";
-        height = 40;
+        height = 30;
         margin = "6";
         position = "top";
         modules-left = [
-          "custom/menu"
+          #          "custom/menu"
           "hyprland/workspaces"
-          "hyprland/submap"
-          "custom/currentplayer"
-          "custom/player"
+          #          "hyprland/submap"
+          #"custom/currentplayer"
+          #"custom/player"
         ];
 
         modules-center = [
-          "cpu"
-          #      "custom/gpu"
-          "memory"
+          #"cpu"
+          #"memory"
           "clock"
-          "pulseaudio"
-          "battery"
-          #      "custom/unread-mail"
+          #"pulseaudio"
+          #"battery"
         ];
 
         modules-right = [
-          # "custom/gammastep" TODO: currently broken for some reason
-          #      "custom/tailscale-ping"
-          "network"
-          "tray"
+          #"network"
+          #"tray"
           "custom/hostname"
         ];
-
         clock = {
           interval = 1;
           format = "{:%d/%m %H:%M:%S}";
@@ -91,20 +87,13 @@ in {
             <big>{:%Y %B}</big>
             <tt><small>{calendar}</small></tt>'';
         };
-
         cpu = {
           format = "  {usage}%";
-        };
-        "custom/gpu" = {
-          interval = 5;
-          exec = "${cat} /sys/class/drm/card0/device/gpu_busy_percent";
-          format = "󰒋  {}%";
         };
         memory = {
           format = "  {}%";
           interval = 5;
         };
-
         pulseaudio = {
           format = "{icon}  {volume}%";
           format-muted = "   0%";
@@ -160,36 +149,7 @@ in {
         };
         "custom/hostname" = {
           exec = "echo $USER@$HOSTNAME";
-        };
-        "custom/gammastep" = {
-          interval = 5;
-          return-type = "json";
-          exec = jsonOutput "gammastep" {
-            pre = ''
-              if unit_status="$(${systemctl} --user is-active gammastep)"; then
-                status="$unit_status ($(${journalctl} --user -u gammastep.service -g 'Period: ' | ${tail} -1 | ${cut} -d ':' -f6 | ${xargs}))"
-              else
-                status="$unit_status"
-              fi
-            '';
-            alt = "\${status:-inactive}";
-            tooltip = "Gammastep is $status";
-          };
-          format = "{icon}";
-          format-icons = {
-            "activating" = "󰁪 ";
-            "deactivating" = "󰁪 ";
-            "inactive" = "? ";
-            "active (Night)" = " ";
-            "active (Nighttime)" = " ";
-            "active (Transition (Night)" = " ";
-            "active (Transition (Nighttime)" = " ";
-            "active (Day)" = " ";
-            "active (Daytime)" = " ";
-            "active (Transition (Day)" = " ";
-            "active (Transition (Daytime)" = " ";
-          };
-          on-click = "${systemctl} --user is-active gammastep && ${systemctl} --user stop gammastep || ${systemctl} --user start gammastep";
+          on-click = "${systemctl} --user restart waybar";
         };
         "custom/currentplayer" = {
           interval = 2;
@@ -232,8 +192,8 @@ in {
           max-length = 30;
           format = "{icon} {}";
           format-icons = {
-            "Playing" = "󰐊";
-            "Paused" = "󰏤 ";
+            "Playing" = "󰏤";
+            "Paused" = "󰐊 ";
             "Stopped" = "󰓛";
           };
           on-click = "${playerctl} play-pause";

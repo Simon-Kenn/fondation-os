@@ -7,6 +7,7 @@
     ./swaylock.nix
     ./wofi.nix
     ./xdg.nix
+    ./gammastep.nix
   ];
 
   home.packages = with pkgs; [
