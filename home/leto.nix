@@ -4,5 +4,5 @@
     ./desktops/hyprland
   ];
 
-  wallpaper = ../pkgs/wallpapers/wallpapers/galaxy.png;
+  wallpaper = ../pkgs/wallpapers/wallpapers/SPOILER_wallpaper.png;
 }

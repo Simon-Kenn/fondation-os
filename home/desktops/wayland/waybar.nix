@@ -45,11 +45,8 @@
       '{text:$text,tooltip:$tooltip,alt:$alt,class:$class,percentage:$percentage}'
   ''}/bin/waybar-${name}";
 in {
-  systemd.user.services.waybar = {
-    Unit.StartLimitBurst = 30;
-  };
   programs.waybar = {
-    systemd.enable = true;
+    enable = true;
     settings = [
       {
         mode = "dock";
@@ -58,24 +55,27 @@ in {
         margin = "6";
         position = "top";
         modules-left = [
-          #          "custom/menu"
+          #"custom/menu"
           "hyprland/workspaces"
-          #          "hyprland/submap"
-          #"custom/currentplayer"
-          #"custom/player"
+          "hyprland/submap"
+          "custom/currentplayer"
+          "custom/player"
+          "tray"
         ];
 
         modules-center = [
           #"cpu"
           #"memory"
           "clock"
-          #"pulseaudio"
-          #"battery"
+          "pulseaudio"
+          "battery"
         ];
 
         modules-right = [
-          #"network"
-          #"tray"
+          "cpu"
+          "memory"
+          "disk"
+          "network"
           "custom/hostname"
         ];
         clock = {
@@ -87,13 +87,33 @@ in {
             <big>{:%Y %B}</big>
             <tt><small>{calendar}</small></tt>'';
         };
+
         cpu = {
           format = "  {usage}%";
         };
+
         memory = {
           format = "  {}%";
           interval = 5;
         };
+
+        disk = {
+          format = "󰋊 {percentage_used}%";
+        };
+
+        network = {
+          interval = 3;
+          format-wifi = "   {signalStrength}% @{essid}";
+          format-ethernet = "󰈁    : {bandwidthUpBits}    : {bandwidthDownBits}";
+          format-disconnected = "";
+          tooltip-format = ''
+            {ifname}
+            {ipaddr}/{cidr}
+              : {bandwidthUpBits} 
+              : {bandwidthDownBits}'';
+          on-click = "";
+        };
+
         pulseaudio = {
           format = "{icon}  {volume}%";
           format-muted = "   0%";
@@ -135,21 +155,8 @@ in {
           format-charging = "󰂄 {capacity}%";
           onclick = "";
         };
-        network = {
-          interval = 3;
-          format-wifi = "   {essid}";
-          format-ethernet = "󰈁 Connected";
-          format-disconnected = "";
-          tooltip-format = ''
-            {ifname}
-            {ipaddr}/{cidr}
-            Up: {bandwidthUpBits}
-            Down: {bandwidthDownBits}'';
-          on-click = "";
-        };
         "custom/hostname" = {
           exec = "echo $USER@$HOSTNAME";
-          on-click = "${systemctl} --user restart waybar";
         };
         "custom/currentplayer" = {
           interval = 2;
@@ -281,7 +288,7 @@ in {
         #tray {
           color: #${colors.base05};
         }
-        #custom-gpu, #cpu, #memory {
+        #custom-gpu, #cpu, #memory, #disk {
           margin-left: 0.05em;
           margin-right: 0.55em;
         }

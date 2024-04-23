@@ -14,6 +14,7 @@
     ../common/systems/impermanence.nix
     ../common/systems/locale.nix
     ../common/systems/nix.nix
+    ../common/systems/systemd-initrd.nix
 
     ../common/hardware/audio.nix
     ../common/hardware/video.nix
