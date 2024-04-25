@@ -1,13 +1,17 @@
-{ lib, outputs, ...}: {
-	nixpkgs = {
-		hostPlatform = lib.mkDefault "x86_64-linux";
-		config = {
-			allowUnfree = true;
-		};
-		overlays = builtins.attrValues outputs.overlays;
-	};
+{
+  lib,
+  outputs,
+  ...
+}: {
+  nixpkgs = {
+    hostPlatform = lib.mkDefault "x86_64-linux";
+    config = {
+      allowUnfree = true;
+    };
+    overlays = builtins.attrValues outputs.overlays;
+  };
 
-	nix = {
+  nix = {
     settings = {
       trusted-users = ["root" "@wheel"];
       auto-optimise-store = lib.mkDefault true;

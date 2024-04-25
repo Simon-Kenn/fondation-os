@@ -1,13 +1,4 @@
-{
-  pkgs,
-  inputs,
-  outputs,
-  ...
-}: {
-  imports = [
-    inputs.home-manager.nixosModules.home-manager
-  ];
-
+{pkgs, ...}: {
   users.users.leto = {
     isNormalUser = true;
     shell = pkgs.fish;
@@ -19,7 +10,6 @@
 
   home-manager = {
     users.leto = import ../../../../home/leto.nix;
-    extraSpecialArgs = {inherit inputs outputs;};
   };
 
   security.pam.services = {

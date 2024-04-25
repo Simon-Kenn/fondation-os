@@ -9,15 +9,6 @@
     ../core
 
     ../common/users/leto
-
-    ../common/systems/base-packages.nix
-
-    ../common/hardware/audio.nix
-    ../common/hardware/video.nix
-    ../common/hardware/bluetooth.nix
-
     ../common/networking/network-manager.nix
-
-    ../common/gaming
   ];
 }
