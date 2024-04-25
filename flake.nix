@@ -112,7 +112,7 @@
       };
 
       "leto@farstar" = lib.homeManagerConfiguration {
-        modules = [./home/leto.nix];
+        modules = [./home/leto/farstar.nix];
         pkgs = pkgsFor.x86_64-linux;
         extraSpecialArgs = {inherit inputs outputs;};
       };

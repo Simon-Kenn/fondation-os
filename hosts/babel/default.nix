@@ -8,7 +8,7 @@
 
     ../core
 
-    ../common/users/leto
+    ../users/leto
     ../common/networking/network-manager.nix
   ];
 }

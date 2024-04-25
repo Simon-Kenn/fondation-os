@@ -9,8 +9,8 @@
     [
       inputs.impermanence.nixosModules.home-manager.impermanence
       inputs.nix-colors.homeManagerModule
-      ../cli
-      ../nvim
+      ./cli
+      ./nvim
     ]
     ++ (builtins.attrValues outputs.homeManagerModules);
 

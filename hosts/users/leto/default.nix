@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   users.users.leto = {
     isNormalUser = true;
     shell = pkgs.fish;
@@ -9,7 +13,7 @@
   };
 
   home-manager = {
-    users.leto = import ../../../../home/leto.nix;
+    users.leto = import ../../../home/leto/${config.networking.hostName}.nix;
   };
 
   security.pam.services = {
