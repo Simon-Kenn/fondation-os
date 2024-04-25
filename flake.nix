@@ -102,6 +102,12 @@
         modules = [./hosts/farstar];
         specialArgs = {inherit inputs outputs;};
       };
+
+      babel = lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [./hosts/babel];
+        specialArgs = {inherit inputs outputs;};
+      };
     };
 
     homeConfigurations = {
@@ -113,6 +119,11 @@
 
       "leto@farstar" = lib.homeManagerConfiguration {
         modules = [./home/leto/farstar.nix];
+        pkgs = pkgsFor.x86_64-linux;
+        extraSpecialArgs = {inherit inputs outputs;};
+      };
+      "leto@babel" = lib.homeManagerConfiguration {
+        modules = [./home/leto/babel.nix];
         pkgs = pkgsFor.x86_64-linux;
         extraSpecialArgs = {inherit inputs outputs;};
       };
