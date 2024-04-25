@@ -28,5 +28,19 @@
     ../common/security/sops.nix
 
     ../common/gaming
+
+    ../common/services/homepage-dashboard.nix
+
+    ../common/services/calibre-web.nix
+    ../common/services/jellyfin.nix
+
+    ../common/services/deluge.nix
+
+    ../common/services/prowlarr.nix
+    ../common/services/radarr.nix
+    ../common/services/sonarr.nix
+    ../common/services/bazarr.nix
+    ../common/services/lidarr.nix
+    ../common/services/readarr.nix
   ];
 }

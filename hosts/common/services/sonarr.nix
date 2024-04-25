@@ -1,0 +1,11 @@
+{
+  services.sonarr = {
+    enable = true;
+  };
+
+  environment.persistence."/persist" = {
+    directories = [
+      "/var/lib/sonarr"
+    ];
+  };
+}
