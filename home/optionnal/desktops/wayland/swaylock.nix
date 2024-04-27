@@ -2,14 +2,12 @@
   config,
   pkgs,
   ...
-}: let
-  inherit (config.colorscheme) palette;
-in {
+}: {
   programs.swaylock = {
     enable = true;
     package = pkgs.swaylock-effects;
+    catppuccin.enable = true;
     settings = {
-      catppuccin.enable = true;
       effect-blur = "20x3";
       fade-in = 0.1;
 

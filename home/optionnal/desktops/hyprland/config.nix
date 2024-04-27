@@ -60,8 +60,6 @@
       };
 
       group = {
-        "col.border_active" = active;
-        "col.border_inactive" = inactive;
         groupbar.font_size = 11;
       };
 
@@ -108,12 +106,11 @@
         ];
       };
     };
-
-    home.sessionVariables = {
-      XDG_CURRENT_DESKTOP = "Hyprland";
-      XDG_SESSION_TYPE = "wayland";
-      XDG_SESSION_DESKTOP = "Hyprland";
-      MOW_ENABLE_WAYLAND = 1;
-    };
+  };
+  home.sessionVariables = {
+    XDG_CURRENT_DESKTOP = "Hyprland";
+    XDG_SESSION_TYPE = "wayland";
+    XDG_SESSION_DESKTOP = "Hyprland";
+    MOW_ENABLE_WAYLAND = 1;
   };
 }
