@@ -58,6 +58,10 @@
       };
     };
 
+    gestures = {
+      workspace_swipe = true;
+    };
+
     group = {
       "col.border_active" = active;
       "col.border_inactive" = inactive;
