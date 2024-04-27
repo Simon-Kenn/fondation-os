@@ -21,7 +21,12 @@
       hmr = "home-manager generations | fzf --tac --no-sort | awk '{print $7} | xargs -I{} bash{}/activate";
       nrs = "sudo nixos-rebuild switch --flake ~/Codes/fondation#farstar";
     };
+
+    functions = {
+      fish_greeting = '''';
+    };
   };
+
   home.persistence."/persist/home/leto".directories = [
     ".local/share/fish"
   ];

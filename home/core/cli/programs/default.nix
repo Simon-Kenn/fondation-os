@@ -1,6 +1,6 @@
 {
   imports = [
-    #./starfish.nix
+    ./starfish.nix
     ./bat.nix
     ./direnv.nix
     ./eza.nix
