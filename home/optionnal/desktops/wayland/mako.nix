@@ -1,13 +1,8 @@
-{config, ...}: let
-  inherit (config.colorscheme) palette variant;
-in {
+{config, ...}: {
   services.mako = {
     enable = true;
     catppuccin.enable = true;
-    iconPath =
-      if variant == "dark"
-      then "${config.gtk.iconTheme.package}/share/icons/Papirus-Dark"
-      else "${config.gtk.iconTheme.package}/share/icons/Papirus-Light";
+    iconPath = "${config.gtk.iconTheme.package}/share/icons/Papirus-Dark";
     font = "${config.fontProfiles.regular.family} 12";
     padding = "10,20";
     anchor = "top-center";

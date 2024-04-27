@@ -214,7 +214,7 @@ in {
     # w x y z -> top, right, bottom, left
     style = let
       inherit (inputs.nix-colors.lib.conversions) hexToRGBString;
-      inherit (config.colorscheme) colors;
+      inherit (config.colorscheme) palette;
       toRGBA = color: opacity: "rgba(${hexToRGBString "," color},${opacity})";
     in
       /*
@@ -231,8 +231,8 @@ in {
         window#waybar {
           padding: 0;
           border-radius: 0.5em;
-          background-color: ${toRGBA colors.base00 "0.7"};
-          color: #${colors.base05};
+          background-color: ${toRGBA palette.base00 "0.7"};
+          color: #${palette.base05};
         }
         .modules-left {
           margin-left: -0.65em;
@@ -242,21 +242,21 @@ in {
         }
 
         #workspaces button {
-          background-color: #${colors.base00};
-          color: #${colors.base05};
+          background-color: #${palette.base00};
+          color: #${palette.base05};
           padding-left: 0.4em;
           padding-right: 0.4em;
           margin-top: 0.15em;
           margin-bottom: 0.15em;
         }
         #workspaces button.hidden {
-          background-color: #${colors.base00};
-          color: #${colors.base04};
+          background-color: #${palette.base00};
+          color: #${palette.base04};
         }
         #workspaces button.focused,
         #workspaces button.active {
-          background-color: #${colors.base0A};
-          color: #${colors.base00};
+          background-color: #${palette.base0A};
+          color: #${palette.base00};
         }
 
         #clock {
@@ -266,15 +266,15 @@ in {
         }
 
         #custom-menu {
-          background-color: #${colors.base01};
+          background-color: #${palette.base01};
           padding-right: 1.5em;
           padding-left: 1em;
           margin-right: 0;
           border-radius: 0.5em;
         }
         #custom-menu.fullscreen {
-          background-color: #${colors.base0C};
-          color: #${colors.base00};
+          background-color: #${palette.base0C};
+          color: #${palette.base00};
         }
         #custom-hostname {
           padding-right: 1em;
@@ -286,7 +286,7 @@ in {
           padding-right: 0;
         }
         #tray {
-          color: #${colors.base05};
+          color: #${palette.base05};
         }
         #custom-gpu, #cpu, #memory, #disk {
           margin-left: 0.05em;
