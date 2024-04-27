@@ -19,5 +19,7 @@
     ../common/networking/network-manager.nix
 
     ../common/gaming
+
+    #../common/services/jellyfin.nix
   ];
 }
