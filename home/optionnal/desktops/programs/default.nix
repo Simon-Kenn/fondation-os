@@ -9,6 +9,7 @@
     ./calibre.nix
     ./libreoffice.nix
     ./signal-dekstop.nix
+    ./mpv.nix
     #./sublime-music.nix
   ];
 }

@@ -3,6 +3,7 @@
 in {
   services.mako = {
     enable = true;
+    catppuccin.enable = true;
     iconPath =
       if variant == "dark"
       then "${config.gtk.iconTheme.package}/share/icons/Papirus-Dark"
@@ -14,9 +15,6 @@ in {
     height = 150;
     borderSize = 2;
     defaultTimeout = 12000;
-    #backgroundColor = "#${palette.base00}dd";
-    #borderColor = "#${palette.base03}dd";
-    #textColor = "#${palette.base05}dd";
     layer = "overlay";
   };
 }

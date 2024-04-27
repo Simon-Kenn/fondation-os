@@ -1,8 +1,6 @@
 {
   programs.bat = {
     enable = true;
-    #config = {
-    #  theme = "catppuccin";
-    #};
+    catppuccin.enable = true;
   };
 }

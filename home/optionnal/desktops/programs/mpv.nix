@@ -1,7 +1,6 @@
 {
-  programs.starship = {
+  programs.mpv = {
     enable = true;
-    enableFishIntegration = true;
     catppuccin.enable = true;
   };
 }
