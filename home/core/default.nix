@@ -9,6 +9,7 @@
       ./impermanence.nix
       ./cli
       ./nvim
+      ./catppuccin.nix
     ]
     ++ (builtins.attrValues outputs.homeManagerModules);
 

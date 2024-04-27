@@ -1,6 +1,7 @@
 {
   programs.zellij = {
     enable = true;
+    catppuccin.enable = true;
   };
 
   xdg.configFile = {

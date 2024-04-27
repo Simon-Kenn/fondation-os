@@ -1,6 +1,5 @@
-{ config, ...}:
-let
-inherit (config.colorScheme) palette;
+{config, ...}: let
+  inherit (config.colorScheme) palette;
 in {
   home.sessionVariables = {
     TERMINAL = "alacritty";
@@ -9,7 +8,6 @@ in {
     enable = true;
 
     settings = {
-
       window = {
         padding = {
           x = 2;
@@ -30,83 +28,83 @@ in {
         size = 11.0;
       };
 
-      colors = {
-        primary = {
-          background = "#${palette.base00}";
-          foreground = "#${palette.base05}";
-          dim_foreground = "#${palette.base05}";
-          bright_foreground = "#${palette.base05}";
-        };
+      #colors = {
+      #  primary = {
+      #    background = "#${palette.base00}";
+      #    foreground = "#${palette.base05}";
+      #    dim_foreground = "#${palette.base05}";
+      #    bright_foreground = "#${palette.base05}";
+      #  };
 
-        cursor = {
-          text = "#${palette.base00}";
-          cursor = "#${palette.base06}";
-        };
+      #  cursor = {
+      #    text = "#${palette.base00}";
+      #    cursor = "#${palette.base06}";
+      #  };
 
-        vi_mode_cursor = {
-          text = "#${palette.base00}";
-          cursor = "#${palette.base07}";
-        };
+      #  vi_mode_cursor = {
+      #    text = "#${palette.base00}";
+      #    cursor = "#${palette.base07}";
+      #  };
 
-        search = {
-          matches = {
-            foreground = "#${palette.base00}";
-            background = "#${palette.base01}"; # TODO: Change
-          };
-          focused_match = {
-            foreground = "#${palette.base00}";
-            background = "#${palette.base0B}";
-          };
-        };
+      #  search = {
+      #    matches = {
+      #      foreground = "#${palette.base00}";
+      #      background = "#${palette.base01}"; # TODO: Change
+      #    };
+      #    focused_match = {
+      #      foreground = "#${palette.base00}";
+      #      background = "#${palette.base0B}";
+      #    };
+      #  };
 
-        hints = {
-          start = {
-            foreground = "#${palette.base00}";
-            background = "#${palette.base0A}";
-          };
-          end = {
-            foreground = "#${palette.base00}";
-            background = "#${palette.base06}";
-          };
-        };
+      #  hints = {
+      #    start = {
+      #      foreground = "#${palette.base00}";
+      #      background = "#${palette.base0A}";
+      #    };
+      #    end = {
+      #      foreground = "#${palette.base00}";
+      #      background = "#${palette.base06}";
+      #    };
+      #  };
 
-        footer_bar= {
-          foreground = "#${palette.base00}";
-          background = "#${palette.base01}";
-        };
-        normal = {
-          black = "#${palette.base03}";
-          red = "#${palette.base08}";
-          green = "#${palette.base0B}";
-          yellow = "#${palette.base0A}";
-          blue = "#${palette.base0D}";
-          magenta = "#${palette.base06}";
-          cyan = "#${palette.base0C}";
-          white = "#${palette.base05}";
-        };
+      #  footer_bar= {
+      #    foreground = "#${palette.base00}";
+      #    background = "#${palette.base01}";
+      #  };
+      #  normal = {
+      #    black = "#${palette.base03}";
+      #    red = "#${palette.base08}";
+      #    green = "#${palette.base0B}";
+      #    yellow = "#${palette.base0A}";
+      #    blue = "#${palette.base0D}";
+      #    magenta = "#${palette.base06}";
+      #    cyan = "#${palette.base0C}";
+      #    white = "#${palette.base05}";
+      #  };
 
-        bright = {
-          black = "#${palette.base04}";
-          red = "#${palette.base08}";
-          green = "#${palette.base0B}";
-          yellow = "#${palette.base0A}";
-          blue = "#${palette.base0D}";
-          magenta = "#${palette.base06}";
-          cyan = "#${palette.base0C}";
-          white = "#${palette.base05}";
-        };
+      #  bright = {
+      #    black = "#${palette.base04}";
+      #    red = "#${palette.base08}";
+      #    green = "#${palette.base0B}";
+      #    yellow = "#${palette.base0A}";
+      #    blue = "#${palette.base0D}";
+      #    magenta = "#${palette.base06}";
+      #    cyan = "#${palette.base0C}";
+      #    white = "#${palette.base05}";
+      #  };
 
-        dim = {
-          black = "#${palette.base03}";
-          red = "#${palette.base08}";
-          green = "#${palette.base0B}";
-          yellow = "#${palette.base0A}";
-          blue = "#${palette.base0D}";
-          magenta = "#${palette.base06}";
-          cyan = "#${palette.base0C}";
-          white = "#${palette.base05}";
-        };
-      };
+      #  dim = {
+      #    black = "#${palette.base03}";
+      #    red = "#${palette.base08}";
+      #    green = "#${palette.base0B}";
+      #    yellow = "#${palette.base0A}";
+      #    blue = "#${palette.base0D}";
+      #    magenta = "#${palette.base06}";
+      #    cyan = "#${palette.base0C}";
+      #    white = "#${palette.base05}";
+      #  };
+      #};
 
       bell = {
         animation = "EaseOutExpo";
@@ -114,9 +112,9 @@ in {
         command = "None";
       };
 
-#selection = {
-#	save_to_clipboard = false;
-#};
+      #selection = {
+      #	save_to_clipboard = false;
+      #};
     };
   };
 }
