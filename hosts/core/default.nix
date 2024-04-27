@@ -5,6 +5,7 @@
 }: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
+    inputs.catppuccin.nixosModules.catppuccin
     ./boot.nix
     ./ephemeral-btrfs.nix
     ./firewall.nix
@@ -19,5 +20,10 @@
 
   home-manager.extraSpecialArgs = {
     inherit inputs outputs;
+  };
+
+  catppuccin = {
+    enable = true;
+    flavour = "mocha";
   };
 }

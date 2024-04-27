@@ -9,5 +9,8 @@
     variant = "bepo";
   };
 
-  console.keyMap = "fr-bepo";
+  console = {
+    keyMap = "fr-bepo";
+    catppuccin.enable = true;
+  };
 }
