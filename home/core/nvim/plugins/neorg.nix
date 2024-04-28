@@ -42,7 +42,7 @@ in {
       }
       {
         mode = "n";
-        action = "<cmd>Neorg journal toc open<CR>";
+        action = "<cmd>Neorg journal toc reload<CR>";
         key = "<leader>mju";
         options.desc = "Mettre à jours l'index";
       }
@@ -58,6 +58,13 @@ in {
         key = "<leader>mjd";
         options.desc = "Demain";
       }
+      {
+        mode = "n";
+        action = "<cmd>Neorg toc<CR>";
+        key = "<localleader>à";
+        options.desc = "TOC";
+      }
+
       {
         mode = "n";
         action = "<cmd>Neorg journal toc<CR>";
@@ -130,32 +137,38 @@ in {
         key = "<localleader><cr>";
         options.desc = "Nouvelle itération";
       }
+
+      {
+        mode = "n";
+        action = "<cmd>Neorg keybind norg core.itero.next-iteration<cr>";
+        key = "<localleader><cr>";
+        options.desc = "Nouvelle itération";
+      }
       {
         mode = "n";
         action = "<cmd>Neorg templates add<cr>";
-        key = "<leader>aa";
+        key = "<localleader>aa";
         options.desc = "add";
       }
       {
         mode = "n";
         action = "<cmd>Neorg templates load<cr>";
-        key = "<leader>al";
+        key = "<localleader>al";
         options.desc = "Load";
       }
       {
         mode = "n";
         action = "<cmd>Neorg templates fload<cr>";
-        key = "<leader>af";
+        key = "<localleader>af";
         options.desc = "Fload";
       }
       {
         mode = "n";
         action = "<cmd>Neorg templates journal<cr>";
-        key = "<leader>aj";
+        key = "<localleader>aj";
         options.desc = "Journal";
       }
     ];
-
     extraPlugins = [
       neorg-templates
     ];
@@ -178,7 +191,7 @@ in {
           "core.defaults".__empty = null;
           "core.esupports.metagen" = {
             config = {
-              type = "auto";
+              type = "none";
             };
           };
           "core.dirman".config = {

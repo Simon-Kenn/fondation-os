@@ -4,7 +4,7 @@
     ../wayland
     ../ui
     ../gaming
-    ../terminals/alacritty.nix
+    ../terminals/kitty.nix
 
     ./config.nix
     ./workspaces.nix
