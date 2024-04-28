@@ -222,6 +222,35 @@ in {
           "external.templates" = {
             config = {
               templates_dir = "~/Notes/templates";
+              keywords = {
+                TODAY_STRING = {
+                  __raw =
+                    /*
+                    lua
+                    */
+                    ''
+                      function() -- detect date from filename and return in org date format
+                                                        local ls = require("luasnip")
+                                                        local s = require("neorg.modules.external.templates.default_snippets")
+                                                        return ls.text_node(s.parse_date(0, s.file_name_date(), [[%A %d %B %Y]])) -- 2006-11-01 Wed
+                                                      end,
+
+                    '';
+                };
+                #HOUR_OF_ORG = {
+                #  __raw =
+                #    /*
+                #    lua
+                #    */
+                #    ''                      function() -- detect date from filename and return in org date format
+                #                                      local ls = require("luasnip")
+                #                                      local s = require("neorg.modules.external.templates.default_snippets")
+                #                                      return ls.text_node(s.parse_date(0, s.file_name_date(), [[%A %d %B %Y]])) -- 2006-11-01 Wed
+                #                                    end,
+
+                #    '';
+                #};
+              };
             };
           };
         };
