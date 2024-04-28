@@ -1,7 +1,7 @@
 {
   imports = [
     ./treesitter.nix
-    #./neorg.nix
+    ./neorg.nix
     ./telescope.nix
     ./startup.nix
     ./hardtime.nix

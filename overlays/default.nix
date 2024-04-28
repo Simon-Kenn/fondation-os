@@ -3,7 +3,7 @@
   outputs,
   ...
 }: {
-  neorg = inputs.neorg-overlay.overlays.default;
+  #neorg = inputs.neorg-overlay.overlays.default;
   #neorg = final.vimUtils.buildVimPlugin {
   #	pname = "neorg";
   #	version = "v7.0.0";
