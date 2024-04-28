@@ -4,31 +4,39 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.05";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     impermanence.url = "github:nix-community/impermanence";
-    nix-colors.url = "github:misterio77/nix-colors";
-    catppuccin.url = "github:catppuccin/nix";
 
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-colors.url = "github:misterio77/nix-colors";
+    catppuccin.url = "github:catppuccin/nix";
+
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     #neorg-overlay.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
-    #neorg-overlay.url = "github:simon-kenn/neorgV7-flake";
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     neorg = {
       url = "github:nvim-neorg/neorg?rev=4cbedbbdd4ccb6f45a2045477f5658a1311dffa3";
+      flake = false;
+    };
+    neorg-templates = {
+      url = "github:pysan3/neorg-templates";
       flake = false;
     };
 
@@ -47,13 +55,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    neorg-templates = {
-      url = "github:pysan3/neorg-templates";
+    firefox-gnome-theme = {
+      url = "github:rafaelmardojai/firefox-gnome-theme";
       flake = false;
     };
   };

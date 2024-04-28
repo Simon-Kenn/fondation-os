@@ -3,7 +3,19 @@
   pkgs,
   ...
 }: {
-  home.sessionVariables.BROWSER = "firefox";
+  home = {
+    sessionVariables.BROWSER = "firefox";
+    persistence."/persist/home/leto".directories = [
+      ".mozilla"
+    ];
+  };
+
+  xdg.mimeApps.defaultApplications = {
+    "text/html" = ["firefox.desktop"];
+    "text/xml" = ["firefox.desktop"];
+    "x-scheme-handler/http" = ["firefox.desktop"];
+    "x-scheme-handler/https" = ["firefox.desktop"];
+  };
 
   programs.firefox = {
     enable = true;
@@ -55,15 +67,4 @@
       };
     };
   };
-
-  xdg.mimeApps.defaultApplications = {
-    "text/html" = ["firefox.desktop"];
-    "text/xml" = ["firefox.desktop"];
-    "x-scheme-handler/http" = ["firefox.desktop"];
-    "x-scheme-handler/https" = ["firefox.desktop"];
-  };
-
-  home.persistence."/persist/home/leto".directories = [
-    ".mozilla"
-  ];
 }
