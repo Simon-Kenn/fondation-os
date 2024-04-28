@@ -3,6 +3,9 @@
     #./starfish.nix # TODO: fix
     ./bat.nix
     ./direnv.nix
+    ./duf.nix
+    ./dust.nix
+    ./fd.nix
     ./eza.nix
     ./fzf.nix
     ./git.nix
