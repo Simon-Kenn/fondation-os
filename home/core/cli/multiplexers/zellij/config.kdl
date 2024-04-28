@@ -1,3 +1,4 @@
 theme "catppuccin-mocha"
-
-simplified_ui true
+default_layout "mine"
+default_shell "fish"
+copy_on_select true
