@@ -2,6 +2,7 @@
   imports = [
     ./treesitter.nix
     ./neorg.nix
+    ./image.nix
     ./telescope.nix
     ./startup.nix
     ./hardtime.nix
