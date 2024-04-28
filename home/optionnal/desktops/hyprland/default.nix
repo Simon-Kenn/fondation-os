@@ -3,7 +3,7 @@
     ../programs
     ../wayland
     ../ui
-    #../gaming
+    ../gaming
     ../terminals/alacritty.nix
 
     ./config.nix

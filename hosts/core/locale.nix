@@ -4,11 +4,6 @@
   };
   time.timeZone = "Europe/Paris";
 
-  services.xserver.xkb = {
-    layout = "fr";
-    variant = "bepo";
-  };
-
   console = {
     keyMap = "fr-bepo";
     catppuccin.enable = true;

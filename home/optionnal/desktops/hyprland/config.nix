@@ -9,14 +9,18 @@
   ];
 
   wayland.windowManager.hyprland = {
-    catppuccin.enable = true;
-    settings = {
+    settings = let
+      active = "0xaa${config.colorscheme.palette.base0C}";
+      inactive = "0xaa${config.colorscheme.palette.base02}";
+    in {
       general = {
         gaps_in = 5;
         gaps_out = 5;
         border_size = 2;
         resize_on_border = true;
         hover_icon_on_border = true;
+        "col.active_border" = active;
+        "col.inactive_border" = inactive;
       };
 
       decoration = {
@@ -61,6 +65,8 @@
 
       group = {
         groupbar.font_size = 11;
+        "col.border_active" = active;
+        "col.border_inactive" = inactive;
       };
 
       exec = ["${pkgs.swaybg}/bin/swaybg -i ${config.wallpaper} --mode fill"];

@@ -1,20 +1,18 @@
-{ lib, config, ...}: {
+{
+  lib,
+  config,
+  ...
+}: {
+  imports = [
+    ../../home/core/nix.nix
+  ];
 
-	imports = [
-		../../modules/home
-	];
+  home = {
+    username = lib.mkDefault "nixos";
+    homeDirectory = lib.mkDefault "/home/${config.home.username}";
+    stateVersion = lib.mkDefault "24.05";
+  };
 
-	home = {
-		username = lib.mkDefault "nixos";
-		homeDirectory = lib.mkDefault "/home/${config.home.username}";
-		stateVersion = lib.mkDefault "24.05";
-	};
-
-	programs.home-manager.enable = true;
-	programs.git.enable = true;
-
-	hm = {
-		editors.vim.enable = true;
-		system.nix.enable = true;
-	};
+  programs.home-manager.enable = true;
+  programs.git.enable = true;
 }
