@@ -371,14 +371,15 @@
           set fish_bind_mode $init_mode
         '';
     };
+    shellInitLast = ''
+      fish_vi_bepo_key_bindings
+    '';
     interactiveShellInit =
       /*
       fish
       */
       ''
-
         # Use vim bindings and cursors
-        set fish_key_bindings fish_vi_bepo_key_bindings
         set fish_cursor_default     block      blink
         set fish_cursor_insert      line       blink
         set fish_cursor_replace_one underscore blink

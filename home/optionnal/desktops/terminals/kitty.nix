@@ -4,6 +4,7 @@
   };
   programs.kitty = {
     enable = true;
+    shellIntegration.enableFishIntegration = true;
     catppuccin.enable = true;
 
     font = {
