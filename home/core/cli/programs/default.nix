@@ -15,5 +15,6 @@
     ./zoxide.nix
     ./ssh.nix
     ./bottom.nix
+    #./neomutt.nix
   ];
 }

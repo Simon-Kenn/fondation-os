@@ -14,5 +14,6 @@
     ./cmp.nix
     ./lualine.nix
     ./neo-tree.nix
+    ./ufo.nix
   ];
 }
