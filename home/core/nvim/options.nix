@@ -1,4 +1,4 @@
-{
+{config, ...}: {
   programs.nixvim = {
     clipboard = {
       providers.wl-copy.enable = true;
@@ -27,10 +27,15 @@
 
       scrolloff = 999;
 
-      foldmethod = "expr";
-      foldexpr = "nvim_treesitter#foldexpr()";
+      foldcolumn = "1";
       foldlevel = 99;
-      foldenable = false;
+      foldlevelstart = 99;
+      foldenable = true;
+
+      swapfile = false;
+      backup = false;
+      undodir = "${config.home.homeDirectory}.vim/undodir";
+      udofile = true;
 
       virtualedit = "block";
       inccommand = "split";
