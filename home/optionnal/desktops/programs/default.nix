@@ -10,7 +10,7 @@
     ./libreoffice.nix
     ./signal-dekstop.nix
     ./mpv.nix
-    ./proton.nix
+    #./proton.nix
     #./sublime-music.nix
   ];
 }
