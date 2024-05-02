@@ -15,5 +15,6 @@
     ./lualine.nix
     ./neo-tree.nix
     ./ufo.nix
+    ./undotree.nix
   ];
 }
