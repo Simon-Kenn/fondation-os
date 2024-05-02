@@ -17,6 +17,7 @@
           loadOnSetup = true;
         };
       };
+      auto-save.enable = true;
     };
   };
 }

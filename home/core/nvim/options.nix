@@ -34,8 +34,8 @@
 
       swapfile = false;
       backup = false;
-      undodir = "${config.home.homeDirectory}.vim/undodir";
-      udofile = true;
+      undodir = "${config.home.homeDirectory}/.vim/undodir";
+      undofile = true;
 
       virtualedit = "block";
       inccommand = "split";
