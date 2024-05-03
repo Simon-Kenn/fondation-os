@@ -10,7 +10,7 @@
       {
         mode = "n";
         key = "zM";
-        action = "require('ufo').closeAllFolds";
+        action = "ufo.closeAllFolds";
         options.desc = "close all fols";
       }
     ];
