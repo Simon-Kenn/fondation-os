@@ -1,3 +1,3 @@
 {
-  audio = import ./audio.nix;
+  audio = import ./hardware/audio;
 }
