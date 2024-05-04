@@ -20,8 +20,12 @@
 
     shell.fish.enable = true;
 
+    networking.enable = true;
+
     hardware = {
       audio.enable = true;
+      video.enable = true;
+      bluetooth.enable = true;
     };
   };
 }

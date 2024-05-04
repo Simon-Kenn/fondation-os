@@ -8,4 +8,8 @@
   fish = import ./shell/fish;
 
   audio = import ./hardware/audio;
+  video = import ./hardware/video;
+  bluetooth = import ./hardware/bluetooth;
+
+  networking = import ./networking;
 }

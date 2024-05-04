@@ -2,7 +2,7 @@
   imports = [
     #./boot.nix
     #./ephemeral-btrfs.nix
-    ./firewall.nix
+    #./firewall.nix
     #./catppuccin.nix
     #./fish.nix
     #./impermanence.nix
