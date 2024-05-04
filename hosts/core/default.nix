@@ -3,7 +3,7 @@
     #./boot.nix
     #./ephemeral-btrfs.nix
     ./firewall.nix
-    ./catppuccin.nix
+    #./catppuccin.nix
     ./fish.nix
     #./impermanence.nix
     ./locale.nix

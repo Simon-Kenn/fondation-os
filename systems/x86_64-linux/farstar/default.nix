@@ -13,6 +13,7 @@
         plymouth = true;
       };
       impermanence.enable = true;
+      catppuccin.enable = true;
     };
     hardware = {
       audio.enable = true;
