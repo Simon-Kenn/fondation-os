@@ -7,7 +7,7 @@
     ./fish.nix
     #./impermanence.nix
     #./locale.nix
-    ./nix.nix
+    #./nix.nix
     ./openssh.nix
     ./sops.nix
     #./system-initrd.nix

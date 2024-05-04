@@ -15,6 +15,7 @@
       impermanence.enable = true;
       catppuccin.enable = true;
       locale.enable = true;
+      nix.enable = true;
     };
     hardware = {
       audio.enable = true;
