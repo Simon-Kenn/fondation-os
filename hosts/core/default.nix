@@ -6,7 +6,7 @@
     #./catppuccin.nix
     ./fish.nix
     #./impermanence.nix
-    ./locale.nix
+    #./locale.nix
     ./nix.nix
     ./openssh.nix
     ./sops.nix

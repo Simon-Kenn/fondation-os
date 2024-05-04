@@ -14,6 +14,7 @@
       };
       impermanence.enable = true;
       catppuccin.enable = true;
+      locale.enable = true;
     };
     hardware = {
       audio.enable = true;
