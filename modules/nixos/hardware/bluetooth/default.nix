@@ -4,10 +4,10 @@
   ...
 }:
 with lib; let
-  cfg = config.fdn.hardware.video;
+  cfg = config.fdn.hardware.bluetooth;
 in {
-  options.fdn.hardware.video = {
-    enable = mkEnableOption "Enable video";
+  options.fdn.hardware.bluetooth = {
+    enable = mkEnableOption "Enable bluetooth";
   };
 
   config = mkIf cfg.enable {
