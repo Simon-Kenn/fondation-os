@@ -2,32 +2,21 @@
   networking.hostName = "farstar";
   system.stateVersion = "24.05";
 
-  imports =
-    [
-      ./hardware.nix
-      ./disk.nix
+  imports = [
+    ../users/leto
+    ../core
 
-      ../core
+    ../common/systems/base-packages.nix
 
-      ../users/leto
+    ../common/hardware/audio.nix
+    ../common/hardware/video.nix
+    ../common/hardware/bluetooth.nix
 
-      ../common/systems/base-packages.nix
+    ../common/networking/network-manager.nix
 
-      #../common/hardware/audio.nix
-      ../common/hardware/video.nix
-      ../common/hardware/bluetooth.nix
+    ../common/gaming
 
-      ../common/networking/network-manager.nix
-
-      ../common/gaming
-
-      #../common/services/jellyfin.nix
-    ]
-    ++ (builtins.attrValues outputs.nixosModules);
-
-  fdt = {
-    hardware = {
-      audio.enable = true;
-    };
-  };
+    #../common/services/jellyfin.nix
+    ../../systems/x86_64-linux/farstar
+  ];
 }
