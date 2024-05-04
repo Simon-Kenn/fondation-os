@@ -1,6 +1,6 @@
 {
   imports = [
-    ./boot.nix
+    #./boot.nix
     ./ephemeral-btrfs.nix
     ./firewall.nix
     ./catppuccin.nix

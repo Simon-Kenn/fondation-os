@@ -7,6 +7,12 @@
     ++ (builtins.attrValues outputs.nixosModules);
 
   fdn = {
+    system = {
+      boot = {
+        enable = true;
+        plymouth = true;
+      };
+    };
     hardware = {
       audio.enable = true;
     };
