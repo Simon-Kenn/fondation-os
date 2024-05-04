@@ -27,5 +27,9 @@
       video.enable = true;
       bluetooth.enable = true;
     };
+
+    services = {
+      openssh.enable = true;
+    };
   };
 }

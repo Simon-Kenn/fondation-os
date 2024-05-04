@@ -8,7 +8,7 @@
     #./impermanence.nix
     #./locale.nix
     #./nix.nix
-    ./openssh.nix
+    #./openssh.nix
     ./sops.nix
     #./system-initrd.nix
   ];

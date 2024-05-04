@@ -12,4 +12,6 @@
   bluetooth = import ./hardware/bluetooth;
 
   networking = import ./networking;
+
+  openssh = import ./services/openssh;
 }
