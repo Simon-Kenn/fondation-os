@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.fdt.hardware.audio;
+  cfg = config.fdn.hardware.audio;
 in {
-  options.fdt.hardware.audio = {
+  options.fdn.hardware.audio = {
     enable = mkEnableOption "Enable audio";
   };
 

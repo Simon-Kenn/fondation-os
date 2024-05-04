@@ -6,7 +6,7 @@
     ]
     ++ (builtins.attrValues outputs.nixosModules);
 
-  fdt = {
+  fdn = {
     hardware = {
       audio.enable = true;
     };
