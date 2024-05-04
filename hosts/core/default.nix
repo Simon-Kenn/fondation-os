@@ -1,15 +1,15 @@
 {
   imports = [
     #./boot.nix
-    ./ephemeral-btrfs.nix
+    #./ephemeral-btrfs.nix
     ./firewall.nix
     ./catppuccin.nix
     ./fish.nix
-    ./impermanence.nix
+    #./impermanence.nix
     ./locale.nix
     ./nix.nix
     ./openssh.nix
     ./sops.nix
-    ./system-initrd.nix
+    #./system-initrd.nix
   ];
 }

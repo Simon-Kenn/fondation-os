@@ -12,6 +12,7 @@
         enable = true;
         plymouth = true;
       };
+      impermanence.enable = true;
     };
     hardware = {
       audio.enable = true;
