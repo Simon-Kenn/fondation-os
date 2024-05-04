@@ -17,6 +17,9 @@
       locale.enable = true;
       nix.enable = true;
     };
+
+    shell.fish.enable = true;
+
     hardware = {
       audio.enable = true;
     };

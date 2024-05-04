@@ -5,5 +5,7 @@
   locale = import ./system/locale;
   nix = import ./system/nix;
 
+  fish = import ./shell/fish;
+
   audio = import ./hardware/audio;
 }

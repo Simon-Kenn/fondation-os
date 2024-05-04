@@ -4,7 +4,7 @@
     #./ephemeral-btrfs.nix
     ./firewall.nix
     #./catppuccin.nix
-    ./fish.nix
+    #./fish.nix
     #./impermanence.nix
     #./locale.nix
     #./nix.nix
