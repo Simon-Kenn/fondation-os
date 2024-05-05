@@ -4,7 +4,7 @@
 
   imports = [
     ../users/leto
-    ../core
+    #../core
 
     ../common/systems/base-packages.nix
 
@@ -14,7 +14,7 @@
 
     #../common/networking/network-manager.nix
 
-    ../common/gaming
+    #../common/gaming
 
     #../common/services/jellyfin.nix
     ../../systems/x86_64-linux/farstar

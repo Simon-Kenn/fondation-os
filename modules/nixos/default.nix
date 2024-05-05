@@ -5,6 +5,8 @@
   locale = import ./system/locale;
   nix = import ./system/nix;
 
+  sops = import ./security/sops;
+
   fish = import ./shell/fish;
 
   audio = import ./hardware/audio;
@@ -14,4 +16,6 @@
   networking = import ./networking;
 
   openssh = import ./services/openssh;
+
+  gaming = import ./gaming;
 }

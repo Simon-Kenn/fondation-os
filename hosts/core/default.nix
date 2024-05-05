@@ -9,7 +9,7 @@
     #./locale.nix
     #./nix.nix
     #./openssh.nix
-    ./sops.nix
+    #./sops.nix
     #./system-initrd.nix
   ];
 }

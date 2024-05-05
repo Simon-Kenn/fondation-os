@@ -18,6 +18,8 @@
       nix.enable = true;
     };
 
+    security.sops.enable = true;
+
     shell.fish.enable = true;
 
     networking.enable = true;
@@ -31,5 +33,7 @@
     services = {
       openssh.enable = true;
     };
+
+    gaming.enable = true;
   };
 }
