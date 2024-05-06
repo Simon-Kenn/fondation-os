@@ -1,7 +1,3 @@
 {outputs, ...}: {
-  imports =
-    [
-      ../core
-    ]
-    ++ (builtins.attrValues outputs.nixosModules);
+  imports = builtins.attrValues outputs.nixosModules;
 }

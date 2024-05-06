@@ -94,7 +94,7 @@
       iso = lib.nixosSystem {
         modules = [
           "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
-          ./hosts/iso
+          ./systems/x86_64-linux-iso/minimal
         ];
         specialArgs = {inherit inputs outputs;};
       };
