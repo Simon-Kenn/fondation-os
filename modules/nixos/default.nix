@@ -18,4 +18,6 @@
   openssh = import ./services/openssh;
 
   gaming = import ./gaming;
+
+  user = import ./users/user;
 }

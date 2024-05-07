@@ -5,20 +5,20 @@
   ...
 }:
 with lib; let
-  cfg = config.fdn.users.user;
+  cfg = config.fdn.user;
 in {
   #imports = [../home-manager];
 
   options.fdn.user = {
     enable = mkEnableOption "Enable system users";
     name = mkOption {
-      type = str;
-      desc = "The username to use";
+      type = types.str;
+      description = "The username to use";
       default = "leto";
     };
-    initiallPassword = mkOption {
-      type = str;
-      desc = "The initiallPassword to use";
+    initialPassword = mkOption {
+      type = types.str;
+      description = "The initiallPassword to use";
       default = "1";
     };
   };
@@ -29,6 +29,7 @@ in {
       shell = pkgs.fish;
       home = "/home/${cfg.name}";
       extraGroups = ["wheel" "network" "git"];
+      initialPassword = cfg.initialPassword;
     };
 
     security.pam.services = {

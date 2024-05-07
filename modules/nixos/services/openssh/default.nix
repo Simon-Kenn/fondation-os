@@ -15,8 +15,13 @@ in {
       enable = true;
       settings = {
         PasswordAuthentication = false;
-        PermitRootLogin = "no";
       };
+    };
+
+    users.users = {
+      ${config.fdn.user.name}.openssh.authorizedKeys.keys = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGvp/TdTeIuLKSk1/NWi+U0tP2pF1pdbQxD5UwaEtT4Z leto@farstar"
+      ];
     };
 
     environment.persistence."/persist".files = [

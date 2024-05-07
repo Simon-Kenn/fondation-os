@@ -13,6 +13,16 @@
     networkmanager.enable = true;
     wireless.enable = lib.mkForce false;
   };
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+
+  users.extraUsers.root.password = "nixos";
+
+  services.openssh = {
+    enable = true;
+    settings = {
+      PermitRootLogin = "yes";
+    };
+  };
 
   fdn = {
     system = {
@@ -21,9 +31,7 @@
       nix.enable = true;
     };
 
-    services.openssh.enable = true;
-
-    users = {
+    user = {
       name = "nixos";
       initialPassword = "1";
     };
