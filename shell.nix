@@ -1,6 +1,6 @@
-{ 
-  pkgs ?
-  let
+{
+  inputs,
+  pkgs ? let
     lock = (builtins.fromJSON (builtins.readFile ./flake.lock)).nodes.nixpkgs.locked;
     nixpkgs = fetchTarball {
       url = "https://github.com/nixos/nixpkgs/archive/${lock.rev}.tar.gz";
@@ -13,6 +13,7 @@
   default = pkgs.mkShell {
     NIX_CONFIG = "extra-experimental-features = nix-command flakes repl-flake";
     nativeBuildInputs = with pkgs; [
+      inputs.nixos-anywhere.packages.${pkgs.system}.nixos-anywhere
       nix
       home-manager
       git

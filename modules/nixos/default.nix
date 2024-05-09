@@ -16,6 +16,7 @@
   networking = import ./networking;
 
   openssh = import ./services/openssh;
+  avahi = import ./services/avahi;
 
   gaming = import ./gaming;
 

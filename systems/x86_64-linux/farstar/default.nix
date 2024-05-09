@@ -32,6 +32,7 @@
 
     services = {
       openssh.enable = true;
+      avahi.enable = true;
     };
 
     gaming.enable = true;

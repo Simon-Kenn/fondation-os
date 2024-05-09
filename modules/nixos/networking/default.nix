@@ -14,9 +14,6 @@ in {
     networking = {
       firewall.enable = true;
       networkmanager.enable = true;
-      hosts = {
-        "192.168.0.2" = ["babel.local"];
-      };
     };
 
     environment.persistence."/persist".directories = [
