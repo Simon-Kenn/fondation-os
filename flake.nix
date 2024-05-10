@@ -113,7 +113,7 @@
 
       babel = lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [./hosts/babel];
+        modules = [./systems/x86_64-linux/babel];
         specialArgs = {inherit inputs outputs;};
       };
     };
