@@ -21,6 +21,11 @@
       nix.enable = true;
     };
 
+    user = {
+      enable = true;
+      name = "leto";
+    };
+
     security.sops.enable = true;
     shell.fish.enable = true;
     networking.enable = true;

@@ -28,6 +28,7 @@ in {
       isNormalUser = true;
       shell = pkgs.fish;
       home = "/home/${cfg.name}";
+      group = "users";
       extraGroups = ["wheel" "network" "git"];
       initialPassword = cfg.initialPassword;
     };
