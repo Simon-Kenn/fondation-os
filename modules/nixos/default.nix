@@ -17,6 +17,8 @@
 
   openssh = import ./services/openssh;
   avahi = import ./services/avahi;
+  servarr = import ./services/servarr;
+  homepage-dashboard = import ./services/homepage-dashboard;
 
   gaming = import ./gaming;
 
