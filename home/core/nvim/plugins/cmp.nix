@@ -30,28 +30,56 @@
           }
         ];
         mapping = {
-          "<CR>" = "cmp.mapping.confirm({ select = false })";
+          "<CR>" =
+            /*
+            lua
+            */
+            ''
+                cmp.mapping(function(fallback)
+                  if cmp.visible() then
+                      if luasnip.expandable() then
+                          luasnip.expand()
+                      else
+                          cmp.confirm({
+                              select = true,
+                          })
+                      end
+                  else
+                      fallback()
+                  end
+              end)
+            '';
           "<Tab>" =
             /*
             lua
             */
             ''
-              cmp.mapping(
-                function(fallback)
-                  if cmp.visible() then
-                    cmp.select_next_item()
-                  elseif luasnip.expandable() then
-                    luasnip.expand()
-                  elseif luasnip.expand_or_jumpable() then
-                    luasnip.expand_or_jump()
-                  elseif check_backspace() then
+              cmp.mapping(function(fallback)
+                 if cmp.visible() then
+                   cmp.select_next_item()
+                 --elseif luasnip.expandable() then
+                 --  luasnip.expand()
+                 --elseif luasnip.expand_or_jumpable() then
+                 --  luasnip.expand_or_jump()
+                else
                     fallback()
-                  else
-                    fallback()
-                  end
-                end,
-                { "i", "s" }
-              )
+                end
+              end, { "i", "s" })
+            '';
+          "<S-Tab" =
+            /*
+            lua
+            */
+            ''
+              cmp.mapping(function(fallback)
+                if cmp.visible() then
+                  cmp.select_prev_item()
+                --elseif luasnip.locally_jumpable(-1) then
+                --  luasnip.jump(-1)
+                else
+                  fallback()
+                end
+              end, { "i", "s" })
             '';
         };
       };
