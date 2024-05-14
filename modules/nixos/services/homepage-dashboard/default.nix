@@ -6,7 +6,7 @@
 with lib; let
   cfg = config.fdn.services.homepage-dashboard;
 in {
-  options.fnd.services.homepage-dashboard = {
+  options.fdn.services.homepage-dashboard = {
     enable = mkEnableOption "Enable homepage-dashboard";
   };
 

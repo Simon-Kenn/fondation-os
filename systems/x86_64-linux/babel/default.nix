@@ -31,7 +31,12 @@
     networking.enable = true;
 
     services = {
-      openssh.enable = true;
+      openssh = {
+        enable = true;
+        PermitRootLogin = "yes";
+      };
+      servarr.enable = true;
+      homepage-dashboard.enable = true;
     };
   };
 }

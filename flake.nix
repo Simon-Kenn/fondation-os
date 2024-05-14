@@ -9,6 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    deploy-rs.url = "github:serokell/deploy-rs";
+
     impermanence.url = "github:nix-community/impermanence";
 
     disko = {
@@ -72,6 +74,7 @@
     nixpkgs,
     nixpkgs-stable,
     home-manager,
+    deploy-rs,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -136,5 +139,17 @@
         extraSpecialArgs = {inherit inputs outputs;};
       };
     };
+
+    deploy.nodes = {
+      babel = {
+        hostname = "babel";
+        profiles.system = {
+          user = "leto";
+          path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.babel;
+        };
+      };
+    };
+
+    checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
   };
 }

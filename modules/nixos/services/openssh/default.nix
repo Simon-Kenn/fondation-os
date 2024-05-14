@@ -29,11 +29,19 @@ in {
       };
     };
 
-    users.users = {
-      ${config.fdn.user.name}.openssh.authorizedKeys.keys = [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGvp/TdTeIuLKSk1/NWi+U0tP2pF1pdbQxD5UwaEtT4Z leto@farstar"
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHlkGcpz4YPfrxG/Yc/wgX29gk20X/VFoXUcm8vwR/7E root@farstar"
-      ];
+    users = {
+      users = {
+        ${config.fdn.user.name}.openssh.authorizedKeys.keys = [
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGvp/TdTeIuLKSk1/NWi+U0tP2pF1pdbQxD5UwaEtT4Z leto@farstar"
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHlkGcpz4YPfrxG/Yc/wgX29gk20X/VFoXUcm8vwR/7E root@farstar"
+        ];
+      };
+      extraUsers.root = {
+        openssh.authorizedKeys.keys = [
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGvp/TdTeIuLKSk1/NWi+U0tP2pF1pdbQxD5UwaEtT4Z leto@farstar"
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHlkGcpz4YPfrxG/Yc/wgX29gk20X/VFoXUcm8vwR/7E root@farstar"
+        ];
+      };
     };
 
     environment = mkIf config.fdn.system.impermanence.enable {

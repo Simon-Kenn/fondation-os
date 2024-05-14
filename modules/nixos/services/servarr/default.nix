@@ -12,7 +12,7 @@ in {
 
   config = mkIf cfg.enable {
     services = {
-      sonnar = {
+      sonarr = {
         enable = true;
       };
       bazarr = {
@@ -34,12 +34,12 @@ in {
 
     environment.persistence."/persist" = {
       directories = [
-        "/var/lib/sonarr/bazarr"
+        "/var/lib/sonarr"
+        "/var/lib/bazarr"
         "/var/lib/lidarr"
         "/var/lib/private/prowlarr"
         "/var/lib/radarr"
         "/var/lib/readarr"
-        "/var/lib/sonarr"
       ];
     };
   };
