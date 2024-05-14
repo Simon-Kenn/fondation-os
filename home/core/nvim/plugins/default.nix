@@ -5,7 +5,7 @@
     ./image.nix
     ./telescope.nix
     ./startup.nix
-    ./hardtime.nix
+    #./hardtime.nix
     ./focus.nix
     ./editor.nix
     ./lsp.nix
