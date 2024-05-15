@@ -6,6 +6,7 @@
   nix = import ./system/nix;
 
   sops = import ./security/sops;
+  yubikey = import ./security/yubikey;
 
   fish = import ./shell/fish;
 
