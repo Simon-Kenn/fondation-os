@@ -1,20 +1,26 @@
-{ pkgs, ...}:{
-	home.sessionVariables = {
-		GPG_TTY = "$(tty)";
-	};
+{pkgs, ...}: {
+  home.sessionVariables = {
+    GPG_TTY = "$(tty)";
+  };
 
-	services.gpg-agent = {
-		enable = true;
-		pinentryPackage = pkgs.pinentry-gnome3;
-	};
+  #home.packages = [pkgs.seahorse];
 
-	programs = {
-		gpg = {
-			enable = true;
-			#publicKeys = [{
-			#	source = ./pgp.asc;
-			#	trust = 5;	
-			#}];
-		};
-	};
+  services.gnome-keyring.enable = true;
+
+  services.gpg-agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-gnome3;
+  };
+
+  programs = {
+    gpg = {
+      enable = true;
+      publicKeys = [
+        {
+          source = ../../../leto/F106DA7D4657D8C9-2024-05-15.asc;
+          trust = 5;
+        }
+      ];
+    };
+  };
 }
