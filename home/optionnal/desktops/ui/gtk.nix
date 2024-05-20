@@ -13,13 +13,13 @@
       };
     };
 
-    iconTheme = {
-      package = pkgs.catppuccin-papirus-folders.override {
-        flavor = "mocha";
-        accent = "lavender";
-      };
-      name = "Papirus-Dark";
-    };
+    #iconTheme = {
+    #  package = pkgs.catppuccin-papirus-folders.override {
+    #    flavor = "mocha";
+    #    accent = "lavender";
+    #  };
+    #  name = "Papirus-Dark";
+    #};
   };
 
   home.sessionVariables.GTK_THEME = "Adwaita-dark";

@@ -5,7 +5,7 @@
   ...
 }:
 with lib; let
-  cfg = fdn.security.sops;
+  cfg = config.fdn.security.sops;
 in {
   imports = [inputs.sops-nix.nixosModules.sops];
 

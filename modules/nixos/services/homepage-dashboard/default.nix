@@ -14,6 +14,8 @@ in {
     services.homepage-dashboard = {
       enable = true;
 
+      openFirewall = true;
+
       settings = {
         title = "Babel";
         theme = "dark";

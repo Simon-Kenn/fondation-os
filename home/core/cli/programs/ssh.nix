@@ -1,10 +1,10 @@
 {
   programs.ssh = {
     enable = true;
+    forwardAgent = true;
   };
-  services.ssh-agent.enable = true;
 
   home.persistence = {
-    "/persist/home/leto".directories = [".ssh"];
+    "/persist/home/leto".files = [".ssh/known_hosts"];
   };
 }

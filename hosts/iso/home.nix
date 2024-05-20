@@ -1,9 +1,11 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: {
   imports = [
+    pkgs.modu
     ../../home/core/nix.nix
   ];
 

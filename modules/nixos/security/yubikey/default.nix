@@ -1,18 +1,33 @@
 {
+  config,
   lib,
-  inputs,
   pkgs,
   ...
 }:
 with lib; let
-  cfg = fdn.security.yubikey;
+  cfg = config.fdn.security.yubikey;
 in {
   options.fdn.security.yubikey = {
-    imports = [inputs.sops-nix.nixosModules.sops];
     enable = mkEnableOption "Enable yubikey";
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [libfido2];
+    environment.systemPackages = with pkgs; [
+      yubikey-manager
+      yubikey-personalization
+    ];
+
+    services = {
+      pcscd.enable = true;
+      udev.packages = with pkgs; [yubikey-personalization];
+    };
+    #environment.sellInit =
+    #  /*
+    #  sh
+    #  */
+    #  ''
+    #    gpg-connect-agent /bye
+    #    export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+    #  '';
   };
 }

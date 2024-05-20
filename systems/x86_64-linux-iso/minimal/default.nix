@@ -16,11 +16,10 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
-  users.extraUsers.root = {
-    password = "nixos";
-    openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGvp/TdTeIuLKSk1/NWi+U0tP2pF1pdbQxD5UwaEtT4Z leto@farstar"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHlkGcpz4YPfrxG/Yc/wgX29gk20X/VFoXUcm8vwR/7E root@farstar"
+  users.users.root = {
+    initialPassword = "nixos";
+    openssh.authorizedKeys.keyFiles = [
+      ../../../home/leto/ssh.pub
     ];
   };
 
@@ -33,7 +32,7 @@
 
     user = {
       name = "nixos";
-      initialPassword = "1";
+      initialPassword = "nixos";
     };
 
     services = {

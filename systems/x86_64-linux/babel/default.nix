@@ -26,7 +26,10 @@
       name = "leto";
     };
 
-    security.sops.enable = true;
+    security = {
+      sops.enable = true;
+      yubikey.enable = true;
+    };
     shell.fish.enable = true;
     networking.enable = true;
 

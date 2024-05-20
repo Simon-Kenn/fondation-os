@@ -234,11 +234,11 @@ in {
                          local s = require("neorg.modules.external.templates.default_snippets")
                          return ls.text_node(s.parse_date(0, s.file_name_date(), [[<%Y-%m-%d %a]])) -- <2006-11-01 Wed>
                        end,
-                        HOUR_OF_ORG = function() -- detect date from filename and return in norg date format
-                          local ls = require("luasnip")
-                          local s = require("neorg.modules.external.templates.default_snippets")
-                          return ls.text_node(s.parse_date(0, os.time(), [[%H:%M:%S]])) -- 2006-11-01 Wed
-                        end,
+                       HOUR_OF_ORG = function() -- detect date from filename and return in norg date format
+                         local ls = require("luasnip")
+                         local s = require("neorg.modules.external.templates.default_snippets")
+                         return ls.text_node(s.parse_date(0, os.time(), [[%H:%M:%S]])) -- 2006-11-01 Wed
+                       end,
                      }
                   '';
                 #};
