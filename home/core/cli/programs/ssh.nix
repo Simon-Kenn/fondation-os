@@ -5,6 +5,6 @@
   };
 
   home.persistence = {
-    "/persist/home/leto".files = [".ssh/known_hosts"];
+    "/persist/home/leto".directories = [".ssh"];
   };
 }
