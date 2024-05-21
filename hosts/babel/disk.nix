@@ -28,6 +28,7 @@
                 name = "crypted";
                 settings = {
                   allowDiscards = true;
+                  crypttaExtraOpts = ["fido2-device=auto" "token-timeout=10"];
                 };
                 content = {
                   type = "btrfs";
@@ -57,7 +58,7 @@
                     };
                     "/swap" = {
                       mountpoint = "/.swapvol";
-                      swap.swapfile.size = "20M";
+                      swap.swapfile.size = "8G";
                       mountOptions = ["noatime"];
                     };
                   };

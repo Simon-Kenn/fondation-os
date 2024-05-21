@@ -38,8 +38,9 @@
         enable = true;
         PermitRootLogin = "yes";
       };
-      servarr.enable = true;
+      avahi.enable = true;
       homepage-dashboard.enable = true;
+      servarr.enable = true;
     };
   };
 }

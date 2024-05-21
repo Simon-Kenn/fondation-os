@@ -14,21 +14,27 @@ in {
     services = {
       sonarr = {
         enable = true;
+        openFirewall = true;
       };
       bazarr = {
         enable = true;
+        openFirewall = true;
       };
       lidarr = {
         enable = true;
+        openFirewall = true;
       };
       prowlarr = {
         enable = true;
+        openFirewall = true;
       };
       radarr = {
         enable = true;
+        openFirewall = true;
       };
       readarr = {
         enable = true;
+        openFirewall = true;
       };
     };
 
