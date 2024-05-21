@@ -2,22 +2,35 @@
   lib,
   config,
   ...
-}:
-with lib; let
+}: let
   cfg = config.fdn.networking;
 in {
+  imports = [
+    ./networkmanager.nix
+    ./wireless.nix
+  ];
+
   options.fdn.networking = {
-    enable = mkEnableOption "Enable networking";
+    enable = lib.mkEnableOption "Enable networking";
+    wireless = lib.mkEnableOption "wireless networking";
   };
 
-  config = mkIf cfg.enable {
-    networking = {
-      firewall.enable = true;
-      networkmanager.enable = true;
-    };
-
-    environment.persistence."/persist".directories = [
-      "/etc/NetworkManager"
-    ];
+  config = lib.mkIf cfg.enable {
+    networking.firewall.enable = true;
+    networkmanager = lib.mkIf (! cfg.wireless) {enable = true;};
+    wireless = lib.mkIf cfg.wireless {enable = true;};
   };
+  #{
+  #  networking = mkMerge [
+  #    {
+  #      firewall.enable = true;
+  #    }
+  #    (mkIf (! cfg.wireless) {
+  #      networkmanager.enable = true;
+  #    })
+  #    (mkIf cfg.wireless {
+  #      wireless.enable = true;
+  #    })
+  #  ];
+  #};
 }

@@ -25,7 +25,9 @@
 
     shell.fish.enable = true;
 
-    networking.enable = true;
+    networking = {
+      enable = true;
+    };
 
     hardware = {
       audio.enable = true;
