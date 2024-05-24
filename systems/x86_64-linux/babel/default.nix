@@ -38,9 +38,18 @@
         enable = true;
         PermitRootLogin = "yes";
       };
-      avahi.enable = true;
       homepage-dashboard.enable = true;
-      servarr.enable = true;
+      nixarr = {
+        enable = true;
+        jellyfin.enable = true;
+        calibre-web.enable = true;
+        sonarr.enable = true;
+        bazarr.enable = true;
+        lidarr.enable = true;
+        prowlarr.enable = true;
+        radarr.enable = true;
+        readarr.enable = true;
+      };
     };
   };
 }

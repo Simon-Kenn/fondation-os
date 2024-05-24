@@ -37,7 +37,6 @@
 
     services = {
       openssh.enable = true;
-      avahi.enable = true;
       homepage-dashboard.enable = true;
     };
 

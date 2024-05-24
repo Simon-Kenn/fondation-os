@@ -20,6 +20,7 @@
   avahi = import ./services/avahi;
   servarr = import ./services/servarr;
   homepage-dashboard = import ./services/homepage-dashboard;
+  nixarr = import ./services/nixarr;
 
   gaming = import ./gaming;
 

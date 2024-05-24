@@ -14,6 +14,7 @@
         }
       ];
     };
+    
     cmp = {
       enable = true;
       settings = {

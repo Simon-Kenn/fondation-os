@@ -14,41 +14,61 @@ in {
     services.homepage-dashboard = {
       enable = true;
 
+      listenPort = 8082;
       openFirewall = true;
 
       settings = {
         title = "Babel";
         theme = "dark";
+        layout = {
+        };
       };
+
+      widgets = [
+        {
+          greeting = {
+            text_size = "xl";
+            text = "Bonjour Leto";
+          };
+        }
+        {
+          datetime = {
+            text_size = "xl";
+            format = {
+              timeStyle = "short";
+            };
+          };
+        }
+      ];
 
       services = [
         {
-          "Groupe 1" = [
-            #{
-            #  "Jellyfin" = {
-            #    description = "Système de média";
-            #    href = "http://babel:8096";
-            #    icon = "jellyfin";
-            #    widget = {
-            #      type = "jellyfin";
-            #      url = "http://babel:8096";
-            #      key = "5f56cbf7cf504105b8ba23e08eb1ffc6";
-            #    };
-            #  };
-            #}
-            #{
-            #  "Calibre" = {
-            #    description = "Biblothèque en ligne";
-            #    href = "http://babel:8083";
-            #    icon = "calibre-web";
-            #    #widget = {
-            #    #  type = "calibreweb";
-            #    #  url = "http://babel:8083";
-            #    #  username = "admin";
-            #    #  password = "admin123";
-            #    #};
-            #  };
-            #}
+          "Media" = [
+            {
+              "Jellyfin" = {
+                description = "Séries et films parfaitement illégale en illimité !";
+                href = "http://babel:8096";
+                icon = "jellyfin";
+                #widget = {
+                #  type = "jellyfin";
+                #  url = "http://babel:8096";
+                #  key = "5f56cbf7cf504105b8ba23e08eb1ffc6";
+                #};
+              };
+            }
+            {
+              "Calibre" = {
+                description = "Biblothèque en ligne";
+                href = "http://babel:8083";
+                icon = "calibre-web";
+                #widget = {
+                #  type = "calibreweb";
+                #  url = "http://babel:8083";
+                #  username = "admin";
+                #  password = "admin123";
+                #};
+              };
+            }
             #{
             #  "Deluge" = {
             #    description = "Qu'internet me le donne";
