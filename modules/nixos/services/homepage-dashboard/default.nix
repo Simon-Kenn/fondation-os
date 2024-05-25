@@ -130,6 +130,16 @@ in {
             }
           ];
         }
+        {
+          "Productivité" = [
+            {
+              "Paperless" = {
+                icon = "paperless";
+                href = "http://babel:8000";
+              };
+            }
+          ];
+        }
       ];
     };
   };

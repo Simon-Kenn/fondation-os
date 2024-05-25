@@ -20,6 +20,7 @@
   avahi = import ./services/avahi;
   homepage-dashboard = import ./services/homepage-dashboard;
   nixarr = import ./services/nixarr;
+  paperless = import ./services/paperless;
 
   gaming = import ./gaming;
 

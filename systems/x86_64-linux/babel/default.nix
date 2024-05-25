@@ -51,6 +51,7 @@
         radarr.enable = true;
         readarr.enable = true;
       };
+      paperless.enable = true;
     };
   };
 }
