@@ -7,15 +7,19 @@
 with lib; let
   cfg = config.fdn.user;
 in {
-  #imports = [../home-manager];
+  imports = [
+    ./home-manager.nix
+  ];
 
   options.fdn.user = {
     enable = mkEnableOption "Enable system users";
+
     name = mkOption {
       type = types.str;
       description = "The username to use";
       default = "leto";
     };
+
     initialPassword = mkOption {
       type = types.str;
       description = "The initiallPassword to use";
@@ -27,8 +31,6 @@ in {
     users.users.${cfg.name} = {
       isNormalUser = true;
       shell = pkgs.fish;
-      home = "/home/${cfg.name}";
-      group = "users";
       extraGroups = ["wheel" "network" "git"];
       initialPassword = cfg.initialPassword;
     };

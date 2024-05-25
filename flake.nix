@@ -110,7 +110,7 @@
 
       farstar = lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [./hosts/farstar];
+        modules = [./systems/x86_64-linux/farstar];
         specialArgs = {inherit inputs outputs;};
       };
 

@@ -1,4 +1,7 @@
 {outputs, ...}: {
+  networking.hostName = "farstar";
+  system.stateVersion = "24.05";
+
   imports =
     [
       ./disk.nix
@@ -16,6 +19,13 @@
       catppuccin.enable = true;
       locale.enable = true;
       nix.enable = true;
+    };
+
+    user = {
+      enable = true;
+      name = "leto";
+      initialPassword = "password";
+      home-manager.enable = true;
     };
 
     security = {
@@ -37,7 +47,6 @@
 
     services = {
       openssh.enable = true;
-      homepage-dashboard.enable = true;
     };
 
     gaming.enable = true;

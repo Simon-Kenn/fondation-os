@@ -24,6 +24,7 @@
     user = {
       enable = true;
       name = "leto";
+      initialPassword = "password";
     };
 
     security = {

@@ -1,87 +1,120 @@
 {
-  programs.nixvim.plugins = {
-    luasnip = {
-      enable = true;
-      extraConfig = {
-        history = true;
-        updateevents = "TextChanged,TextChangedI";
-        enable_autosnippets = true;
-      };
-      fromLua = [
-        {}
-        {
-          paths = ./snippets;
-        }
-      ];
-    };
-    
-    cmp = {
-      enable = true;
-      settings = {
-        snippet.expand = "luasnip";
-        sources = [
-          {name = "nvim_lsp";}
-          {name = "nvim-lua";}
-          {name = "luasnip";}
-          {name = "path";}
-          {name = "neorg";}
+  programs.nixvim = {
+    plugins = {
+      luasnip = {
+        enable = true;
+        extraConfig = {
+          history = true;
+          updateevents = "TextChanged,TextChangedI";
+          enable_autosnippets = true;
+        };
+        fromLua = [
+          {}
           {
-            name = "buffer";
-            keywordLength = 5;
+            paths = ./snippets;
           }
         ];
-        mapping = {
-          "<CR>" =
-            /*
-            lua
-            */
-            ''
-                cmp.mapping(function(fallback)
-                  if cmp.visible() then
-                      if luasnip.expandable() then
-                          luasnip.expand()
-                      else
-                          cmp.confirm({
-                              select = true,
-                          })
-                      end
-                  else
-                      fallback()
-                  end
-              end)
-            '';
-          "<Tab>" =
-            /*
-            lua
-            */
-            ''
-              cmp.mapping(function(fallback)
-                 if cmp.visible() then
-                   cmp.select_next_item()
-                 --elseif luasnip.expandable() then
-                 --  luasnip.expand()
-                 --elseif luasnip.expand_or_jumpable() then
-                 --  luasnip.expand_or_jump()
-                else
-                    fallback()
-                end
-              end, { "i", "s" })
-            '';
-          "<S-Tab" =
-            /*
-            lua
-            */
-            ''
-              cmp.mapping(function(fallback)
-                if cmp.visible() then
-                  cmp.select_prev_item()
-                --elseif luasnip.locally_jumpable(-1) then
-                --  luasnip.jump(-1)
-                else
-                  fallback()
-                end
-              end, { "i", "s" })
-            '';
+      };
+
+      lspkind = {
+        enable = true;
+
+        cmp = {
+          enable = true;
+          menu = {
+            nvim_lsp = "[LSP]";
+            nvim_lua = "[api]";
+            path = "[path]";
+            luasnip = "[snip]";
+            buffer = "[buffer]";
+            neorg = "[neorg]";
+            cmp_tabby = "[Tabby]";
+          };
+        };
+      };
+
+      cmp = {
+        enable = true;
+        settings = {
+          #_raw = "luasnip = require(\"luasnip\")";
+          snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
+
+          sources = [
+            {name = "path";}
+            {name = "nvim_lsp";}
+            {name = "luasnip";}
+            {name = "neorg";}
+            {
+              name = "buffer";
+              keywordLength = 5;
+            }
+          ];
+
+          mapping = {
+            "<C-d>" = "cmp.mapping.scroll_docs(-4)";
+            "<C-f>" = "cmp.mapping.scroll_docs(4)";
+            "<C-Space>" = "cmp.mapping.complete()";
+            "<C-e>" = "cmp.mapping.close()";
+            "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+            "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+            "<CR>" = "cmp.mapping.confirm({ select = true })";
+            #"<CR>" =
+            #  /*
+            #  lua
+            #  */
+            #  ''
+            #    cmp.mapping(function(fallback)
+            #      if cmp.visible() then
+            #        if luasnip.expandable() then
+            #          luasnip.expand()
+            #        else
+            #          cmp.confirm({
+            #            select = true,
+            #          })
+            #        end
+            #      else
+            #        fallback()
+            #      end
+            #    end)
+            #  '';
+            #"<Tab>" =
+            #  /*
+            #  lua
+            #  */
+            #  ''
+            #    cmp.mapping(
+            #      function(fallback)
+            #        if cmp.visible() then
+            #          cmp.select_next_item()
+            #        elseif luasnip.expandable() then
+            #          luasnip.expand()
+            #        elseif luasnip.expand_or_jumpable() then
+            #          luasnip.expand_or_jump()
+            #        elseif check_backspace() then
+            #          fallback()
+            #        else
+            #          fallback()
+            #        end
+            #      end,
+            #      { "i", "s" }
+            #      )
+            #  '';
+            #"<S-Tab" =
+            #  /*
+            #  lua
+            #  */
+            #  ''
+            #    cmp.mapping(function(fallback)
+            #      if cmp.visible() then
+            #        cmp.select_prev_item()
+            #      elseif luasnip.locally_jumpable(-1) then
+            #        luasnip.jump(-1)
+            #      else
+            #        fallback()
+            #      end
+            #    end, { "i", "s" })
+            #  '';
+          };
         };
       };
     };

@@ -7,24 +7,26 @@
   ...
 }:
 with lib; let
-  cfg = config.users.home-manager;
+  cfg = config.fdn.user.home-manager;
 in {
   imports = [
     inputs.home-manager.nixosModules.home-manager
   ];
 
-  options.fdn.users.home-manager = {
+  options.fdn.user.home-manager = {
     enable = mkEnableOption "Enable home-manager";
   };
 
   config = mkIf cfg.enable {
+    users.users.leto.packages = [pkgs.home-manager];
+
     home-manager = {
-      users.leto = import ../../../home/leto/${config.networking.hostName}.nix;
+      users.leto = import ../../../../home/leto/farstar.nix;
       extraSpecialArgs = {
         inherit inputs outputs;
       };
-      useGlobalPkgs = true;
-      useUserPackages = true;
+      #useGlobalPkgs = true;
+      #useUserPackages = true;
     };
   };
 }
