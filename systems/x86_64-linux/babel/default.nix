@@ -39,7 +39,13 @@
         enable = true;
         PermitRootLogin = "yes";
       };
+
       homepage-dashboard.enable = true;
+
+      wireguard = {
+        enable = true;
+      };
+
       nixarr = {
         enable = true;
         jellyfin.enable = true;
@@ -51,6 +57,7 @@
         radarr.enable = true;
         readarr.enable = true;
       };
+
       paperless.enable = true;
     };
   };

@@ -17,12 +17,11 @@ in {
       mediaDir = "/data/paperless";
       dataDir = "/data/.state/dataDir";
       user = "paperless";
-      port = defaultPort;
+      #      port = defaultPort;
     };
 
     networking.firewall = {
       allowedUDPPorts = [defaultPort];
-      allowedTCPPorts = [defaultPort];
     };
   };
 }

@@ -23,7 +23,7 @@ return {
 				}}
 			]],
 			{
-				i(1, "mymodule"),
+				i(1),
 				rep(1),
 				i(2, "mymodule"),
 				i(3, "myconfiguration"),

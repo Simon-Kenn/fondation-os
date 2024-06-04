@@ -140,6 +140,16 @@ in {
             }
           ];
         }
+        {
+          "Système" = [
+            {
+              "Tailscale" = {
+                icon = "tailscale";
+                href = "http://babel:41641";
+              };
+            }
+          ];
+        }
       ];
     };
   };

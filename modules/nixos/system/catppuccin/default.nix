@@ -17,7 +17,7 @@ in {
   config = mkIf cfg.enable {
     catppuccin = {
       enable = true;
-      flavour = "mocha";
+      flavor = "mocha";
     };
   };
 }

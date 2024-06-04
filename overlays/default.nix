@@ -9,7 +9,7 @@
   #	version = "v7.0.0";
   #}
 
-  neovim = inputs.neovim-nightly-overlay.overlay;
+  neovim = inputs.neovim-nightly-overlay.overlays.default;
 
   #modifications = final: prev: {
   #	vimPlugins.neorg = prev.vimPlugins.extands {

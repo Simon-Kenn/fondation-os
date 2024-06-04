@@ -47,6 +47,10 @@
 
     services = {
       openssh.enable = true;
+      wireguard = {
+        enable = true;
+        client = true;
+      };
     };
 
     gaming.enable = true;

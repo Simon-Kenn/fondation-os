@@ -17,6 +17,7 @@
   networking = import ./networking;
 
   openssh = import ./services/openssh;
+  wireguard = import ./services/wireguard;
   avahi = import ./services/avahi;
   homepage-dashboard = import ./services/homepage-dashboard;
   nixarr = import ./services/nixarr;
