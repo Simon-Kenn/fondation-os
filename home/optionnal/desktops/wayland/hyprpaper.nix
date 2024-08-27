@@ -3,9 +3,9 @@
     enable = true;
     settings = {
       preloads = [
-        "~/fondation/modules/home/desktops/wayland/hyprpaper/nix-black-4K.png"
+        "~/fondation/modules/home/desktops/wayland/hyprpaper/girl_and_cat.jpg"
       ];
-      wallpapers = [", ./nix-black-4K.png"];
+      wallpapers = [", ./girl_and_cat.jpg"];
     };
   };
 }

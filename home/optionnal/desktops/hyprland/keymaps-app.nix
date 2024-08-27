@@ -41,10 +41,10 @@
       # Screen lock
       ++ (
         let
-          swaylock = lib.getExe config.programs.swaylock.package;
+          hyprlock = lib.getExe config.programs.hyprlock.package;
         in
-          lib.optionals config.programs.swaylock.enable [
-            "SUPER,l,exec,${swaylock} -S --grace 2"
+          lib.optionals config.programs.hyprlock.enable [
+            "SUPER,l,exec,${hyprlock}"
           ]
       )
       ++

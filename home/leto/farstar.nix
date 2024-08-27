@@ -5,6 +5,6 @@
     ../optionnal/desktops/hyprland
   ];
 
-  wallpaper = ../../pkgs/wallpapers/wallpapers/Kurzgesagt-Cloudy_Quasar_1.png;
+  wallpaper = ../../pkgs/wallpapers/wallpapers/girl_and_cat.jpg;
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 }
