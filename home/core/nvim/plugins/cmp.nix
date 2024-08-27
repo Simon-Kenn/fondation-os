@@ -3,7 +3,7 @@
     plugins = {
       luasnip = {
         enable = true;
-        extraConfig = {
+        settings = {
           history = true;
           updateevents = "TextChanged,TextChangedI";
           enable_autosnippets = true;
@@ -35,20 +35,32 @@
 
       cmp = {
         enable = true;
+        autoEnableSources = false;
         settings = {
-          #_raw = "luasnip = require(\"luasnip\")";
-          snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
+          snippet.expand = /*lua*/ ''
+            function(args) 
+              require('luasnip').lsp_expand(args.body) 
+            end
+          '';
 
-          sources = [
-            {name = "path";}
-            {name = "nvim_lsp";}
-            {name = "luasnip";}
-            {name = "neorg";}
-            {
-              name = "buffer";
-              keywordLength = 5;
-            }
-          ];
+            sources ={ 
+            __raw = /*lua*/ ''
+            cmp.config.sources({
+              { name = "nvim_lsp" },
+              { name = "luasnip" },
+              { name = "buffer" },
+              { name = "path" },
+              { name = "neorg" },
+              { name = "vimtex" },
+              { name = "bashls" },
+              { name = "lua_ls" },
+              { name = "nil_ls" },
+            }),
+
+
+
+            '';
+            };
 
           mapping = {
             "<C-d>" = "cmp.mapping.scroll_docs(-4)";
@@ -113,6 +125,13 @@
           };
         };
       };
+
+      cmp-path.enable = true;
+      cmp-buffer.enable = true;
+      cmp_luasnip.enable = true;
+      cmp-nvim-lsp.enable = true;
+      cmp-spell.enable = true;
+
     };
   };
 }

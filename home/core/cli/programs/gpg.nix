@@ -9,7 +9,7 @@
       gpgconf --launch gpg-agent
     '';
 in {
-  home.packages = [pkgs.gnome.seahorse];
+  home.packages = [pkgs.seahorse];
 
   services.gnome-keyring.enable = true;
 

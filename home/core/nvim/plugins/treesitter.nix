@@ -2,18 +2,21 @@
   programs.nixvim.plugins = {
     treesitter = {
       enable = true;
-      nixGrammars = true;
-      ensureInstalled = "all";
-      nixvimInjections = true;
+      settings = {
+        nixGrammars = true;
+        ensureInstalled = "all";
+        nixvimInjections = true;
 
-      indent = true;
+        indent.enable = true;
+        highlight.enable = true;
 
-      incrementalSelection = {
-        enable = true;
-        keymaps = {
-          initSelection = "<leader>v";
-          nodeIncremental = "<leader>vi";
-          nodeDecremental = "<leader>vd";
+        incrementalSelection = {
+          enable = true;
+          keymaps = {
+            init_selection = "<leader>v";
+            node_incremental = "<leader>vi";
+            node_decremental = "<leader>vd";
+          };
         };
       };
     };

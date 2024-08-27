@@ -32,17 +32,17 @@
     nix-colors.url = "github:misterio77/nix-colors";
     catppuccin.url = "github:catppuccin/nix";
 
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    neovim.url = "github:nix-community/neovim-nightly-overlay";
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #neorg-overlay.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
-    neorg = {
-      url = "github:nvim-neorg/neorg?rev=4cbedbbdd4ccb6f45a2045477f5658a1311dffa3";
-      flake = false;
-    };
+    neorg.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
+    #neorg = {
+    #  url = "github:nvim-neorg/neorg?rev=4cbedbbdd4ccb6f45a2045477f5658a1311dffa3";
+    #  flake = false;
+    #};
     neorg-templates = {
       url = "github:pysan3/neorg-templates";
       flake = false;

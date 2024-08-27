@@ -9,10 +9,15 @@
   ];
 
   wayland.windowManager.hyprland = {
-    settings = let
-      active = "0xaa${config.colorscheme.palette.base0C}";
-      inactive = "0xaa${config.colorscheme.palette.base02}";
-    in {
+    catppuccin = {
+      enable = true;
+      flavor = "mocha";
+      accent = "blue";
+    };
+      settings = let
+        active = "0xaa${config.colorscheme.palette.base0C}";
+        inactive = "0xaa${config.colorscheme.palette.base02}";
+      in {
       general = {
         gaps_in = 5;
         gaps_out = 5;
@@ -85,7 +90,7 @@
       misc.vfr = "on";
 
       master = {
-        new_is_master = true;
+        new_on_top = true;
       };
 
       animations = {

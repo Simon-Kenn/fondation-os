@@ -1,10 +1,13 @@
 {pkgs, ...}: {
   qt = {
     enable = true;
-    platformTheme.name = "gtk";
+    platformTheme.name = "kvantum";
     style = {
-      name = "adwaita-dark";
-      package = pkgs.adwaita-qt;
+      name = "kvantum";
+      catppuccin = {
+        enable = true;
+        apply = true;
+      };
     };
   };
 }

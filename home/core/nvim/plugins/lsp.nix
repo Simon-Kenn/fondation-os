@@ -25,21 +25,10 @@
 
       conform-nvim = {
         enable = true;
-        formatOnSave = {
-          lspFallback = true;
-          timeoutMs = 500;
-        };
       };
 
       lint = {
         enable = true;
-      };
-
-      which-key.registrations = {
-        "<leader>a" = "Code";
-        "g" = "goto";
-        "}" = "next";
-        "{" = "prev";
       };
     };
   };

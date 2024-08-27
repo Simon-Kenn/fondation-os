@@ -26,6 +26,6 @@
     viAlias = true;
     vimAlias = true;
     enableMan = true;
-    # package = pkgs.neovim-nightly;
+    #package = pkgs.neovim;
   };
 }

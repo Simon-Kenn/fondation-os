@@ -13,13 +13,10 @@ in {
 
   config = mkIf cfg.enable {
     hardware = {
-      opengl = {
+      graphics = {
         enable = true;
-        extraPackages = with pkgs; [
-          mesa
-        ];
-        driSupport = true;
-        driSupport32Bit = true;
+        enable32Bit = true;
+        extraPackages = with pkgs; [intel-media-sdk];
       };
     };
 

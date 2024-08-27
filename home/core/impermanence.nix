@@ -8,6 +8,7 @@
       directories = [
         "Bibliothèque"
         "Notes"
+        "CerveauII"
         "Documents"
         "Musiques"
         "Images"

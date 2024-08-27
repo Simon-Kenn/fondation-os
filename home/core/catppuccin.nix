@@ -7,5 +7,8 @@
     enable = true;
     flavor = "mocha";
     accent = "teal";
+    pointerCursor = {
+      enable = true;
+    };
   };
 }
