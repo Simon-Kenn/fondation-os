@@ -8,7 +8,7 @@
 
     ./settings.nix
 
-    ./config.nix
+    #./config.nix
     ./workspaces.nix
     ./keymaps-global.nix
     ./keymaps-app.nix
