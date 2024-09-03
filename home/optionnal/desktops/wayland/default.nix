@@ -3,9 +3,7 @@
     ./waybar.nix
     ./hyprpaper.nix
     ./hyprlock.nix
-    #./kanshi.nix
     ./mako.nix
-    #./swaylock.nix
     ./wofi.nix
     ./xdg.nix
     ./gammastep.nix
