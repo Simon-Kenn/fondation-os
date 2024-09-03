@@ -68,6 +68,17 @@ in {
         "border,1,3,easeout"
       ];
     };
+
+    group = {
+      groupbar = {
+        font_size = 10;
+        gradients = false;
+        text_color = "0xaa${palette.base05}";
+      };
+
+      "col.border_active" = "0xaa${palette.base0D}";
+      "col.border_inactive" = "0xaa${palette.base01}";
+    };
   };
 
 }
