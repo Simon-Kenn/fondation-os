@@ -6,6 +6,10 @@
         enable = true;
       };
 
+      fugitive = {
+        enable = true;
+      };
+
       which-key = {
         settings = {
           spec = let 
