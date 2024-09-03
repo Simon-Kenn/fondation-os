@@ -6,6 +6,8 @@
     ../gaming
     ../terminals/kitty.nix
 
+    ./settings.nix
+
     ./config.nix
     ./workspaces.nix
     ./keymaps-global.nix
