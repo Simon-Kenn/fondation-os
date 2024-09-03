@@ -18,6 +18,32 @@ in {
       resize_on_border = true;
     };
 
+    input = {
+      kb_layout = "fr";
+      kb_variant = "bepo";
+      kb_options = "caps:swapescape";
+
+      follow_mouse = 1;
+      accel_profile = "flat";
+      sensitivity = 0;
+
+      touchpad = {
+        natural_scroll = true;
+        scroll_factor = 0.1;
+      };
+    };
+
+    gestures = {
+      workspace_swipe = true;
+      workspace_swipe_forever = true;
+    };
+
+    dwindle = {
+      # keep floating dimentions while tiling
+      pseudotile = true;
+      preserve_split = true;
+    };
+
     decoration = {
       rounding = 16;
       blur = {
