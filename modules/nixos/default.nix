@@ -16,6 +16,9 @@
 
   networking = import ./networking;
 
+
+  hyprland = import ./desktops/hyprland;
+
   openssh = import ./services/openssh;
   wireguard = import ./services/wireguard;
   avahi = import ./services/avahi;
