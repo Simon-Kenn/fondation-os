@@ -74,8 +74,6 @@
         "col.border_inactive" = inactive;
       };
 
-      exec = ["${pkgs.swaybg}/bin/swaybg -i ${config.wallpaper} --mode fill"];
-
       exec-once = [
         "${pkgs.waybar}/bin/waybar"
         "${pkgs.mako}/bin/mako"
