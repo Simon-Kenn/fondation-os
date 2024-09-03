@@ -7,6 +7,11 @@ in {
       "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
     ];
 
+    exec-once = [
+      "${pkgs.waybar}/bin/waybar"
+      "${pkgs.mako}/bin/mako"
+    ];
+
     general = {
       gaps_in = 5;
       gaps_out = 5;
