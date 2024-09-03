@@ -17,5 +17,6 @@
     ./ufo.nix
     ./undotree.nix
     ./noice.nix
+    ./git.nix
   ];
 }
