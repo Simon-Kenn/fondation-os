@@ -46,6 +46,8 @@
       flake = false;
     };
 
+    ags.url = "github:Aylur/ags";
+
     # hyprwm
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
