@@ -1,11 +1,4 @@
-{ config, ...}: let 
-  pkgs = import (builtins.fetchTarball {
-    url = "https://github.com/NixOS/nixpkgs/archive/05bbf675397d5366259409139039af8077d695ce.tar.gz";
-    sha256 = "sha256:1r26vjqmzgphfnby5lkfihz6i3y70hq84bpkwd43qjjvgxkcyki0";
-  }) { config = config.nixpkgs.config; system = "x86_64-linux"; };
-
-  myPkg = pkgs.hyprland;
-in {
+{ inputs, pkgs, ...}: {
   imports = [
     ../programs
     ../wayland
@@ -21,6 +14,7 @@ in {
 
   wayland.windowManager.hyprland = {
     enable = true;
-    #package = myPkg;
+
+    package = inputs.hyprland.packages.${pkgs.system}.default;
   };
 }
