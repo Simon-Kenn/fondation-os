@@ -17,8 +17,7 @@ in{
       };
 
       background = {
-        # TODO: Change this path
-        path = "~/Codes/fondation/pkgs/wallpapers/wallpapers/girl_and_cat.jpg";
+        path = "${config.wallpaper}";
         blur_passes = 2;
         contrast = 0.8916;
         brightness = 0.7172;
