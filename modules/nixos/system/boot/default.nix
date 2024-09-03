@@ -27,17 +27,11 @@ in {
         catppuccin.enable = true;
       };
 
-      loader.timeout = 0;
       kernelParams = lib.optionals cfg.plymouth [
         "quiet"
-        "loglevel=3"
         "systemd-show_status=auto"
         "rd.udev.log_level=3"
-        "vt.global_cursor_default=0"
       ];
-
-      consoleLogLevel = 0;
-      initrd.verbose = false;
     };
   };
 }
