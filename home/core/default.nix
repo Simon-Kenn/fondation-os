@@ -58,7 +58,7 @@
       multiplexers.zellij.enable = true;
 
       programs = {
-        bat.nix.enable = true;
+        bat.enable = true;
       };
     };
   };
