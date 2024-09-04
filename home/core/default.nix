@@ -9,7 +9,7 @@
       ./impermanence.nix
       #./cli
       ./nvim
-      ./catppuccin.nix
+      #./catppuccin.nix
     ]
     ++ (builtins.attrValues outputs.homeManagerModules);
 
@@ -73,6 +73,10 @@
         yazi.enable = true;
         zoxide.enable = true;
       };
+    };
+
+    themes = {
+      catppuccin.enable = true;
     };
   };
 }

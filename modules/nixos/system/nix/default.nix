@@ -36,6 +36,8 @@ in {
           "https://nix-gaming.cachix.org"
           "https://yazi.cachix.org"
           "https://ags.cachix.org"
+          "https://catppuccin.cachix.org"
+          "https://nix-node.cachix.org"
         ];
 
         trusted-public-keys = [
@@ -46,6 +48,8 @@ in {
           "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
           "yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k="
           "ags.cachix.org-1:naAvMrz0CuYqeyGNyLgE010iUiuf/qx6kYrUv3NwAJ8="
+          "catppuccin.cachix.org-1:noG/4HkbhJb+lUAdKrph6LaozJvAeEEZj4N732IysmU="
+          "nix-node.cachix.org-1:2YOHGtGxa8VrFiWAkYnYlcoQ0sSu+AqCniSfNagzm60="
         ];
 
       };

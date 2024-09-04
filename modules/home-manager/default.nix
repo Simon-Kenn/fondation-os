@@ -43,4 +43,6 @@
   starship = import ./cli/programs/starship.nix;
   yazi = import ./cli/programs/yazi.nix;
   zoxide = import ./cli/programs/zoxide.nix;
+
+  catppuccin = import ./themes/catppuccin.nix;
 }
