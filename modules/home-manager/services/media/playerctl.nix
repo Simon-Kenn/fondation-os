@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.fdn.services.playerctl;
+  cfg = config.fdn.services.media.playerctl;
 in {
-  options.fdn.services.playerctl = {
+  options.fdn.services.media.playerctl = {
     enable = mkEnableOption "service playerctl";
   };
 

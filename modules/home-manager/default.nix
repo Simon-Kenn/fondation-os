@@ -18,5 +18,5 @@
   libre-office = import ./programs/office/libreoffice.nix;
 
 
-  services = import ./services/playerctl.nix;
+  services = import ./services/media/playerctl.nix;
 }

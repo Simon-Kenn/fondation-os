@@ -47,7 +47,9 @@
     };
 
     services = {
-      playerctl.enable = true;
+      media = {
+        playerctl.enable = true;
+      };
     };
   };
 }
