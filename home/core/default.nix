@@ -60,6 +60,7 @@
       programs = {
         bat.enable = true;
         direnv.enable = true;
+        duf.enable = true;
       };
     };
   };
