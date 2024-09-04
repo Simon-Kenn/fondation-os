@@ -15,7 +15,7 @@ in {
     general = {
       gaps_in = 5;
       gaps_out = 5;
-      border_size = 1;
+      border_size = 2;
       "col.active_border" = "0xaa${palette.base0D}";
       "col.inactive_border" = "0xaa${palette.base01}";
 
