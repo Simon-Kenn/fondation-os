@@ -28,7 +28,7 @@ in {
         enable = true;
         publicKeys = [
           {
-            source = ../../../leto/pub.asc;
+            source = ../../../;
             trust = 5;
           }
         ];

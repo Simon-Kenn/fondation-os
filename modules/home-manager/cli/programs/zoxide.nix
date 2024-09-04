@@ -4,10 +4,10 @@
   ...
 }:
 with lib; let
-  cfg = config.fdn.cli.programs.yazi;
+  cfg = config.fdn.cli.programs.zoxide;
 in {
-  options.fdn.cli.programs.yazi = {
-    enable = mkEnableOption "yazi";
+  options.fdn.cli.programs.zoxide = {
+    enable = mkEnableOption "zoxide";
   };
 
   config = mkIf cfg.enable {

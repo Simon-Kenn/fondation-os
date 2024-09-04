@@ -4,10 +4,10 @@
   ...
 }:
 with lib; let
-  cfg = config.fdn.programs.bat;
+  cfg = config.fdn.cli.programs.direnv;
 in {
-  options.fdn.programs.bat = {
-    enable = mkEnableOption "bat";
+  options.fdn.cli.programs.direnv = {
+    enable = mkEnableOption "direnv";
   };
 
   config = mkIf cfg.enable {

@@ -6,7 +6,7 @@
 with lib; let
   cfg = config.fdn.cli.programs.fd;
 in {
-  options.fdn.cli.programs.fdn = {
+  options.fdn.cli.programs.fd = {
     enable = mkEnableOption "fd";
   };
 
