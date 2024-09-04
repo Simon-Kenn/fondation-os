@@ -12,6 +12,8 @@
   pavucontrol = import ./programs/pavucontrol.nix;
   proton = import ./programs/proton.nix;
   signal = import ./programs/signal.nix;
+  sublime-music = import ./programs/sublime-music.nix;
+
 
   services = import ./services/playerctl.nix;
 }
