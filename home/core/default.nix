@@ -62,6 +62,7 @@
         direnv.enable = true;
         duf.enable = true;
         dust.enable = true;
+        eza.enable = true;
       };
     };
   };

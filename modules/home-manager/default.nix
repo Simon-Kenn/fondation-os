@@ -31,4 +31,5 @@
   direnv = import ./cli/programs/direnv.nix;
   duf = import ./cli/programs/duf.nix;
   dust = import ./cli/programs/dust.nix;
+  eza = import ./cli/programs/eza.nix;
 }
