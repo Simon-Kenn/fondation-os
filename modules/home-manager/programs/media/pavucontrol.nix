@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.fdn.programs.pavucontrol;
+  cfg = config.fdn.programs.media.pavucontrol;
 in {
-  options.fdn.programs.pavucontrol = {
+  options.fdn.programs.media.pavucontrol = {
     enable = mkEnableOption "pavucontrol";
   };
 

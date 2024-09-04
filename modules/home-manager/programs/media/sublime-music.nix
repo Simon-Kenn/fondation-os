@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.fdn.programs.sublime-music;
+  cfg = config.fdn.programs.media.sublime-music;
 in {
-  options.fdn.programs.sublime-music = {
+  options.fdn.programs.media.sublime-music = {
     enable = mkEnableOption "sublime-music";
   };
 

@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.fdn.programs.firefox;
+  cfg = config.fdn.programs.browsers.firefox;
 in {
-  options.fdn.programs.firefox = {
+  options.fdn.programs.browsers.firefox = {
     enable = mkEnableOption "firefox";
   };
 

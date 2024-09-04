@@ -4,9 +4,9 @@
   ...
 }:
 with lib; let
-  cfg = config.fdn.programs.mpv;
+  cfg = config.fdn.programs.media.mpv;
 in {
-  options.fdn.programs.mpv = {
+  options.fdn.programs.media.mpv = {
     enable = mkEnableOption "mpv";
   };
 

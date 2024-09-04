@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.fdn.programs.proton;
+  cfg = config.fdn.programs.communication.proton;
 in {
-  options.fdn.programs.proton = {
+  options.fdn.programs.communication.proton = {
     enable = mkEnableOption "proton";
   };
 

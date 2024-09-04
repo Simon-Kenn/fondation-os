@@ -5,19 +5,19 @@
   ...
 }:
 with lib; let
-  cfg = config.fdn.programs.element;
+  cfg = config.fdn.programs.communication.signal;
 in {
-  options.fdn.programs.element = {
-    enable = mkEnableOption "element";
+  options.fdn.programs.communication.signal = {
+    enable = mkEnableOption "signal";
   };
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
-      element-desktop
+      signal-desktop
     ];
-
+  
     home.persistence."/persist/home/leto".directories = [
-      ".config/Element"
+      ".config/Signal"
     ];
   };
 }

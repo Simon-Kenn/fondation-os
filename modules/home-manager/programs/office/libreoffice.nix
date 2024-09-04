@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.fdn.programs.libre-office;
+  cfg = config.fdn.programs.office.libre-office;
 in {
-  options.fdn.programs.libre-office = {
+  options.fdn.programs.office.libre-office = {
     enable = mkEnableOption "libre-office";
   };
 

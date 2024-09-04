@@ -5,19 +5,19 @@
   ...
 }:
 with lib; let
-  cfg = config.fdn.programs.calibre;
+  cfg = config.fdn.programs.office.anki;
 in {
-  options.fdn.programs.calibre = {
-    enable = mkEnableOption "calibre";
+  options.fdn.programs.office.anki = {
+    enable = mkEnableOption "anki";
   };
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
-      calibre 
+      anki-bin
     ];
 
     home.persistence."/persist/home/leto".directories = [
-      ".config/calibre"
+      ".local/share/Anki2"
     ];
   };
 }

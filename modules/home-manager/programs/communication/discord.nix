@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.fdn.programs.discord;
+  cfg = config.fdn.programs.communication.discord;
 in {
-  options.fdn.programs.discord = {
+  options.fdn.programs.communication.discord = {
     enable = mkEnableOption "discord";
   };
 

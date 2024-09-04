@@ -5,19 +5,19 @@
   ...
 }:
 with lib; let
-  cfg = config.fdn.programs.anki;
+  cfg = config.fdn.programs.communication.element;
 in {
-  options.fdn.programs.anki = {
-    enable = mkEnableOption "anki";
+  options.fdn.programs.communication.element = {
+    enable = mkEnableOption "element";
   };
 
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
-      anki-bin
+      element-desktop
     ];
 
     home.persistence."/persist/home/leto".directories = [
-      ".local/share/Anki2"
+      ".config/Element"
     ];
   };
 }
