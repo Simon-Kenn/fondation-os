@@ -18,8 +18,10 @@
   libre-office = import ./programs/office/libreoffice.nix;
 
 
-  services = import ./services/media/playerctl.nix;
+  playerctl = import ./services/media/playerctl.nix;
 
   alacritty = import ./cli/emulators/alacritty.nix;
   kitty = import ./cli/emulators/kitty.nix;
+
+  fish = import ./cli/shells/fish.nix;
 }

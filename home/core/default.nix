@@ -54,6 +54,7 @@
 
     cli = {
       emulators.kitty.enable = true;
+      shells.fish.enable = true;
     };
   };
 }

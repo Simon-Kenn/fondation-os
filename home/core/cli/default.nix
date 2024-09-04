@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./shells/fish.nix
+    #./shells/fish.nix
     ./multiplexers/zellij
     ./programs
   ];
