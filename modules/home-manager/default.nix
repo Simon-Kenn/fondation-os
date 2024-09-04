@@ -7,4 +7,5 @@
   discord = import ./programs/discord.nix;
   element = import ./programs/element.nix;
   firefox  = import ./programs/firefox.nix;
+  libre-office = import ./programs/libreoffice.nix;
 }
