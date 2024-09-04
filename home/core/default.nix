@@ -7,7 +7,7 @@
     [
       ./nix.nix
       ./impermanence.nix
-      ./cli
+      #./cli
       ./nvim
       ./catppuccin.nix
     ]
@@ -67,6 +67,7 @@
         fzf.enable = true;
         git.enable = true;
         gpg.enable = true;
+        packages.enable = true;
         ripgrep.enable = true;
         ssh.enable = true;
         yazi.enable = true;
