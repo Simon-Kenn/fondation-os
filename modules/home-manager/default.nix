@@ -3,4 +3,5 @@
   wallpaper = import ./wallpaper.nix;
 
   anki  = import  ./programs/anki.nix;
+  calibre = import ./programs/calibre.nix;
 }
