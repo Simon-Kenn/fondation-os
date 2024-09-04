@@ -67,6 +67,8 @@
         fzf.enable = true;
         git.enable = true;
         gpg.enable = true;
+        ripgrep.enable = true;
+        ssh.enable = true;
       };
     };
   };

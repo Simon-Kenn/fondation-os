@@ -37,4 +37,6 @@
   git = import ./cli/programs/git.nix;
   gpg = import ./cli/programs/gpg.nix;
   neomutt = import ./cli/programs/neomutt.nix;
+  ripgrep = import ./cli/programs/ripgrep.nix;
+  ssh = import ./cli/programs/ssh.nix;
 }
