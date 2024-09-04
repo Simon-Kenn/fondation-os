@@ -3,7 +3,6 @@
     ../wayland
     ../ui
     ../gaming
-    #../terminals/kitty.nix
     ../ags
 
     ./settings.nix
