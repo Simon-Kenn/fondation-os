@@ -1,4 +1,4 @@
-{outputs, ...}: {
+{outputs, pkgs, ...}: {
   networking.hostName = "farstar";
   system.stateVersion = "24.05";
 
@@ -8,6 +8,12 @@
       ./hardware.nix
     ]
     ++ (builtins.attrValues outputs.nixosModules);
+
+  # TODO: delete it 
+  environment.systemPackages = with pkgs; [
+    nodePackages.typescript
+  ];
+
 
   fdn = {
     system = {
