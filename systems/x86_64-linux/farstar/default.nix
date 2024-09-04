@@ -12,6 +12,7 @@
   # TODO: delete it 
   environment.systemPackages = with pkgs; [
     nodePackages.typescript
+    bun
   ];
 
 
