@@ -40,4 +40,5 @@
   ripgrep = import ./cli/programs/ripgrep.nix;
   ssh = import ./cli/programs/ssh.nix;
   starship = import ./cli/programs/starship.nix;
+  yazi = import ./cli/programs/yazi.nix;
 }

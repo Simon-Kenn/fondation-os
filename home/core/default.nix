@@ -69,6 +69,7 @@
         gpg.enable = true;
         ripgrep.enable = true;
         ssh.enable = true;
+        yazi.enable = true;
       };
     };
   };

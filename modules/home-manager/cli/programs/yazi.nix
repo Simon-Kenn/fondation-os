@@ -1,4 +1,17 @@
-{pkgs, ...}: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+with lib; let
+  cfg = config.fdn.cli.programs.yazi;
+in {
+  options.fdn.cli.programs.yazi = {
+    enable = mkEnableOption "yazi";
+  };
+
+  config = mkIf cfg.enable {
     programs.yazi = {
       enable = true;
       enableFishIntegration = true;
@@ -143,4 +156,6 @@
       poppler
       unar
     ];
+
+  };
 }
