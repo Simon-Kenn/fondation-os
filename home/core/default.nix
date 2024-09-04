@@ -1,18 +1,8 @@
 {
-  lib,
   outputs,
   ...
 }: {
   imports = builtins.attrValues outputs.homeManagerModules;
-
-  #systemd.user.startServices = "sd-switch";
-  #programs.home-manager.enable = true;
-
-  #home = {
-  #  username = lib.mkDefault "leto";
-  #  homeDirectory = lib.mkDefault "/home/leto";
-  #  stateVersion = lib.mkDefault "24.05";
-  #};
 
   fdn = {
     programs  = {
