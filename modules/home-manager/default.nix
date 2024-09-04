@@ -26,4 +26,6 @@
   fish = import ./cli/shells/fish.nix;
 
   zellij = import ./cli/multiplexers/zellij;
+
+  bat = import ./cli/programs/bat.nix;
 }

@@ -1,7 +1,7 @@
 {
   imports = [
     #./starship.nix # TODO: fix
-    ./bat.nix
+    #./bat.nix
     ./direnv.nix
     ./duf.nix
     ./dust.nix

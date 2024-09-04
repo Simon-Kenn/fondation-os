@@ -56,6 +56,10 @@
       emulators.kitty.enable = true;
       shells.fish.enable = true;
       multiplexers.zellij.enable = true;
+
+      programs = {
+        bat.nix.enable = true;
+      };
     };
   };
 }
