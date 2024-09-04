@@ -35,6 +35,7 @@ in {
       initialPassword = cfg.initialPassword;
     };
 
+    #TODO:  moove this
     security.pam.services = {
       swaylock = {};
       hyprlock = {};

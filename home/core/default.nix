@@ -3,24 +3,16 @@
   outputs,
   ...
 }: {
-  imports =
-    [
-      #./nix.nix
-      #./impermanence.nix
-      #./cli
-      #./nvim
-      #./catppuccin.nix
-    ]
-    ++ (builtins.attrValues outputs.homeManagerModules);
+  imports = builtins.attrValues outputs.homeManagerModules;
 
-  systemd.user.startServices = "sd-switch";
-  programs.home-manager.enable = true;
+  #systemd.user.startServices = "sd-switch";
+  #programs.home-manager.enable = true;
 
-  home = {
-    username = lib.mkDefault "leto";
-    homeDirectory = lib.mkDefault "/home/leto";
-    stateVersion = lib.mkDefault "24.05";
-  };
+  #home = {
+  #  username = lib.mkDefault "leto";
+  #  homeDirectory = lib.mkDefault "/home/leto";
+  #  stateVersion = lib.mkDefault "24.05";
+  #};
 
   fdn = {
     programs  = {
@@ -78,6 +70,10 @@
     editors.nvim.enable = true;
 
     system = {
+      home-manager = {
+        enable = true;
+        username = "leto";
+      };
       impermanence.enable = true;
       nix.enable = true;
     };
