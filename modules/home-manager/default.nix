@@ -4,4 +4,5 @@
 
   anki  = import  ./programs/anki.nix;
   calibre = import ./programs/calibre.nix;
+  discord = import ./programs/discord.nix;
 }
