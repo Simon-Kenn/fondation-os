@@ -4,6 +4,9 @@
       which-key = {
         enable = true;
       };
+      nvim-autopairs = {
+        enable = true;
+      };
     };
     keymaps = [
       {
