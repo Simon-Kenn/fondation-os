@@ -6,4 +6,5 @@
   calibre = import ./programs/calibre.nix;
   discord = import ./programs/discord.nix;
   element = import ./programs/element.nix;
+  firefox  = import ./programs/firefox.nix;
 }
