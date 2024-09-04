@@ -5,8 +5,8 @@
 }: {
   imports =
     [
-      ./nix.nix
-      ./impermanence.nix
+      #./nix.nix
+      #./impermanence.nix
       #./cli
       ./nvim
       #./catppuccin.nix
@@ -73,6 +73,11 @@
         yazi.enable = true;
         zoxide.enable = true;
       };
+    };
+
+    system = {
+      impermanence.enable = true;
+      nix.enable = true;
     };
 
     themes = {

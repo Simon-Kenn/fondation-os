@@ -44,5 +44,8 @@
   yazi = import ./cli/programs/yazi.nix;
   zoxide = import ./cli/programs/zoxide.nix;
 
+  impermanence = import ./system/impermanence.nix;
+  nix = import ./system/nix.nix;
+
   catppuccin = import ./themes/catppuccin.nix;
 }
