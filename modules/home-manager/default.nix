@@ -34,4 +34,5 @@
   eza = import ./cli/programs/eza.nix;
   fd = import ./cli/programs/fd.nix;
   fzf = import ./cli/programs/fzf.nix;
+  git = import ./cli/programs/git.nix;
 }
