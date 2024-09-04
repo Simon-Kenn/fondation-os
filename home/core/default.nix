@@ -66,6 +66,7 @@
         fd.enable = true;
         fzf.enable = true;
         git.enable = true;
+        gpg.enable = true;
       };
     };
   };

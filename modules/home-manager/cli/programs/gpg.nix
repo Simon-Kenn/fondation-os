@@ -1,4 +1,9 @@
-{pkgs, ...}: let
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
   startGpgAgent =
     /*
     bash
@@ -8,7 +13,15 @@
       set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
       gpgconf --launch gpg-agent
     '';
+in 
+with lib; let
+  cfg = config.fdn.cli.programs.gpg;
 in {
+  options.fdn.cli.programs.gpg = {
+    enable = mkEnableOption "gpg";
+  };
+
+  config = mkIf cfg.enable {
     home.packages = [pkgs.seahorse];
   
     services.gnome-keyring.enable = true;
@@ -34,4 +47,5 @@ in {
         ];
       };
     };
+  };
 }
