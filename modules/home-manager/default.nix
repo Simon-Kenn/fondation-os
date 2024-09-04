@@ -44,6 +44,8 @@
   yazi = import ./cli/programs/yazi.nix;
   zoxide = import ./cli/programs/zoxide.nix;
 
+  nvim = import ./editors/nvim;
+
   impermanence = import ./system/impermanence.nix;
   nix = import ./system/nix.nix;
 

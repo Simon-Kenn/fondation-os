@@ -8,7 +8,7 @@
       #./nix.nix
       #./impermanence.nix
       #./cli
-      ./nvim
+      #./nvim
       #./catppuccin.nix
     ]
     ++ (builtins.attrValues outputs.homeManagerModules);
@@ -74,6 +74,8 @@
         zoxide.enable = true;
       };
     };
+
+    editors.nvim.enable = true;
 
     system = {
       impermanence.enable = true;
