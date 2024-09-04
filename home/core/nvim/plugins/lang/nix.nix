@@ -9,12 +9,14 @@
       hmts.enable = true;
 
       conform-nvim = {
-        formattersByFt = {
-          nix = ["alejandra"];
-        };
-        formatters = {
-          alejandra = {
-            command = "${pkgs.alejandra}/bin/alejandra";
+        settings = {
+          formattersByFt = {
+            nix = ["alejandra"];
+          };
+          formatters = {
+            alejandra = {
+              command = "${pkgs.alejandra}/bin/alejandra";
+            };
           };
         };
       };
