@@ -30,4 +30,5 @@
   bat = import ./cli/programs/bat.nix;
   direnv = import ./cli/programs/direnv.nix;
   duf = import ./cli/programs/duf.nix;
+  dust = import ./cli/programs/dust.nix;
 }

@@ -61,6 +61,7 @@
         bat.enable = true;
         direnv.enable = true;
         duf.enable = true;
+        dust.enable = true;
       };
     };
   };
