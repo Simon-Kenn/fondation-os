@@ -19,4 +19,6 @@
 
 
   services = import ./services/media/playerctl.nix;
+
+  alacritty = import ./cli/emulators/alacritty.nix;
 }

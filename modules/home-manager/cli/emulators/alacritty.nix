@@ -1,4 +1,16 @@
-{config, ...}: {
+{
+  config,
+  lib,
+  ...
+}:
+with lib; let
+  cfg = config.fdn.cli.emulators.alacritty;
+in {
+  options.fdn.cli.emulators.alacritty = {
+    enable = mkEnableOption "alacritty";
+  };
+
+  config = mkIf cfg.enable {
     home.sessionVariables = {
       TERMINAL = "alacritty";
     };
@@ -38,4 +50,5 @@
         #};
       };
     };
+  };
 }
