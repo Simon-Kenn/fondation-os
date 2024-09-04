@@ -51,5 +51,9 @@
         playerctl.enable = true;
       };
     };
+
+    cli = {
+      emulators.kitty.enable = true;
+    };
   };
 }

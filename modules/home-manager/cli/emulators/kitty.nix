@@ -1,4 +1,16 @@
-{config, ...}: {
+{
+  config,
+  lib,
+  ...
+}:
+with lib; let
+  cfg = config.fdn.cli.emulators.kitty;
+in {
+  options.fdn.cli.emulators.kitty = {
+    enable = mkEnableOption "kitty";
+  };
+
+  config = mkIf cfg.enable {
     home.sessionVariables = {
       TERMINAL = "kitty";
     };
@@ -23,4 +35,6 @@
         underline_hyperlinks = "never";
       };
     };
+
+  };
 }
