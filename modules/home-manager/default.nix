@@ -10,4 +10,6 @@
   libre-office = import ./programs/libreoffice.nix;
   mpv = import ./programs/mpv.nix;
   pavucontrol = import ./programs/pavucontrol.nix;
+
+  services = import ./services/playerctl.nix;
 }
