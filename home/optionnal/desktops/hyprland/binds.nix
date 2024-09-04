@@ -1,4 +1,4 @@
-{  lib, ...}: let 
+{  lib, pkgs, config, ...}: let 
       workspaces = [
         {
           name = "1";
@@ -120,15 +120,16 @@ in {
 
     bind = let  
       grimblast = lib.getExe pkgs.grimblast;
-      #pactl = lib.getExe' pkgs.tesseract;
+      pactl = lib.getExe' pkgs.tesseract;
       notify-send = lib.getExe' pkgs.libnotify "notify-send";
-
       terminal = config.home.sessionVariables.TERMINAL;
       defaultApp = type: "${lib.getExe' pkgs.gtk3 "gtk-launch"} $(${lib.getExe' pkgs.xdg-utils "xdg-mime"} query default ${type})";
       browser = defaultApp "x-scheme-handler/https";
 
     in[
       # compositor command
+      # ------------------
+
       "$mod SHIFT, c, killactive"
       "$mod SHIFT, Q, exit"
 
@@ -155,7 +156,14 @@ in {
       "$mod, i, pseudo"
 
       # programs
+      #---------
 
+      "$mod, Return, exec, ${terminal}"
+      "$mod, b, exec, ${browser}"
+      "$mod, l, exec, pgrep hyprlock || hyprlock"
+      "$mod, w, exec, makoctl dismiss"
+      "$mod, space, exec, wofi -S drun -x 10 -y 10 -W 25% -H 60%"
+      "$mod, space, exec, wofi -S run"
     ]
     ++
     # Change workspace
