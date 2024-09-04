@@ -1,4 +1,16 @@
 {
+  config,
+  lib,
+  ...
+}:
+with lib; let
+  cfg = config.fdn.cli.programs.neomutt;
+in {
+  options.fdn.cli.programs.neomutt = {
+    enable = mkEnableOption "neomutt";
+  };
+
+  config = mkIf cfg.enable {
     home.persistence = {
       "/persist/home/leto".directories = ["mailbox"];
     };
@@ -146,4 +158,6 @@
         color   body    brightmagenta   default         "-- Patch Links --"
       '';
     };
+
+  };
 }

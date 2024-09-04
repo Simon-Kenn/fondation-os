@@ -36,4 +36,5 @@
   fzf = import ./cli/programs/fzf.nix;
   git = import ./cli/programs/git.nix;
   gpg = import ./cli/programs/gpg.nix;
+  neomutt = import ./cli/programs/neomutt.nix;
 }
