@@ -15,7 +15,7 @@
         {
           name = "4";
           key = "parenleft";
-        }
+      }
         {
           name = "5";
           key = "parenright";
@@ -110,6 +110,8 @@
         s = down;
       };
 
+      runOnce = program:  "pgrep ${program} || ${program}";
+
 in {
   wayland.windowManager.hyprland.settings = {
 
@@ -163,7 +165,22 @@ in {
       "$mod, l, exec, pgrep hyprlock || hyprlock"
       "$mod, w, exec, makoctl dismiss"
       "$mod, space, exec, wofi -S drun -x 10 -y 10 -W 25% -H 60%"
-      "$mod, space, exec, wofi -S run"
+      "$mod, h, exec, wofi -S run"
+
+      # Screenshot
+      # ----------
+
+      # area
+      ", Print, exec, ${runOnce "grimblast"} --notify copysave area"
+      "$mod SHIFT, R, exec, ${runOnce "grimblast"} --notify copysave area"
+
+      # current screen
+      "CTRL, Print, exec, ${runOnce "grimblast"} --notify --cursor copysave output"
+      "$mod SHIFT CTRL, R, exec, ${runOnce "grimblast"} --notify --cursor copysave output"
+
+      # all screens
+      "ALT, Print, exec, ${runOnce "grimblast"} --notify --cursor copysave screen"
+      "$mod SHIFT ALT, R, exec, ${runOnce "grimblast"} --notify --cursor copysave screen"
     ]
     ++
     # Change workspace
@@ -193,5 +210,25 @@ in {
       )
       directions);
 
+    bindl = [
+      # media controls
+      ", XF86AudioPlay, exec, playerctl play-pause"
+      ", XF86AudioPrev, exec, playerctl previous"
+      ", XF86AudioNext, exec, playerctl next"
+
+      # volume
+      ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+    ];
+
+    bindle = [
+      # volume
+      ", XF86AudioRaiseVolume, exec, wpctl set-volume -l '1.0' @DEFAULT_AUDIO_SINK@ 6%+"
+      ", XF86AudioLowerVolume, exec, wpctl set-volume -l '1.0' @DEFAULT_AUDIO_SINK@ 6%-"
+
+      # backlight
+      ", XF86MonBrightnessUp, exec, brillo -q -u 300000 -A 5"
+      ", XF86MonBrightnessDown, exec, brillo -q -u 300000 -U 5"
+    ];
   };
 }

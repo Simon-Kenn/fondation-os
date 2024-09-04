@@ -10,10 +10,7 @@
     ./settings.nix
     ./binds.nix
 
-    #./config.nix
     ./workspaces.nix
-    #./keymaps-global.nix
-    ./keymaps-app.nix
   ];
 
   home.packages = [
