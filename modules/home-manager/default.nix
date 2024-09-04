@@ -41,4 +41,5 @@
   ssh = import ./cli/programs/ssh.nix;
   starship = import ./cli/programs/starship.nix;
   yazi = import ./cli/programs/yazi.nix;
+  zoxide = import ./cli/programs/zoxide.nix;
 }
