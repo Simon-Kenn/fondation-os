@@ -64,6 +64,7 @@
         dust.enable = true;
         eza.enable = true;
         fd.enable = true;
+        fzf.enable = true;
       };
     };
   };
