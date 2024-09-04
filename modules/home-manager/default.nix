@@ -11,6 +11,7 @@
   mpv = import ./programs/mpv.nix;
   pavucontrol = import ./programs/pavucontrol.nix;
   proton = import ./programs/proton.nix;
+  signal = import ./programs/signal.nix;
 
   services = import ./services/playerctl.nix;
 }
