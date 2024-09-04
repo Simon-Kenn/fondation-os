@@ -24,4 +24,6 @@
   kitty = import ./cli/emulators/kitty.nix;
 
   fish = import ./cli/shells/fish.nix;
+
+  zellij = import ./cli/multiplexers/zellij;
 }
