@@ -10,8 +10,6 @@
     ./settings.nix
     ./binds.nix
     ./rules.nix
-
-    ./workspaces.nix
   ];
 
   home.packages = [
