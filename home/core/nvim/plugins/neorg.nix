@@ -37,6 +37,11 @@ in {
               default_workspace = "notes",
             },
           },
+          ["core.esupports.metagen"] =  {
+            config = {
+              type =  "auto",
+            },
+          },
           ["core.completion"] = {
             config = {
               engine = "nvim-cmp",
