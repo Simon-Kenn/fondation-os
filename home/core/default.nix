@@ -63,6 +63,7 @@
         duf.enable = true;
         dust.enable = true;
         eza.enable = true;
+        fd.enable = true;
       };
     };
   };

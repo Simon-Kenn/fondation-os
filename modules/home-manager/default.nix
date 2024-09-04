@@ -32,4 +32,5 @@
   duf = import ./cli/programs/duf.nix;
   dust = import ./cli/programs/dust.nix;
   eza = import ./cli/programs/eza.nix;
+  fd = import ./cli/programs/fd.nix;
 }
