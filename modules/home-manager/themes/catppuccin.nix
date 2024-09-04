@@ -11,10 +11,11 @@ in {
     enable = mkEnableOption "catppuccin";
   };
 
+  imports = [
+    inputs.catppuccin.homeManagerModules.catppuccin
+  ];
+
   config = mkIf cfg.enable {
-    imports = [
-      inputs.catppuccin.homeManagerModules.catppuccin
-    ];
   
     catppuccin = {
       enable = true;
