@@ -42,7 +42,9 @@
     services = {
       wayland = {
         hyprpaper.enable = true;
+        mako.enable = true;
       };
+
       media = {
         playerctl.enable = true;
       };

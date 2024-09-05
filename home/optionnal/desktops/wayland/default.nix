@@ -3,7 +3,7 @@
     #./waybar.nix
     #./hyprpaper.nix
     #./hyprlock.nix
-    ./mako.nix
+    #./mako.nix
     #./wofi.nix
     #./xdg.nix
     ./gammastep.nix

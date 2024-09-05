@@ -1,4 +1,16 @@
-{config, ...}: {
+{
+  config,
+  lib,
+  ...
+}:
+with lib; let
+  cfg = config.fdn.services.wayland.mako;
+in {
+  options.fdn.services.wayland.mako = {
+    enable = mkEnableOption "mako";
+  };
+
+  config = mkIf cfg.enable {
     services.mako = {
       enable = true;
       catppuccin.enable = true;
@@ -12,4 +24,6 @@
       defaultTimeout = 12000;
       layer = "overlay";
     };
+
+  };
 }
