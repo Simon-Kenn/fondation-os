@@ -1,7 +1,7 @@
 {lib, ...}: let
   inherit (lib) types mkOption;
 in {
-  options.wallpaper = mkOption {
+  options.fdn.themes.wallpaper = mkOption {
     type = types.path;
     default = "";
     description = ''

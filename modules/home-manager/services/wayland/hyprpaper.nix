@@ -7,6 +7,7 @@
 }:
 with lib; let
   cfg = config.fdn.services.wayland.hyprpaper;
+  wallpaper  = config.fdn.themes.wallpaper;
 in {
   options.fdn.services.wayland.hyprpaper = {
     enable = mkEnableOption "hyprpaper";
@@ -18,8 +19,8 @@ in {
       package = inputs.hyprpaper.packages.${pkgs.system}.default;
   
       settings = {
-        preload = ["${config.wallpaper}"];
-        wallpapers = [",${config.wallpaper}"];
+        preload = ["${wallpaper}"];
+        wallpapers = [",${wallpaper}"];
       };
     };
 

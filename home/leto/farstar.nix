@@ -5,7 +5,6 @@
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
   # TODO: this belong tho fdn.theme
-  wallpaper = ../../pkgs/wallpapers/wallpapers/girl_and_cat.jpg;
   colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 
   fdn = {
@@ -102,6 +101,7 @@
           package = pkgs.fira;
         };
       };
+      wallpaper = ../../pkgs/wallpapers/wallpapers/girl_and_cat.jpg;
     };
   };
 }

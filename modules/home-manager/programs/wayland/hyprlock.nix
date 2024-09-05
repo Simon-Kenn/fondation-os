@@ -7,6 +7,7 @@
 }:
 with lib; let
   cfg = config.fdn.programs.wayland.hyprlock;
+  wallpaper = config.fdn.themes.wallpaper;
 in {
   options.fdn.programs.wayland.hyprlock = {
     enable = mkEnableOption "hyprlock";
@@ -28,7 +29,7 @@ in {
         };
   
         background = {
-          path = "${config.wallpaper}";
+          path = "${wallpaper}";
           blur_passes = 2;
           contrast = 0.8916;
           brightness = 0.7172;

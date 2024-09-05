@@ -1,6 +1,4 @@
 {
-  wallpaper = import ./wallpaper.nix;
-
   firefox  = import ./programs/browsers/firefox.nix;
 
   discord = import ./programs/communication/discord.nix;
@@ -62,4 +60,5 @@
 
   catppuccin = import ./themes/catppuccin.nix;
   font = import ./themes/fonts.nix;
+  wallpaper = import ./themes/wallpaper.nix;
 }
