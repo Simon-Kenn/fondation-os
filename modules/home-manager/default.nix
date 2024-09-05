@@ -1,5 +1,4 @@
 {
-  fonts = import ./fonts.nix;
   wallpaper = import ./wallpaper.nix;
 
   firefox  = import ./programs/browsers/firefox.nix;
@@ -62,4 +61,5 @@
   
 
   catppuccin = import ./themes/catppuccin.nix;
+  font = import ./themes/fonts.nix;
 }

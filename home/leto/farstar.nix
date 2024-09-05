@@ -1,4 +1,4 @@
-{inputs, outputs, ...}: {
+{inputs, outputs, pkgs, ...}: {
   imports = [
     inputs.nix-colors.homeManagerModule
     ../optionnal/desktops/hyprland
@@ -90,6 +90,18 @@
 
     themes = {
       catppuccin.enable = true;
+
+      font = {
+        enable = true;
+        monospace = {
+          family = "FiraCode Nerd Font";
+          package = pkgs.nerdfonts.override {fonts = ["FiraCode"];};
+        };
+        regular = {
+          family = "Fira Sans";
+          package = pkgs.fira;
+        };
+      };
     };
   };
 }
