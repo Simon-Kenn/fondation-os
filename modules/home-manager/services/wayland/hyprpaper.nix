@@ -7,7 +7,7 @@
 }:
 with lib; let
   cfg = config.fdn.services.wayland.hyprpaper;
-  wallpaper  = config.fdn.themes.wallpaper;
+  inherit (config.fdn.themes) wallpaper;
 in {
   options.fdn.services.wayland.hyprpaper = {
     enable = mkEnableOption "hyprpaper";

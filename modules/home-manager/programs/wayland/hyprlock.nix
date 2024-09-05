@@ -7,7 +7,7 @@
 }:
 with lib; let
   cfg = config.fdn.programs.wayland.hyprlock;
-  wallpaper = config.fdn.themes.wallpaper;
+  inherit (config.fdn.themes) wallpaper;
 in {
   options.fdn.programs.wayland.hyprlock = {
     enable = mkEnableOption "hyprlock";
