@@ -25,6 +25,7 @@
 
   hyprpaper = import ./services/wayland/hyprpaper.nix;
   mako = import  ./services/wayland/mako.nix;
+  gammastep = import ./services/wayland/gammastep.nix;
 
   alacritty = import ./cli/emulators/alacritty.nix;
   kitty = import ./cli/emulators/kitty.nix;

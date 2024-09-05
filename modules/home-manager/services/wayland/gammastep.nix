@@ -1,4 +1,16 @@
 {
+  config,
+  lib,
+  ...
+}:
+with lib; let
+  cfg = config.fdn.services.wayland.gammastep;
+in {
+  options.fdn.services.wayland.gammastep = {
+    enable = mkEnableOption "gammastep";
+  };
+
+  config = mkIf cfg.enable {
     services.gammastep = {
       enable = true;
       enableVerboseLogging = true;
@@ -11,4 +23,6 @@
         general.adjustement-method = "wayland";
       };
     };
+
+  };
 }

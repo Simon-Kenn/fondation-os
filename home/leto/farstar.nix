@@ -43,6 +43,7 @@
       wayland = {
         hyprpaper.enable = true;
         mako.enable = true;
+        gammastep.enable = true;
       };
 
       media = {
