@@ -40,6 +40,9 @@
     };
 
     services = {
+      wayland = {
+        hyprpaper.enable = true;
+      };
       media = {
         playerctl.enable = true;
       };

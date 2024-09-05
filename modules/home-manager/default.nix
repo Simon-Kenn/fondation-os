@@ -23,6 +23,8 @@
 
   playerctl = import ./services/media/playerctl.nix;
 
+  hyprpaper = import ./services/wayland/hyprpaper.nix;
+
   alacritty = import ./cli/emulators/alacritty.nix;
   kitty = import ./cli/emulators/kitty.nix;
 
