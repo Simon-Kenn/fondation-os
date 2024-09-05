@@ -17,6 +17,8 @@
   anki  = import  ./programs/office/anki.nix;
   libre-office = import ./programs/office/libreoffice.nix;
 
+  hyprlock = import ./programs/wayland/hyprlock.nix;
+
 
   playerctl = import ./services/media/playerctl.nix;
 

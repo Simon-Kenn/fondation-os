@@ -2,7 +2,7 @@
   imports = [
     ./waybar.nix
     ./hyprpaper.nix
-    ./hyprlock.nix
+    #./hyprlock.nix
     ./mako.nix
     ./wofi.nix
     ./xdg.nix

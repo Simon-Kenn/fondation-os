@@ -1,4 +1,18 @@
-{ config, inputs, pkgs, ...}: {
+{
+  config,
+  lib,
+  inputs,
+  pkgs,
+  ...
+}:
+with lib; let
+  cfg = config.fdn.programs.wayland.hyprlock;
+in {
+  options.fdn.programs.wayland.hyprlock = {
+    enable = mkEnableOption "hyprlock";
+  };
+
+  config = mkIf cfg.enable {
     programs.hyprlock = {
       enable = true;
       package = inputs.hyprlock.packages.${pkgs.system}.hyprlock;
@@ -90,4 +104,5 @@
         };
       };
     };
+  };
 }

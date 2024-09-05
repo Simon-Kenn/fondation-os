@@ -10,6 +10,11 @@
 
   fdn = {
     programs  = {
+
+      wayland = {
+        hyprlock.enable = true;
+      };
+
       browsers = {
         firefox.enable = true;
       };
