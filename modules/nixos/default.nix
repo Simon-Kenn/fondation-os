@@ -26,7 +26,5 @@
   nixarr = import ./services/nixarr;
   paperless = import ./services/paperless;
 
-  gaming = import ./gaming;
-
   user = import ./users/user;
 }

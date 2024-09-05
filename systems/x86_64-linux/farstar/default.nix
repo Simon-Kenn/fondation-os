@@ -61,7 +61,5 @@
     };
 
     desktops.hyprland.enable = true;
-
-    gaming.enable = true;
   };
 }
