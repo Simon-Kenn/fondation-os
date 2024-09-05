@@ -85,6 +85,7 @@
       nix.enable = true;
       xdg.enable = true;
       gtk.enable = true;
+      qt.enable = true;
     };
 
     themes = {
