@@ -1,4 +1,16 @@
-{config, ...}: {
+{
+  config,
+  lib,
+  ...
+}:
+with lib; let
+  cfg = config.fdn.programs.wayland.wofi;
+in {
+  options.fdn.programs.wayland.wofi = {
+    enable = mkEnableOption "wofi";
+  };
+
+  config = mkIf cfg.enable {
     programs.wofi = {
       enable = true;
   
@@ -100,4 +112,6 @@
           }
         '';
     };
+
+  };
 }

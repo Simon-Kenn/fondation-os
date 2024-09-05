@@ -19,6 +19,7 @@
 
   hyprlock = import ./programs/wayland/hyprlock.nix;
   waybar = import ./programs/wayland/waybar.nix;
+  wofi = import  ./programs/wayland/wofi.nix;
 
   playerctl = import ./services/media/playerctl.nix;
 

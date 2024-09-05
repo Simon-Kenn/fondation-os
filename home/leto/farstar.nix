@@ -14,6 +14,7 @@
       wayland = {
         hyprlock.enable = true;
         waybar.enable = true;
+        wofi.enable = true;
       };
 
       browsers = {

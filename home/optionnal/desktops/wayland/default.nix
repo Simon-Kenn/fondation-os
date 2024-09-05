@@ -4,7 +4,7 @@
     ./hyprpaper.nix
     #./hyprlock.nix
     ./mako.nix
-    ./wofi.nix
+    #./wofi.nix
     ./xdg.nix
     ./gammastep.nix
   ];
