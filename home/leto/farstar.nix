@@ -91,7 +91,7 @@
     themes = {
       catppuccin.enable = true;
 
-      font = {
+      fonts = {
         enable = true;
         monospace = {
           family = "FiraCode Nerd Font";
