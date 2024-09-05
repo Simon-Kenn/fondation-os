@@ -1,14 +1,4 @@
 {pkgs, ...}: {
-  imports = [
-    #./waybar.nix
-    #./hyprpaper.nix
-    #./hyprlock.nix
-    #./mako.nix
-    #./wofi.nix
-    #./xdg.nix
-    #./gammastep.nix
-  ];
-
   home.packages = with pkgs; [
     grim # Grab image from a Wayland compositor
     gtk3

@@ -1,6 +1,5 @@
 { inputs, pkgs, ...}: {
   imports = [
-    ../wayland
     ../ui
     ../gaming
     ../ags
