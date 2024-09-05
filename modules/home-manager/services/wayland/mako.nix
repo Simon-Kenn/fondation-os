@@ -15,7 +15,7 @@ in {
       enable = true;
       catppuccin.enable = true;
       iconPath = "${config.gtk.iconTheme.package}/share/icons/Papirus-Dark";
-      font = "${config.fontProfiles.regular.family} 12";
+      font = "${config.fdn.themes.fonts.regular.family} 12";
       padding = "10,20";
       anchor = "top-center";
       width = 400;

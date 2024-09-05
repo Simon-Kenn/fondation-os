@@ -20,7 +20,7 @@ in {
       catppuccin.enable = true;
 
       font = {
-        name = config.fontProfiles.monospace.family;
+        name = config.fdn.themes.fonts.monospace.family;
         size = 11;
       };
 
