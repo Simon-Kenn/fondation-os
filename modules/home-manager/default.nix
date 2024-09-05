@@ -14,6 +14,7 @@
   anki  = import  ./programs/office/anki.nix;
   libre-office = import ./programs/office/libreoffice.nix;
 
+  hyprland = import ./programs/wayland/hyprland;
   hyprlock = import ./programs/wayland/hyprlock.nix;
   waybar = import ./programs/wayland/waybar.nix;
   wofi = import  ./programs/wayland/wofi.nix;

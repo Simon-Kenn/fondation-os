@@ -1,7 +1,6 @@
 {inputs, outputs, pkgs, ...}: {
   imports = [
     inputs.nix-colors.homeManagerModule
-    ../optionnal/desktops/hyprland
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
   # TODO: this belong tho fdn.theme
@@ -11,6 +10,7 @@
     programs  = {
 
       wayland = {
+        hyprland.enable = true;
         hyprlock.enable = true;
         waybar.enable = true;
         wofi.enable = true;
