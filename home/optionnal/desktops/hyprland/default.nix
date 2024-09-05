@@ -1,6 +1,5 @@
 { inputs, pkgs, ...}: {
   imports = [
-    ../ui
     ../ags
 
     ./settings.nix
