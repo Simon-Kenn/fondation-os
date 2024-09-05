@@ -1,10 +1,12 @@
 {
   config,
+  lib,
   pkgs,
   inputs,
   ...
-}: let
-  # Dependencies
+}:
+with lib; let
+  cfg = config.fdn.programs.wayland.waybar;
   cut = "${pkgs.coreutils}/bin/cut";
   wc = "${pkgs.coreutils}/bin/wc";
 
@@ -32,6 +34,11 @@
       '{text:$text,tooltip:$tooltip,alt:$alt,class:$class,percentage:$percentage}'
   ''}/bin/waybar-${name}";
 in {
+  options.fdn.programs.wayland.waybar = {
+    enable = mkEnableOption "waybar";
+  };
+
+  config = mkIf cfg.enable {
     programs.waybar = {
       enable = true;
       settings = [
@@ -281,4 +288,6 @@ in {
           }
         '';
     };
+
+  };
 }

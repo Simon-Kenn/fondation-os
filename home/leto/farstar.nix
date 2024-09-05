@@ -13,6 +13,7 @@
 
       wayland = {
         hyprlock.enable = true;
+        waybar.enable = true;
       };
 
       browsers = {

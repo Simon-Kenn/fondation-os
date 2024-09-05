@@ -18,7 +18,7 @@
   libre-office = import ./programs/office/libreoffice.nix;
 
   hyprlock = import ./programs/wayland/hyprlock.nix;
-
+  waybar = import ./programs/wayland/waybar.nix;
 
   playerctl = import ./services/media/playerctl.nix;
 
