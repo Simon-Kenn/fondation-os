@@ -84,6 +84,7 @@
       impermanence.enable = true;
       nix.enable = true;
       xdg.enable = true;
+      gtk.enable = true;
     };
 
     themes = {
