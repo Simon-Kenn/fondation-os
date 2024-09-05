@@ -5,7 +5,7 @@
     #./hyprlock.nix
     ./mako.nix
     #./wofi.nix
-    ./xdg.nix
+    #./xdg.nix
     ./gammastep.nix
   ];
 

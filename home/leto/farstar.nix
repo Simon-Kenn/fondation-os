@@ -77,6 +77,7 @@
       };
       impermanence.enable = true;
       nix.enable = true;
+      xdg.enable = true;
     };
 
     themes = {

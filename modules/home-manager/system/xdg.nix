@@ -1,7 +1,16 @@
 {
   config,
+  lib,
   ...
-}: {
+}:
+with lib; let
+  cfg = config.fdn.system.xdg;
+in {
+  options.fdn.system.xdg = {
+    enable = mkEnableOption "xdg";
+  };
+
+  config = mkIf cfg.enable {
     xdg = {
       enable = true;
   
@@ -23,4 +32,5 @@
         };
       };
     };
+  };
 }

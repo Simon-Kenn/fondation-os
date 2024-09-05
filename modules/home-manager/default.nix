@@ -52,6 +52,7 @@
   home-manager = import ./system/home-manager.nix;
   impermanence = import ./system/impermanence.nix;
   nix = import ./system/nix.nix;
+  xdg = import ./system/xdg.nix;
 
   catppuccin = import ./themes/catppuccin.nix;
 }
