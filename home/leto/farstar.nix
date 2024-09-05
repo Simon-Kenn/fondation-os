@@ -39,7 +39,9 @@
     };
 
     services = {
+
       wayland = {
+        ags.enable = true;
         hyprpaper.enable = true;
         mako.enable = true;
         gammastep.enable = true;

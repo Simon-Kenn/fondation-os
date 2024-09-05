@@ -1,7 +1,5 @@
 { inputs, pkgs, ...}: {
   imports = [
-    ../ags
-
     ./settings.nix
     ./binds.nix
     ./rules.nix
