@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 with lib; let
@@ -13,11 +14,13 @@ in {
   config = mkIf cfg.enable {
     gtk = {
       enable = true;
-      font = {
-        name = "Fira Sans";
-        size = 12;
-      };
   
+      font = {
+        name = "Inter";
+        package = pkgs.google-fonts.override {fonts = ["Inter"];};
+        size = 9;
+      };
+
       catppuccin = {
         enable = true;
         icon = {

@@ -216,7 +216,7 @@ in {
         */
         ''
           * {
-            font-family: ${config.fdn.themes.fonts.regular.family}, ${config.fdn.themes.fonts.monospace.family};
+            font-family: Inter, Roboto, Sans-serif;
             font-size: 12pt;
             padding: 0;
             margin: 0 0.4em;

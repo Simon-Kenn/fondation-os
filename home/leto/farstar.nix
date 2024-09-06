@@ -3,9 +3,6 @@
     inputs.nix-colors.homeManagerModule
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
-  # TODO: this belong tho fdn.theme
-  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
-
   fdn = {
     programs  = {
 
@@ -58,6 +55,7 @@
       multiplexers.zellij.enable = true;
 
       programs = {
+        starship.enable = true;
         bat.enable = true;
         direnv.enable = true;
         duf.enable = true;
@@ -91,19 +89,10 @@
 
     themes = {
       catppuccin.enable = true;
-
-      fonts = {
-        enable = true;
-        monospace = {
-          family = "FiraCode Nerd Font";
-          package = pkgs.nerdfonts.override {fonts = ["FiraCode"];};
-        };
-        regular = {
-          family = "Fira Sans";
-          package = pkgs.fira;
-        };
-      };
+      fonts.enable = true;
       wallpaper = ../../pkgs/wallpapers/wallpapers/girl_and_cat.jpg;
     };
   };
+
+  colorScheme = inputs.nix-colors.colorSchemes.catppuccin-mocha;
 }

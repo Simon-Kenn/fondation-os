@@ -20,7 +20,7 @@ in {
       catppuccin.enable = true;
 
       font = {
-        name = config.fdn.themes.fonts.monospace.family;
+        name = "JetBrains Mono";
         size = 11;
       };
 

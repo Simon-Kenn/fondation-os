@@ -33,7 +33,7 @@ in {
 
         font = {
           normal = {
-            family = config.fdn.themes.fonts.monospace.family;
+            family = "Inter";
             style = "Regular";
           };
           size = 11.0;
