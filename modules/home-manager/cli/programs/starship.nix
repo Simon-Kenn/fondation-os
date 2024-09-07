@@ -13,8 +13,8 @@ in {
   config = mkIf cfg.enable {
     programs.starship = {
       enable = true;
-      enableFishIntegration = true;
       catppuccin.enable = true;
-    };
+      enableFishIntegration = false; # TODO fix it
+    }; 
   };
 }

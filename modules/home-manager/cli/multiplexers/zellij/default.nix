@@ -14,6 +14,7 @@ in {
     programs.zellij = {
       enable = true;
       catppuccin.enable = true;
+      enableFishIntegration = true;
     };
   
     xdg.configFile = {
