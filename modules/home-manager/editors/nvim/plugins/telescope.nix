@@ -47,6 +47,15 @@
       };
     };
 
+    plugins.which-key.settings.spec = [
+      {
+        __unkeyed-1 = "<leader>f";
+        groupe = "telescope";
+        desc = "Telescope";
+      }
+    ];
+
+
     keymaps = [
       {
         mode = "n";

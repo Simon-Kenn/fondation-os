@@ -28,6 +28,8 @@ in {
         ".local/share/nvim"
         ".vim"
       ];
+
+
     };
   
     programs.nixvim = {

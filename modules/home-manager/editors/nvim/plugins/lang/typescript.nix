@@ -5,9 +5,9 @@
         enable = true;
       };
 
-      lsp.servers.tsserver = {
-        enable = true;
-      };
+      #lsp.servers.tsserver = {
+      #  enable = true;
+      #};
 
       treesitter = {
         grammarPackages = [

@@ -21,7 +21,6 @@
 
   playerctl = import ./services/media/playerctl.nix;
 
-  ags = import  ./services/wayland/ags;
   hyprpaper = import ./services/wayland/hyprpaper.nix;
   mako = import  ./services/wayland/mako.nix;
   gammastep = import ./services/wayland/gammastep.nix;
