@@ -2,6 +2,7 @@
   config,
   lib,
   inputs,
+  pkgs,
   ...
 }:
 with lib; let
@@ -27,6 +28,12 @@ in {
       persistence."/persist/home/leto".directories = [
         ".local/share/nvim"
         ".vim"
+      ];
+      packages = with pkgs; [
+        # web
+        nodePackages.typescript
+        bun
+        sass
       ];
 
 
