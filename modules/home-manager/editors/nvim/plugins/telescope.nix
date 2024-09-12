@@ -5,7 +5,6 @@
 
       extensions = {
         fzf-native.enable = true;
-        frecency.enable = true;
         file-browser.enable = true;
         undo.enable = true;
         media-files = {

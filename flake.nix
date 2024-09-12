@@ -46,6 +46,31 @@
       flake = false;
     };
 
+    neorg-interim-ls = {
+      url = "github:benlubas/neorg-interim-ls";
+      flake = false;
+    };
+
+    neorg-conceal-wrap = {
+      url = "github:benlubas/neorg-conceal-wrap";
+      flake = false;
+    };
+
+    neorg-worklog = {
+      url = "github:bottd/neorg-worklog";
+      flake = false;
+    };
+
+    neorg-capture = {
+      url = "github:pritchett/neorg-capture";
+      flake = false;
+    };
+
+    neorg-extras = {
+      url = "github:juniorsundar/neorg-extras";
+      flake = false;
+    };
+
     ags.url = "github:Aylur/ags";
 
     # hyprwm

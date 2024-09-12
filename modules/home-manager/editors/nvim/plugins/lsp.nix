@@ -5,10 +5,10 @@
         enable = true;
 
         keymaps = {
-          diagnostic = {
-            "}d" = "goto_next";
-            "{d" = "goto_prev";
-          };
+          #diagnostic = {
+          #  "}d" = "goto_next";
+          #  "{d" = "goto_prev";
+          #};
           lspBuf = {
             R = "hover";
             gD = "declaration";

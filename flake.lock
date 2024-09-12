@@ -982,6 +982,70 @@
         "type": "github"
       }
     },
+    "neorg-capture": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1712155910,
+        "narHash": "sha256-WBVklSwKEpEMhLE7t6KsFnwp33//3utlPxKVyEQT9JE=",
+        "owner": "pritchett",
+        "repo": "neorg-capture",
+        "rev": "8ed1a5d8ef1cc89cba40f4e5e51d1e46003938aa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pritchett",
+        "repo": "neorg-capture",
+        "type": "github"
+      }
+    },
+    "neorg-conceal-wrap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725735873,
+        "narHash": "sha256-375izZm21/qk1mV8xlKayMIEvdJKsU8ffc2dXTMHxMs=",
+        "owner": "benlubas",
+        "repo": "neorg-conceal-wrap",
+        "rev": "e08b06042b175355496d3b5b033658021b90cd82",
+        "type": "github"
+      },
+      "original": {
+        "owner": "benlubas",
+        "repo": "neorg-conceal-wrap",
+        "type": "github"
+      }
+    },
+    "neorg-extras": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725739110,
+        "narHash": "sha256-odaNqYZZYWAnxdk0Ikxixd5VWc2Fz86bPhHOzmc18Mk=",
+        "owner": "juniorsundar",
+        "repo": "neorg-extras",
+        "rev": "bb0ec76b85933affdbb82b55d52724ac23ef313d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "juniorsundar",
+        "repo": "neorg-extras",
+        "type": "github"
+      }
+    },
+    "neorg-interim-ls": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725801496,
+        "narHash": "sha256-rc7dd70N2mhcsA6ii5V+HJGqvboKzAbpKoZA9m5V3Z8=",
+        "owner": "benlubas",
+        "repo": "neorg-interim-ls",
+        "rev": "a5ad59d6db43a5867eb15faad2a62f23c85de201",
+        "type": "github"
+      },
+      "original": {
+        "owner": "benlubas",
+        "repo": "neorg-interim-ls",
+        "type": "github"
+      }
+    },
     "neorg-telescope": {
       "flake": false,
       "locked": {
@@ -1011,6 +1075,22 @@
       "original": {
         "owner": "pysan3",
         "repo": "neorg-templates",
+        "type": "github"
+      }
+    },
+    "neorg-worklog": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1725069275,
+        "narHash": "sha256-CEqjqLvxKXERfyaGA2p/O57LgoI87tIYMElMREWMPlU=",
+        "owner": "bottd",
+        "repo": "neorg-worklog",
+        "rev": "32f2c98c05c5ae168f9285ce6851d17ee394ba62",
+        "type": "github"
+      },
+      "original": {
+        "owner": "bottd",
+        "repo": "neorg-worklog",
         "type": "github"
       }
     },
@@ -1460,7 +1540,12 @@
         "hyprpaper": "hyprpaper",
         "impermanence": "impermanence",
         "neorg": "neorg",
+        "neorg-capture": "neorg-capture",
+        "neorg-conceal-wrap": "neorg-conceal-wrap",
+        "neorg-extras": "neorg-extras",
+        "neorg-interim-ls": "neorg-interim-ls",
         "neorg-templates": "neorg-templates",
+        "neorg-worklog": "neorg-worklog",
         "neovim": "neovim",
         "nix-colors": "nix-colors",
         "nixos-anywhere": "nixos-anywhere",

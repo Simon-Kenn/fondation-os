@@ -1,0 +1,16 @@
+@document.meta
+title: {TITLE_INPUT}
+description:
+authors: {AUTHOR}
+categories: [
+	journal
+]
+created: {TODAY}
+updated: {TODAY}
+version: 1.0.0
+@end
+
+* *{TODAY_STRING}*
+	- *{{:{YESTERDAY_OF_FILETREE}:}}[Hier]* - *{{:{TOMORROW_OF_FILETREE}:}}[Demain]*
+
+** Entrées

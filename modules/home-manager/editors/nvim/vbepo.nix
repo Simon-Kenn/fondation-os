@@ -39,6 +39,13 @@
       { mode = ["n" "v" "o"]; key = "gb"; action = "gT" ; options = { desc = "tap prev"; }; }
       { mode = ["n" "v" "o"]; key = "gé"; action = "gt" ; options = { desc = "tab next"; }; }
 
+
+      { mode = ["n" "v" "o"]; key = "ê"; action = "{" ; options = { desc = "paragraph prev"; }; }
+      { mode = ["n" "v" "o"]; key = "à"; action = "}" ; options = { desc = "paragraph next"; }; }
+
+      { mode = ["n" "v" "o"]; key = "Ê"; action = "(" ; options = { desc = "sentence prev"; }; }
+      { mode = ["n" "v" "o"]; key = "À"; action = ")" ; options = { desc = "sentence next"; }; }
+
       { mode = ["n" "v" "o"]; key = "\""; action = "1"; }
       { mode = ["n" "v" "o"]; key = "1"; action = "\""; }
       { mode = ["n" "v" "o"]; key = "«"; action = "2"; }

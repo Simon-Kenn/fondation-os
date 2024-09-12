@@ -95,18 +95,18 @@
               desc = "Unstage hunk";
               inherit mode;
             }
-            {
-              __unkeyed-1 = "{g";
-              __unkeyed-2 = "<cmd>Gitsigns prev_hunk<cr>";
-              desc = "Previous hunk";
-              inherit mode;
-            }
-            {
-              __unkeyed-1 = "}g";
-              __unkeyed-2 = "<cmd>Gitsigns next_hunk<cr>";
-              desc = "Next hunk";
-              inherit mode;
-            }
+            #{
+            #  __unkeyed-1 = "{g";
+            #  __unkeyed-2 = "<cmd>Gitsigns prev_hunk<cr>";
+            #  desc = "Previous hunk";
+            #  inherit mode;
+            #}
+            #{
+            #  __unkeyed-1 = "}g";
+            #  __unkeyed-2 = "<cmd>Gitsigns next_hunk<cr>";
+            #  desc = "Next hunk";
+            #  inherit mode;
+            #}
           ];
         };
       };

@@ -30,10 +30,15 @@ in {
         ".vim"
       ];
       packages = with pkgs; [
+        #rust
+        cargo
+        rustc
+
         # web
         nodePackages.typescript
         bun
         sass
+
       ];
 
 
