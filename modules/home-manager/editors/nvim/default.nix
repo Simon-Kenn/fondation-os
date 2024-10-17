@@ -12,14 +12,14 @@ in {
     enable = mkEnableOption "nvim";
   };
 
-  imports = [
-    inputs.nixvim.homeManagerModules.nixvim
-    ./vbepo.nix
-    ./leadermap.nix
-    ./colorscheme.nix
-    ./options.nix
-    ./plugins
-  ];
+  #imports = [
+  #  inputs.nixvim.homeManagerModules.nixvim
+  #  ./vbepo.nix
+  #  ./leadermap.nix
+  #  ./colorscheme.nix
+  #  ./options.nix
+  #  ./plugins
+  #];
 
 
   config = mkIf cfg.enable {
@@ -31,26 +31,33 @@ in {
       ];
       packages = with pkgs; [
         #rust
-        cargo
-        rustc
+        #cargo
+        #rustc
 
         # web
-        nodePackages.typescript
-        bun
-        sass
+        #nodePackages.typescript
+        #bun
+        #sass
+        #nvim-pkg
+
 
       ];
-
-
     };
+
+    #programs.neovim = {
+    #  enable = true;
+    #  viAlias = true;
+    #  vimAlias = true;
+    #  #package = pkgs.nvim-pkg;
+    #};
   
-    programs.nixvim = {
-      enable = true;
-      defaultEditor = true;
-      viAlias = true;
-      vimAlias = true;
-      enableMan = true;
-      #package = pkgs.neovim;
-    };
+    # programs.nixvim = {
+    #   enable = true;
+    #   defaultEditor = true;
+    #   viAlias = true;
+    #   vimAlias = true;
+    #   enableMan = true;
+    #   #package = pkgs.neovim;
+    # };
   };
 }

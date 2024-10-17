@@ -32,59 +32,13 @@
     nix-colors.url = "github:misterio77/nix-colors";
     catppuccin.url = "github:catppuccin/nix";
 
-    neovim.url = "github:nix-community/neovim-nightly-overlay";
-
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    neorg.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
-
-    neorg-templates = {
-      url = "github:pysan3/neorg-templates";
-      flake = false;
-    };
-
-    neorg-interim-ls = {
-      url = "github:benlubas/neorg-interim-ls";
-      flake = false;
-    };
-
-    neorg-conceal-wrap = {
-      url = "github:benlubas/neorg-conceal-wrap";
-      flake = false;
-    };
-
-    neorg-worklog = {
-      url = "github:bottd/neorg-worklog";
-      flake = false;
-    };
-
-    neorg-capture = {
-      url = "github:pritchett/neorg-capture";
-      flake = false;
-    };
-
-    neorg-extras = {
-      url = "github:juniorsundar/neorg-extras";
-      flake = false;
-    };
+    # neovim.url = "github:nix-community/neovim-nightly-overlay";
+    neovim.url = "git+file:///home/leto/Codes/quantum";
 
     ags.url = "github:Aylur/ags";
 
     # hyprwm
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-
-    hypridle = {
-      url = "github:hyprwm/hypridle";
-      inputs = {
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-        systems.follows = "hyprland/systems";
-      };
-    };
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland";
 
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
@@ -94,26 +48,6 @@
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
-    };
-
-    hyprlock = {
-      url = "github:hyprwm/hyprlock";
-      inputs = {
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-        systems.follows = "hyprland/systems";
-      };
-    };
-
-    hyprpaper = {
-      url = "github:hyprwm/hyprpaper";
-      inputs = {
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-        systems.follows = "hyprland/systems";
-      };
     };
 
     firefox-addons = {

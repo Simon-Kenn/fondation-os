@@ -24,7 +24,7 @@
       };
 
       media = {
-        calibre.enable = true;
+        calibre.enable = false;
         mpv.enable = true;
         pavucontrol.enable = true;
       };
@@ -38,6 +38,7 @@
     services = {
 
       wayland = {
+        #ags.enable = true;
         hyprpaper.enable = true;
         mako.enable = true;
         gammastep.enable = true;
@@ -72,7 +73,7 @@
       };
     };
 
-    editors.nvim.enable = true;
+    #editors.nvim.enable = false;
 
     system = {
       home-manager = {

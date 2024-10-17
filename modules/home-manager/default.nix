@@ -49,7 +49,7 @@
   yazi = import ./cli/programs/yazi.nix;
   zoxide = import ./cli/programs/zoxide.nix;
 
-  nvim = import ./editors/nvim;
+  #nvim = import ./editors/nvim;
 
   gtk =  import ./system/gtk.nix;
   home-manager = import ./system/home-manager.nix;

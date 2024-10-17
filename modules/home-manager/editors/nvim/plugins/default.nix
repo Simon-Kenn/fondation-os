@@ -18,5 +18,6 @@
     ./undotree.nix
     ./noice.nix
     ./git.nix
+    #./ai.nix
   ];
 }
