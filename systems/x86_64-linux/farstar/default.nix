@@ -12,19 +12,19 @@
   # TODO: Moove it to the good place
   environment.systemPackages = with pkgs; [
     nvim-pkg
-    rustc
-    cargo
-    gnumake
-    gcc
-    openssl
-    cmake
+    #rustc
+    #cargo
+    #gnumake
+    #gcc
+    #openssl
+    #cmake
   ];
 
   environment.variables = {
     PKG_CONFIG_PATH="${pkgs.openssl.dev}/lib/pkgconfig";
   };
 
-  programs.neovim.enable = true;
+  #programs.neovim.enable = true;
 
   fdn = {
     system = {

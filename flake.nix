@@ -68,80 +68,90 @@
     home-manager,
     deploy-rs,
     ...
-  } @ inputs: let
-    inherit (self) outputs;
-    lib = nixpkgs.lib // home-manager.lib;
-    systems = "x86_64-linux";
-    forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
-    pkgsFor = lib.genAttrs systems (
-      system:
+    } @ inputs: let
+      inherit (self) outputs;
+      lib = nixpkgs.lib // home-manager.lib;
+      systems = "x86_64-linux";
+      forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
+      pkgsFor = lib.genAttrs systems (
+        system:
         import nixpkgs {
           inherit system;
           config.allowUnfree = true;
         }
-    );
-  in {
-    inherit lib;
-    nixosModules = import ./modules/nixos;
-    homeManagerModules = import ./modules/home-manager;
+      );
+    in {
+      inherit lib;
+      nixosModules = import ./modules/nixos;
+      homeManagerModules = import ./modules/home-manager;
 
-    overlays = import ./overlays {inherit inputs outputs;};
+      overlays = import ./overlays {inherit inputs outputs;};
 
-    pakages = forEachSystem (pkgs: import ./shell.nix {inherit pkgs;});
-    devShells = forEachSystem (pkgs: import ./shell.nix {inherit pkgs;});
-    formatter = forEachSystem (pkgs: pkgs.alejandra);
+      pakages = forEachSystem (pkgs: import ./shell.nix {inherit pkgs;});
+      devShells = forEachSystem (pkgs: import ./shell.nix {inherit pkgs;});
+      formatter = forEachSystem (pkgs: pkgs.alejandra);
 
-    nixosConfigurations = {
-      iso = lib.nixosSystem {
-        modules = [
-          "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
-          ./systems/x86_64-linux-iso/minimal
-        ];
-        specialArgs = {inherit inputs outputs;};
-      };
+      nixosConfigurations = {
+        iso = lib.nixosSystem {
+          modules = [
+            "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
+            ./systems/x86_64-linux-iso/minimal
+          ];
+          specialArgs = {inherit inputs outputs;};
+        };
 
-      farstar = lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [./systems/x86_64-linux/farstar];
-        specialArgs = {inherit inputs outputs;};
-      };
+        air-gapped-iso = lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            "${nixpkgs}/nixos/modules/profiles/all-hardware.nix"
+            "${nixpkgs}/nixos/modules/installer/cd-dvd/iso-image.nix"
+            ./systems/x86_64-linux-iso/air-gapped
+          ];
+          specialArgs = {inherit inputs outputs; };
+        };
 
-      babel = lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [./systems/x86_64-linux/babel];
-        specialArgs = {inherit inputs outputs;};
-      };
-    };
+        farstar = lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [./systems/x86_64-linux/farstar];
+          specialArgs = {inherit inputs outputs;};
+        };
 
-    homeConfigurations = {
-      "nixos@iso" = lib.homeManagerConfiguration {
-        modules = [./homes/nixos-iso/home.nix];
-        pkgs = pkgsFor.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
-      };
-
-      "leto@farstar" = lib.homeManagerConfiguration {
-        modules = [./home/leto/farstar.nix];
-        pkgs = pkgsFor.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
-      };
-      "leto@babel" = lib.homeManagerConfiguration {
-        modules = [./home/leto/babel.nix];
-        pkgs = pkgsFor.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
-      };
-    };
-
-    deploy.nodes = {
-      babel = {
-        hostname = "babel";
-        profiles.system = {
-          user = "leto";
-          path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.babel;
+        babel = lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [./systems/x86_64-linux/babel];
+          specialArgs = {inherit inputs outputs;};
         };
       };
-    };
 
-    checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
-  };
+      homeConfigurations = {
+        "nixos@iso" = lib.homeManagerConfiguration {
+          modules = [./homes/nixos-iso/home.nix];
+          pkgs = pkgsFor.x86_64-linux;
+          extraSpecialArgs = {inherit inputs outputs;};
+        };
+
+        "leto@farstar" = lib.homeManagerConfiguration {
+          modules = [./home/leto/farstar.nix];
+          pkgs = pkgsFor.x86_64-linux;
+          extraSpecialArgs = {inherit inputs outputs;};
+        };
+        "leto@babel" = lib.homeManagerConfiguration {
+          modules = [./home/leto/babel.nix];
+          pkgs = pkgsFor.x86_64-linux;
+          extraSpecialArgs = {inherit inputs outputs;};
+        };
+      };
+
+      deploy.nodes = {
+        babel = {
+          hostname = "babel";
+          profiles.system = {
+            user = "leto";
+            path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.babel;
+          };
+        };
+      };
+
+      checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
+    };
 }
