@@ -40,8 +40,8 @@ in {
       u2f = {
         enable = true;
         settings = {
-          #cue = true;
-          #cue_prompt = "Prouvez votre existence";
+          cue = true;
+          cue_prompt = "Prouvez votre existence";
           authfile = ./u2f_keys;
           userpresence = 1;
           userverification = 0;
@@ -50,15 +50,9 @@ in {
       };
 
       services = {
-        hyprlock = {
-          u2fAuth = true;
-        };
-        login = {
-          u2fAuth = true;
-        };
-        sudo = {
-          u2fAuth = true;
-        };
+        sudo.u2fAuth = true;
+        login.u2fAuth = true;
+        hyprlock.u2fAuth = true;
       };
     };
   };
