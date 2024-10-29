@@ -40,6 +40,7 @@
       wayland = {
         #ags.enable = true;
         hyprpaper.enable = true;
+        hypridle.enable = true;
         mako.enable = true;
         gammastep.enable = true;
       };
