@@ -34,11 +34,5 @@ in {
       extraGroups = ["wheel" "network" "git"];
       initialPassword = cfg.initialPassword;
     };
-
-    #TODO:  moove this
-    security.pam.services = {
-      swaylock = {};
-      hyprlock = {};
-    };
   };
 }
