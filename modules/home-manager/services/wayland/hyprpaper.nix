@@ -16,10 +16,13 @@ in {
       enable = true;
 
       settings = {
-        preload = ["${wallpaper}"];
-        wallpapers = [",${wallpaper}"];
+        preload = [
+          "${wallpaper}"
+        ];
+        wallpaper = [
+          ",${wallpaper}"
+        ];
       };
     };
-
   };
 }

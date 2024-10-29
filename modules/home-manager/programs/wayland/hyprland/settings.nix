@@ -10,6 +10,7 @@ in {
     exec-once = [
       "${pkgs.waybar}/bin/waybar"
       "${pkgs.mako}/bin/mako"
+      #"${pkgs.hyprpaper}/bin/hyprpaper"
     ];
 
     general = {
