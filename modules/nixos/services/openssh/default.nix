@@ -23,9 +23,6 @@ in {
 
     users = {
       users = {
-        #leto.openssh.authorizedKeys.keys = [
-        #  "sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIG7xGnrAIpXl1WIlNIqY71zNMCqCvE+8pavwgxU5CDj/AAAABHNzaDo= Leto yubikey"
-        #];
         leto.openssh.authorizedKeys.keyFiles = [
           ../../../../home/leto/ssh.pub
         ];
