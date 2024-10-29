@@ -8,29 +8,27 @@ with lib; let
 in {
   options.fdn.services.openssh = {
     enable = mkEnableOption "Enable openssh";
-    PermitRootLogin = mkOption {
-      default = "no";
-      type = types.str;
-      description = "Permit root login";
-    };
-    PasswordAuthentication = mkOption {
-      type = types.bool;
-      default = false;
-      description = "Enable PasswordAuthentication";
-    };
   };
 
   config = mkIf cfg.enable {
     services.openssh = {
       enable = true;
       settings = {
-        PasswordAuthentication = cfg.PasswordAuthentication;
-        PermitRootLogin = cfg.PermitRootLogin;
+        PasswordAuthentication = false;
+        PermitRootLogin = "prohibit-password";
+        PubkeyAuthentication = "yes";
+        PubkeyAuthOptions = "verify-required";
       };
     };
 
     users = {
       users = {
+        #leto.openssh.authorizedKeys.keys = [
+        #  "sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIG7xGnrAIpXl1WIlNIqY71zNMCqCvE+8pavwgxU5CDj/AAAABHNzaDo= Leto yubikey"
+        #];
+        leto.openssh.authorizedKeys.keyFiles = [
+          ../../../../home/leto/ssh.pub
+        ];
       };
     };
 
