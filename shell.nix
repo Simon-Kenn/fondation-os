@@ -14,12 +14,18 @@
     NIX_CONFIG = "extra-experimental-features = nix-command flakes";
     nativeBuildInputs = with pkgs; [
       inputs.nixos-anywhere.packages.${pkgs.system}.nixos-anywhere
+      deploy-rs
+
       nix
       home-manager
-      git
+      statix
+      deadnix
+      alejandra
 
+      git
       sops
       ssh-to-age
+      gnupg
       age
     ];
   };
