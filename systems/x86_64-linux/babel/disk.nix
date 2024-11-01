@@ -15,7 +15,7 @@
               type = "EF00";
               content = {
                 type = "filesystem";
-                extraArgs = ["-n NIXBOOT"];
+                extraArgs = ["-n" "NIXBOOT"];
                 format = "vfat";
                 mountOptions = ["umask=0077"];
                 mountpoint = "/boot";
@@ -31,7 +31,7 @@
                 };
                 content = {
                   type = "btrfs";
-                  extraArgs = ["-f" "-L NIXROOT"];
+                  extraArgs = ["-f" "-L" "NIXROOT"];
                   postCreateHook =
                     /*
                     sh
