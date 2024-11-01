@@ -41,7 +41,7 @@ in {
         settings = {
           cue = true;
           cue_prompt = "Prouvez votre existence";
-          authfile = ./u2f_keys;
+          authfile = "./u2f_keys";
           userpresence = 1;
           userverification = 0;
           pinverification = 1;
