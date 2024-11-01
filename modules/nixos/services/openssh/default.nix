@@ -26,6 +26,10 @@ in {
         leto.openssh.authorizedKeys.keyFiles = [
           ../../../../home/leto/ssh.pub
         ];
+
+        root.openssh.authizedKeys.keyFiles = [
+          ../../../../home/leto/ssh.pub
+        ];
       };
     };
 
