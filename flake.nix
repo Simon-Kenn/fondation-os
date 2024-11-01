@@ -33,7 +33,7 @@
     catppuccin.url = "github:catppuccin/nix";
 
     # neovim.url = "github:nix-community/neovim-nightly-overlay";
-    neovim.url = "git+file:///home/leto/Codes/quantum";
+    neovim.url = "github:Simon-Kenn/quantum";
 
     ags.url = "github:Aylur/ags";
 

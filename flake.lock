@@ -832,15 +832,15 @@
       "locked": {
         "lastModified": 1729162603,
         "narHash": "sha256-Rxs4k/Y/f+Q9dlLxJIwNDvcrQnvaJ5zPo9xInu9Qdyw=",
-        "ref": "refs/heads/master",
+        "owner": "Simon-Kenn",
+        "repo": "quantum",
         "rev": "7d6df91fe86ffafb993793bd1f804c7ed8cbe8c7",
-        "revCount": 142,
-        "type": "git",
-        "url": "file:///home/leto/Codes/quantum"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///home/leto/Codes/quantum"
+        "owner": "Simon-Kenn",
+        "repo": "quantum",
+        "type": "github"
       }
     },
     "nix-colors": {
