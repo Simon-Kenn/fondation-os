@@ -30,7 +30,7 @@
 
     security = {
       sops.enable = true;
-      yubikey.enable = true;
+      yubikey.enable = false;
     };
     shell.fish.enable = true;
     networking.enable = true;
