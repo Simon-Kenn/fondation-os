@@ -14,7 +14,7 @@
     system = {
       boot = {
         enable = true;
-        plymouth = true;
+        plymouth = false;
       };
       impermanence.enable = true;
       catppuccin.enable = true;
@@ -36,30 +36,27 @@
     networking.enable = true;
 
     services = {
-      openssh = {
-        enable = true;
-        PermitRootLogin = "yes";
-      };
+      openssh.enable = true;
 
       homepage-dashboard.enable = true;
 
-      wireguard = {
-        enable = true;
-      };
+      #wireguard = {
+      #  enable = true;
+      #};
 
-      nixarr = {
-        enable = true;
-        jellyfin.enable = true;
-        calibre-web.enable = true;
-        sonarr.enable = true;
-        bazarr.enable = true;
-        lidarr.enable = true;
-        prowlarr.enable = true;
-        radarr.enable = true;
-        readarr.enable = true;
-      };
+      #nixarr = {
+      #  enable = true;
+      #  jellyfin.enable = true;
+      #  calibre-web.enable = true;
+      #  sonarr.enable = true;
+      #  bazarr.enable = true;
+      #  lidarr.enable = true;
+      #  prowlarr.enable = true;
+      #  radarr.enable = true;
+      #  readarr.enable = true;
+      #};
 
-      paperless.enable = true;
+      #paperless.enable = true;
     };
   };
 }
